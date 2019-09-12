@@ -1,0 +1,4 @@
+baseURL = "https://chabad360.me/"
+languageCode = "en-us"
+title = "Mendel Greenberg (aka chabad360)"
+theme = "bilberry"
