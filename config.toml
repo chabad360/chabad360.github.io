@@ -2,3 +2,17 @@ baseURL = "https://chabad360.me/"
 languageCode = "en-us"
 title = "Mendel Greenberg (aka chabad360)"
 theme = "bilberry"
+
+DefaultContentLanguage = "en"
+
+googleAnalytics = "UA-147634698-1"
+
+disqusShortname = "chabad360-me"
+
+[params]
+  algolia_search    = true
+  algolia_appId     = "PGM2NJXWVH"
+  algolia_apiKey    = "f65b57ce60ed335aedc88844faab7cc2"
+  algolia_indexName = "chabad360.me"
+
+  gravatarEMail = "mendel@chabad360.me"

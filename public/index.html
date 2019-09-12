@@ -13,7 +13,7 @@
         <meta itemprop="description" content="">
         <meta property="og:title" content="">
         <meta property="og:description" content="">
-        <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+        <meta property="og:image" content="https://www.gravatar.com/avatar/e2d211a29401e812b809602b86c5d23f?size=200">
         <meta property="og:url" content="https://chabad360.me/">
         <meta property="og:site_name" content="Mendel Greenberg (aka chabad360)"><meta property="og:type" content="website">
         <link rel="icon" type="image/png" href="https://chabad360.me/favicon-32x32.png" sizes="32x32">
@@ -44,6 +44,11 @@
         </ul>
 
         
+            <div id="search-box" class="search">
+                <i class="fa fa-search"></i>
+                <input id="search" type="text" placeholder="Search ...">
+            </div>
+        
     </div>
 </nav>
 
@@ -53,7 +58,7 @@
         <div class="logo">
             <a href="/" class="logo">
                 
-                    <img src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm&size=200" alt="">
+                    <img src="https://www.gravatar.com/avatar/e2d211a29401e812b809602b86c5d23f?d=mm&size=200" alt="">
                 
 
                 <span class="overlay"><i class="fa fa-home"></i></span>
@@ -83,8 +88,76 @@
     
 
     
+        
+    <div class="article-wrapper u-cf">
+        
+            <a class="bubble" href="https://chabad360.me/article/welcome/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="https://chabad360.me/article/welcome/">Welcome</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-09-12</span>
+            
+        
+
+        
+
+        
+
+        
+            <span class="author"><a href="/author/mendel-greenberg">Mendel Greenberg</a></span>
+        
+    </div>
 
     
+        
+
+<h3 id="welcome">Welcome!</h3>
+
+<p>This is a blog by <a href="mailto:mendel@chabad360.com">Mendel Greenberg</a></p>
+
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    <a href="/tags/introduction">introduction</a>
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+
+    
+    <div class="paginator">
+        
+
+        
+    </div>
+
 
 
         </div>
@@ -97,6 +170,10 @@
         <div class="recent-posts">
             <strong>Latest posts</strong>
                 <ul>
+                
+                    <li>
+                        <a href="https://chabad360.me/article/welcome/">Welcome</a>
+                    </li>
                 
                 </ul>
         </div>
@@ -150,6 +227,17 @@
 
 
         
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-147634698-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 
         
 
@@ -174,6 +262,48 @@
         </script>
 
         
+
+        
+            <script>
+    var client = algoliasearch("PGM2NJXWVH", "f65b57ce60ed335aedc88844faab7cc2");
+    var index = client.initIndex("chabad360.me");
+
+    $('#search').autocomplete({ hint: false, autoselect: true, debug: false },
+      [
+        {
+          
+            source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 10 }),
+          
+          displayKey: function(suggestion) {
+            return suggestion.title || suggestion.author
+          },
+          templates: {
+            suggestion: function(suggestion) {
+                return "<span class='entry " + suggestion.type + "'>"
+                      + "<span class='title'>" + suggestion.title + "</span>"
+                      + "<span class='fa fa-fw " + suggestion.iconClass + "'></span>"
+                  + "</span>"
+                ;
+            },
+            empty: function() {
+              return "<span class='empty'>Nothing found.</span>"
+            },
+            footer: function() {
+              return '<div class="branding">Powered by <img src="https:\/\/chabad360.me\/dist\/algolia-logo-light.svg" /></div>'
+            }
+
+          },
+        }
+      ])
+      .on('autocomplete:selected', function(event, suggestion, dataset) {
+        window.location = (suggestion.url);
+      })
+      .keypress(function (event, suggestion) {
+        if (event.which == 13) {
+          window.location = (suggestion.url);
+        }
+      });
+</script>
 
         
 
