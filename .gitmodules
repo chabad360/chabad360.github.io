@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/chabad360/chabad360.github.io
+	branch = master
