@@ -28,10 +28,8 @@
   <nav class="menu">
     <ul class="menu-list">
       {{ if (eq .Site.Params.algolia_search true) }}
-        <div id="search-box" class="search">
-          <svg class="icon" color="#fff" stroke="currentColor" fill="none" fill="none" stroke-width="3" stroke-linecap="round">
-            <use xlink:href="#icon-search" />
-          </svg>
+        <div class="search">
+          <i class="fa fa-search" style="color:#fff;font-size:21px;"></i>
           <input id="search" type="text" placeholder="Search ...">
         </div>
       {{ end }}

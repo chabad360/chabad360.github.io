@@ -12,7 +12,7 @@
     {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags/" $name | absURL) ) -}}
 {{- end -}}
 
-{{- range where .Pages "Type" "not in"  (slice "page" "json") -}}
+{{- range where .Pages "Type" "not in"  (slice "json") -}}
 
     {{-  $iconClass := "fa-pencil" -}}
 
