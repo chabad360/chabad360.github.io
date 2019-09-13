@@ -1,7 +1,9 @@
 baseURL = "https://chabad360.me/"
 languageCode = "en-us"
-title = "Mendel Greenberg (aka chabad360)"
-theme = "bilberry"
+title = "Mendel Greenberg"
+theme = "lamp"
+
+enableRobotsTXT = true
 
 DefaultContentLanguage = "en"
 
@@ -10,9 +12,18 @@ googleAnalytics = "UA-147634698-1"
 disqusShortname = "chabad360-me"
 
 [params]
-  algolia_search    = true
-  algolia_appId     = "PGM2NJXWVH"
-  algolia_apiKey    = "f65b57ce60ed335aedc88844faab7cc2"
-  algolia_indexName = "chabad360.me"
+  mainSections = ["posts"]
+  subtitle = "(aka chabad360)"
+  author = "Mendel Greenberg"
+  logo = "https://en.gravatar.com/userimage/96540202/1827f6b00f304329e1e96108f6511399.jpeg"
+#  description = "A light responsive Hugo AMP theme for blogger"
+  paginate = 10
 
-  gravatarEMail = "mendel@chabad360.me"
+  # SEO configs
+  seotitle = "Mendel Greenberg (aka chabad360)"
+
+  # Social networks
+  email = "mendel@chabad360.me"
+  github = "chabad360"
+  reddit = "chabad360"
+
