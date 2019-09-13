@@ -3,6 +3,7 @@ title: "Welcome"
 author: "Mendel Greenberg"
 #cover: "/img/cover.jpg"
 tags: ["Intro"]
+catagories: ["Random"]
 date: 2019-09-13T02:14:21Z
 draft: false
 ---
