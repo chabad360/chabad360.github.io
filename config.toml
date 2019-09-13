@@ -1,7 +1,7 @@
 baseURL = "https://chabad360.me/"
 languageCode = "en-us"
 title = "Mendel Greenberg"
-theme = "lamp"
+theme = "hugo-lamp"
 
 enableRobotsTXT = true
 
