@@ -3,15 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://chabad360.me/categories/</loc>
+    <loc>https://chabad360.me/</loc>
+    <lastmod>2019-09-13T02:14:21+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chabad360.me/</loc>
+    <loc>https://chabad360.me/post/</loc>
+    <lastmod>2019-09-13T02:14:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chabad360.me/tags/taga/</loc>
+    <lastmod>2019-09-13T02:14:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chabad360.me/tags/tagb/</loc>
+    <lastmod>2019-09-13T02:14:21+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://chabad360.me/tags/</loc>
+    <lastmod>2019-09-13T02:14:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chabad360.me/post/welcome/</loc>
+    <lastmod>2019-09-13T02:14:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chabad360.me/categories/</loc>
   </url>
   
 </urlset>

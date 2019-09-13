@@ -11,6 +11,11 @@ googleAnalytics = "UA-147634698-1"
 
 disqusShortname = "chabad360-me"
 
+# Code highlighting
+pygmentsUseClasses=true
+linenos=true
+pygmentsCodeFences=true
+
 [params]
   mainSections = ["posts"]
   subtitle = "(aka chabad360)"
