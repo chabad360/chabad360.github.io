@@ -2,7 +2,7 @@
 title: "Welcome"
 author: "Mendel Greenberg"
 #cover: "/img/cover.jpg"
-tags: ["tagA", "tagB"]
+tags: ["Intro"]
 date: 2019-09-13T02:14:21Z
 draft: false
 ---

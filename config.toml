@@ -32,3 +32,12 @@ pygmentsCodeFences=true
   github = "chabad360"
   reddit = "chabad360"
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menu.main]]
+  name = "Tags"
+  weight = 1
+  identifier = "tags"
+  url = "/tags/"

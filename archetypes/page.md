@@ -2,8 +2,10 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 author: "Mendel Greenberg"
 # cover: "/img/cover.jpg"
-tags: ["tagA", "tagB"]
+# tags: ["tagA", "tagB"]
 date: {{ .Date }}
+notoc: true
+
 draft: true
 ---
 

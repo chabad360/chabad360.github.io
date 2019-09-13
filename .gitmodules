@@ -2,6 +2,3 @@
 	path = public
 	url = https://github.com/chabad360/chabad360.github.io.git
 	branch = master
-[submodule "themes/lamp"]
-	path = themes/lamp
-	url = https://github.com/huyb1991/hugo-lamp.git
