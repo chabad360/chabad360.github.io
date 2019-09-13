@@ -20,7 +20,7 @@ pygmentsCodeFences=true
   mainSections = ["posts"]
   subtitle = "(aka chabad360)"
   author = "Mendel Greenberg"
-  logo = "https://en.gravatar.com/userimage/96540202/1827f6b00f304329e1e96108f6511399.jpeg"
+  logo = "/img/avatar.jpg"
 #  description = "A light responsive Hugo AMP theme for blogger"
   paginate = 10
 
