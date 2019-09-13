@@ -45,7 +45,7 @@
   font-size: $size-4;
   font-family: $family-roboto;
   font-weight: $weight-bold;
-  margin: 1rem auto;
+  margin: 1rem auto 0rem auto;
 
   @media screen and (max-width: $tablet) {
     margin: 0 auto;
@@ -57,6 +57,7 @@
 }
 
 .subtitle {
+  margin-top: 0rem;
   margin-bottom: 1rem;
   color: $white;
   opacity: 0.8;

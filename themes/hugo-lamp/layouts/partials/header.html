@@ -27,6 +27,14 @@
   <!-- Sidebar is header on desktop -->
   <nav class="menu">
     <ul class="menu-list">
+      {{ if (eq .Site.Params.algolia_search true) }}
+        <div id="search-box" class="search">
+          <svg class="icon" color="#fff" stroke="currentColor" fill="none" fill="none" stroke-width="3" stroke-linecap="round">
+            <use xlink:href="#icon-search" />
+          </svg>
+          <input id="search" type="text" placeholder="Search ...">
+        </div>
+      {{ end }}
       {{ $type := .Type }}
       {{ $kind := .Kind }}
       {{ $currentPage := . }}

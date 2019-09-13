@@ -38,15 +38,6 @@
     </a>
   </li>
   {{ end }}
-
-  {{ if isset .Site.Params "google" }}
-  <li class="social-item">
-    <a href="//plus.google.com/{{ .Site.Params.google }}" title="Google+">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-googleplus" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
   {{ if isset .Site.Params "instagram" }}
   <li class="social-item">
     <a href="//www.instagram.com/{{ .Site.Params.instagram }}" title="Instagram">

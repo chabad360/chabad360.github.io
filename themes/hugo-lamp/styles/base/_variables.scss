@@ -4,12 +4,12 @@ $grey-dark: darken($grey, 20%);
 $grey-light: lighten($grey, 40%);
 $white: #fff;
 $black: #000;
-$green: #6aac0e;
-$green-light: saturate($green, 10%);
+$dark-blue: #020206;
+$dark-blue-light: saturate($dark-blue, 10%);
 $blue: #3f9adc;
 
 /* Theme colors */
-$primary: $green;
+$primary: $dark-blue;
 $light: darken($white, 5%);
 $pre-background: $grey-light;
 
@@ -23,7 +23,7 @@ $text-title: lighten($black, 15%);
 $text-invert: findcolorinvert($text);
 $text-light: $grey;
 $text-strong: $grey-dark;
-$text-content-title: $green-light;
+$text-content-title: $dark-blue-light;
 $text-link: $blue;
 
 /* Border colors */

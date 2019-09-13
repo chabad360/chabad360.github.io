@@ -30,5 +30,8 @@
     {{ partial "sidebar.html" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
+    {{ if (eq .Site.Params.algolia_search true) }}
+      {{ partial "algolia-search.html" . }}
+    {{ end }}
   </body>
 </html>

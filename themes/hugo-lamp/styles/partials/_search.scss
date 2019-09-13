@@ -1,0 +1,139 @@
+.search {
+        margin-left: auto;
+        position: relative;
+
+        i {
+            position: absolute;
+            left: 1em;
+            top: 10px;
+            z-index: 40;
+        }
+
+        input {
+            margin: 0;
+            background: transparent;
+            border: none;
+            color: $text;
+            padding-left: 0.75em;
+            width: 80%;
+            background-color: rgba($dark-blue-light, 0.9);
+            font-family: $family-roboto;
+
+            &:hover, &:focus {
+                background-color: rgba($dark-blue-light, 0.5);
+                border: none;
+            }
+        }
+
+        .algolia-autocomplete {
+            width: 100%;
+            color: $dark-blue-light;
+
+            .aa-dropdown-menu {
+                width: 100%;
+                border-radius: 4px;
+
+                .empty {
+                    padding: 0.5em 1em;
+                    display: block;
+                }
+
+                .branding {
+                    font-size: 0.75em;
+                    text-align: right;
+                    padding: 0.5em 1em;
+                    background-color: $main-background;
+
+                    img {
+                        width: 3.5em;
+                        position: relative;
+                        top: 0.1em;
+                    }
+                }
+
+            }
+
+            .aa-suggestion {
+                span {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: $sidebar-background;
+
+                    &:hover, &:focus {
+                        background-color: darken($sidebar-background, 2);
+                    }
+
+                    .title {
+                        max-width: 315px;
+                    }
+
+                    &.entry.category, &.entry.tag, &.entry.author {
+                        .title {
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .fa {
+                        color: $white;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .aa-input-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .aa-input-search {
+            width: 300px;
+            padding: 12px 28px 12px 12px;
+            border: 1px solid $primary;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button,
+        .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .aa-input-icon {
+            height: 16px;
+            width: 16px;
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            fill: $primary;
+            pointer-events: none;
+        }
+
+        .aa-dropdown-menu {
+            background-color: #fff;
+            border: 1px solid rgba($primary, 0.6);
+            min-width: 300px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .aa-suggestion {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .aa-suggestion + .aa-suggestion {
+            border-top: 1px solid rgba($primary, 0.6);
+        }
+
+        .aa-suggestions-category {
+            border-bottom: 1px solid rgba($primary, 0.6);
+            border-top: 1px solid rgba($primary, 0.6);
+            padding: 6px 12px;
+        }
+    }

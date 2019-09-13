@@ -27,6 +27,15 @@ pygmentsCodeFences=true
   # SEO configs
   seotitle = "Mendel Greenberg (aka chabad360)"
 
+  # Page configs
+  showComments = true
+
+  # Search configs
+  algolia_search = true
+  algolia_appId = "PGM2NJXWVH"
+  algolia_apiKey = "f65b57ce60ed335aedc88844faab7cc2"
+  algolia_indexName = "chabad360.me"
+
   # Social networks
   email = "mendel@chabad360.me"
   github = "chabad360"

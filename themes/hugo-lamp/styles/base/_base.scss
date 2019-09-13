@@ -59,13 +59,13 @@ button:hover {
 }
 
 .footer {
-  display: none;
+  display: block;
+  padding: 1rem 1rem 1rem 21rem;
+  font-size: $size-7;
+  text-align: center;
+  font-family: $family-monospace;
 
   @media screen and (max-width: $tablet) {
-    display: block;
     padding: 1rem;
-    font-size: $size-7;
-    text-align: center;
-    font-family: $family-monospace;
   }
 }
