@@ -52,8 +52,6 @@
 <!-- SEO Prefs -->
 <meta name="robots" content="index,follow" />
 <meta name="referrer" content="origin-when-cross-origin" />
-{{ if isset .Site.Params "googlesiteverification" }}<meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerification }}" />{{ end }}
-{{ if isset .Site.Params "msvalidate" }}<meta name="msvalidate.01" content="{{ .Site.Params.msValidate }}" />{{ end }}
 
 <!-- Favicon and Touch icons -->
 <link rel="icon" href="/img/favicon.ico" />
@@ -61,16 +59,21 @@
 <link rel="apple-touch-icon" sizes="120x120" href="{{ $logo }}">
 
 <!-- Styles -->
-<script src="https://kit.fontawesome.com/489a8ca3eb.js"></script>
+{{ if eq .Site.Params.algolia_search true }}
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
+{{ end }}
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <style amp-custom>{{ partial "stylesheet" | safeCSS }}</style>
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/3.6.0/instantsearch.production.min.js" integrity="sha256-N/ZioXfJ7+qk2cejhAJsm0+ed/l/445mZGjpEWeyeR4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.37.0/autocomplete.jquery.min.js" integrity="sha256-AEeiDMvWyxSUajsdRg7FG0WsK2aQp6WwnpPXcK898d8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" integrity="sha256-wql/MDbyML50PJjxoPTgCa8ByZzyPX6HftEDWu6jovY=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.34.0/algoliasearch.min.js" integrity="sha256-o0ZQgrwr1QsSdzSedSS1zE0IjC8WzyNzyYBIxuAcZAA=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+{{ if eq .Site.Params.algolia_search true }}
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/3.6.0/instantsearch.production.min.js" integrity="sha256-N/ZioXfJ7+qk2cejhAJsm0+ed/l/445mZGjpEWeyeR4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.37.0/autocomplete.jquery.min.js" integrity="sha256-AEeiDMvWyxSUajsdRg7FG0WsK2aQp6WwnpPXcK898d8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js" integrity="sha256-wql/MDbyML50PJjxoPTgCa8ByZzyPX6HftEDWu6jovY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.34.0/algoliasearch.min.js" integrity="sha256-o0ZQgrwr1QsSdzSedSS1zE0IjC8WzyNzyYBIxuAcZAA=" crossorigin="anonymous"></script>
+{{ end }}

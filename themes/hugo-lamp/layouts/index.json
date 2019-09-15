@@ -4,15 +4,11 @@
     {{- $.Scratch.Add "index" (dict "url" (print "/categories/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-folder" "type" "category" "objectID" (print "/categories/" $name | absURL) ) -}}
 {{- end -}}
 
-{{- range $name, $taxonomy := .Site.Taxonomies.author -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/author/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-user" "type" "author" "objectID" (print "/author/" $name | absURL) ) -}}
-{{- end -}}
-
 {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
     {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags/" $name | absURL) ) -}}
 {{- end -}}
 
-{{- range where .Pages "Type" "not in"  (slice "json") -}}
+{{- range where .Site.Pages "Type" "not in" (slice "page" "tags" "categories" "projects" "author" "json") -}}
 
     {{-  $iconClass := "fa-pencil" -}}
 
