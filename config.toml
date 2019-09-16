@@ -44,19 +44,25 @@ pygmentsCodeFences=true
 [taxonomies]
   tag = "tags"
   category = "categories"
-  author = "author"
-
-#[[menu.main]]
-#  name = "Tags"
-#  weight = 2
-#  identifier = "tags"
-#  url = "/tags/"
+  projects = "projects"
 
 [[menu.main]]
   name = "About Me"
   weight = 1
   identifier = "about-me"
   url = "/page/about-me"
+
+[[menu.main]]
+  name = "Projects"
+  weight = 2
+  identifier = "projects"
+  url = "/project/"
+
+[[menu.main]]
+  name = "Tags"
+  weight = 3
+  identifier = "tags"
+  url = "/tags/"
 
 [outputs]
   home = [ "HTML", "JSON", "RSS" ]
