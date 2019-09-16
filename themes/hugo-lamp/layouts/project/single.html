@@ -7,12 +7,11 @@
     {{ partial "adsense.html" . }}
     <article class="post-content">{{ .Content }}</article>
     <section class="post-content">
+      <h2>Posts</h2>
       <ul>
         {{ $title := .Title }}
-        {{ range $key, $value := .Site.Taxonomies.projects }}
-          {{ range where ( where $value.Pages "Type" "post") ".Params.projects" $title }}
-            {{ .Render "summary" }}
-          {{ end }}
+        {{ range where ( where .Site.Pages "Type" "post") ".Params.project" $title }}
+          {{ .Render "summary" }}
         {{ end }}
       </ul>
     </section>

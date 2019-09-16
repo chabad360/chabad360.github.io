@@ -1,6 +1,5 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
-author: "Mendel Greenberg"
 # cover: "/img/cover.jpg"
 # tags: ["tagA", "tagB"]
 # project: "Project"

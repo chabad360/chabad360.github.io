@@ -18,7 +18,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
         {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-          <h2 class="list-label">{{ .Name }} Posts</h2>
+          <h2 class="list-label">{{ .Name }}</h2>
         {{ end }}
       {{ end }}
     </header>

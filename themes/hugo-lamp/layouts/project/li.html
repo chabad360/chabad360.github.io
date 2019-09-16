@@ -1,0 +1,13 @@
+<li>
+<a href="{{ .Permalink }}" class="entry-link">
+  <article class="entry-single">
+    <header class="entry-header">
+      <h3 class="entry-title">{{ .Title }}</h3>
+    </header>
+    <p class="entry-summary" style="margin-top:0.5rem;margin-bottom:0.5rem;">{{ .Summary | plainify | htmlUnescape }}</p>
+    <footer class="entry-footer">
+      <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read</p>
+    </footer>
+  </article>
+</a>
+<li>
