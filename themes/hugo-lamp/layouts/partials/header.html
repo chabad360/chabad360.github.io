@@ -27,10 +27,10 @@
   <!-- Sidebar is header on desktop -->
   <nav class="menu">
     <ul class="menu-list">
-      {{ if (eq .Site.Params.algolia_search true) }}
+      {{ if isset .Site.Params "googlecseid" }}
         <div class="search">
           <i class="fa fa-search" style="color:#fff;font-size:21px;"></i>
-          <input id="search" type="text" placeholder="Search ...">
+          {{ partial "cse" . }}
         </div>
       {{ end }}
       {{ $type := .Type }}

@@ -15,7 +15,7 @@
       </ul>
       {{ end }}
       {{ if ( .Params.showComments | default true ) }}
-        {{ template "_internal/disqus.html" . }}
+        {{ partial "disqus.html" . }}
       {{ end }}
     </footer>
   </section>

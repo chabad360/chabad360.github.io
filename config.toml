@@ -31,10 +31,7 @@ pygmentsCodeFences=true
   showComments = true
 
   # Search configs
-  algolia_search = true
-  algolia_appId = "PGM2NJXWVH"
-  algolia_apiKey = "f65b57ce60ed335aedc88844faab7cc2"
-  algolia_indexName = "chabad360.me"
+  googleCseId = "006958833182019350199:fiwtwuvmck8"
 
   # Social networks
   email = "mendel@chabad360.me"
