@@ -9,8 +9,6 @@ DefaultContentLanguage = "en"
 
 googleAnalytics = "UA-147634698-1"
 
-disqusShortname = "chabad360-me"
-
 # Code highlighting
 pygmentsUseClasses=true
 linenos=true
@@ -21,7 +19,7 @@ pygmentsCodeFences=true
   subtitle = "(aka chabad360)"
   author = "Mendel Greenberg"
   logo = "/img/avatar.jpg"
-#  description = "A light responsive Hugo AMP theme for blogger"
+#  description = "A light responsive Hugo AMP-ish theme for blogger"
   paginate = 10
 
   # SEO configs

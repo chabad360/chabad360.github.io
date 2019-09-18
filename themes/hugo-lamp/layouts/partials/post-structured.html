@@ -1,0 +1,32 @@
+{{ $description := .Description | default .Summary }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "headline": "{{ .Title }}",
+  {{ if .Params.cover }}
+    "image": [
+      "{{ .Params.cover | absURL }}"
+    ],
+  {{ end }}
+  "datePublished": "{{ .Date | dateFormat "2006-01-02" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "chabad360.me",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}img/avatar.jpg"
+    }
+  },
+  "description": "{{ $description | plainify }}"
+}
+</script>
