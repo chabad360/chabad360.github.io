@@ -9,8 +9,8 @@
     <section class="post-content">
       <h2>Posts</h2>
       <ul>
-        {{ $title := .Title }}
-        {{ range where ( where .Site.Pages "Type" "post") ".Params.project" $title }}
+        {{ $project := ( cond ( isset .Params "project" ) .Params.project .Title  ) }}
+        {{ range where ( where .Site.Pages "Type" "post") ".Params.project" $project }}
           {{ .Render "summary" }}
         {{ end }}
       </ul>
@@ -24,7 +24,7 @@
       </ul>
       {{ end }}
       {{ if ( .Params.showComments | default true ) }}
-        {{ template "_internal/disqus.html" . }}
+        {{ partial "commento.html" . }}
       {{ end }}
     </footer>
   </section>

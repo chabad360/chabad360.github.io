@@ -1,3 +1,4 @@
+{{ $logo := "/img/avatar.jpg" }}
 {{ $description := .Description | default .Summary }}
 
 <script type="application/ld+json">
@@ -9,11 +10,9 @@
     "@id": "{{ .Permalink }}"
   },
   "headline": "{{ .Title }}",
-  {{ if .Params.cover }}
-    "image": [
-      "{{ .Params.cover | absURL }}"
-    ],
-  {{ end }}
+  "image": [
+    "{{ if .Params.cover }}{{ .Params.cover | absURL }}{{ else }}{{ $logo | absURL }}{{ end }}"
+  ],
   "datePublished": "{{ .Date | dateFormat "2006-01-02" }}",
   "author": {
     "@type": "Person",
@@ -24,7 +23,7 @@
     "name": "chabad360.me",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ .Site.BaseURL }}img/avatar.jpg"
+      "url": "{{ $logo | absURL }}"
     }
   },
   "description": "{{ $description | plainify }}"
