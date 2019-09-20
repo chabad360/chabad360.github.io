@@ -57,7 +57,3 @@ pygmentsCodeFences=true
   weight = 3
   identifier = "tags"
   url = "/tags/"
-
-[outputs]
-  home = [ "HTML", "JSON", "RSS" ]
-  page = [ "HTML" ]
