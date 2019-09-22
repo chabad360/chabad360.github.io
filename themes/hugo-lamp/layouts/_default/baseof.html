@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     {{ $sidebar := resources.Get "js/sidebar.js" }}
-    {{ $js := slice $sidebar | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
-    <script type="module" async custom-element="sidebar" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
+    {{ $js := slice $sidebar | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
+    <script integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
 
     <!-- Script for publisher using Google Adsense -->
     {{ if .Site.Params.adsensePublisher }}
@@ -31,5 +31,6 @@
     {{ partial "sidebar.html" . }}
     {{ block "main" . }}{{ end }}
     {{ partial "footer.html" . }}
+    <div class="sidebar-mask" id="sidebar-mask" hidden="" onclick="closeSidebar()"></div>
   </body>
 </html>

@@ -1,93 +1,79 @@
 sidebar {
-  --story-page-vh:1vh;
-  position:fixed!important;
-  top:0;
-  max-height:100vh!important;
-  height:100vh;
-  max-width:80vw;
-  min-width:45px!important;
-  outline:none;
-  overflow-x:hidden!important;
-  overflow-y:auto!important;
-  z-index:2147483647;
-  -webkit-overflow-scrolling:touch;
-  will-change:transform;
-}
-
-sidebar {
-  right:0!important;
-  transform:translateX(100%);
-  animation-name:sidebar-slide-out-right
+  position: fixed !important;
+  top: 0;
+  max-height: 100vh !important;
+  height: 100vh;
+  max-width: 80vw;
+  min-width: 45px !important;
+  outline: none;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  z-index: 2147483647;
+  will-change: transform;
+  right: 0 !important;
+  transform: translateX(100%);
+  animation-name: sidebar-slide-out-right;
 }
 
 sidebar[open] {
-  animation-name:sidebar-slide-in-right
-}
-
-sidebar[side][sidebar-opened] {
-  transform:none;
-  animation:none
+  animation-name: sidebar-slide-in-right;
 }
 
 .sidebar-mask,
-sidebar[side] {
-  animation-duration:233ms;
-  animation-timing-function:cubic-bezier(0,0,.21,1);
-  animation-fill-mode:forwards
+sidebar {
+  animation-duration: 233ms;
+  animation-timing-function: cubic-bezier(0,0,.21,1);
+  animation-fill-mode: forwards;
 }
 
 .sidebar-mask {
-  position:fixed!important;
-  top:0!important;
-  left:0!important;
-  width:100vw!important;
-  height:100vh!important;
-  background-image:none!important;
-  background-color:rgba(0,0,0,0.5);
-  animation-name:sidebar-mask-fade-out;
-  z-index:2147483646
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-image: none !important;
+  background-color: rgba(0,0,0,0.5);
+  animation-name: sidebar-mask-fade-out;
+  z-index: 2147483646;
 }
 
 .sidebar-mask[open] {
-  animation-name:sidebar-mask-fade-in
-}
-
-.sidebar-mask[sidebar-opened] {
-  animation:none
+  animation-name: sidebar-mask-fade-in;
 }
 
 @keyframes sidebar-slide-in-right {
   0% {
-    transform:translateX(100%)
+    transform: translateX(100%);
   }
   to {
-    transform:translateX(0)
+    transform: translateX(0);
   }
 }
 
 @keyframes sidebar-slide-out-right {
   0% {
-    transform:translateX(0)
+    transform: translateX(0);
   }
   to {
-    transform:translateX(100%)
+    transform: translateX(100%);
   }
 }
 
 @keyframes sidebar-mask-fade-in {
   0% {
-    opacity:0
+    opacity: 0;
   }
   to {
-    opacity:1
+    opacity: 1;
   }
 }
 
 @keyframes sidebar-mask-fade-out {
   0% {
-    opacity:1
+    opacity: 1;
   }
   to {
-    opacity:0
+    opacity: 0;
   }
 }

@@ -1,6 +1,6 @@
-<sidebar id="sidebar" class="sidebar" layout="nodisplay" close="">
+<sidebar id="sidebar" class="sidebar" layout="nodisplay">
   <ul class="sidebar-list">
-    <li class="sidebar-menu"><button class="sidebar-icon" on="tap:sidebar.close">X</button></li>
+    <li class="sidebar-menu"><button class="sidebar-icon" onclick="closeSidebar()">X</button></li>
     {{ $type := .Type }}
     {{ $kind := .Kind }}
     {{ $currentPage := . }}
