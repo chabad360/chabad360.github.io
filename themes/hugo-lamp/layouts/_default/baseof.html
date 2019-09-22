@@ -2,9 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <meta charset="utf-8" />
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    {{ $sidebar := resources.Get "js/sidebar.js" }}
+    {{ $js := slice $sidebar | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
+    <script type="module" async custom-element="sidebar" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
 
     <!-- Script for publisher using Google Adsense -->
     {{ if .Site.Params.adsensePublisher }}
