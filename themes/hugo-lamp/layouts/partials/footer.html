@@ -6,7 +6,7 @@
 {{ partial "adsense-sticky.html" . }}
 
 {{ if .Site.GoogleAnalytics }}
-  <script type=application/json>
+  <script>
     var galite = galite || {};
     galite.UA = {{ .Site.GoogleAnalytics }}'
   </script>
