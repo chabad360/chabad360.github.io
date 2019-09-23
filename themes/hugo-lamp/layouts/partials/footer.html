@@ -6,12 +6,8 @@
 {{ partial "adsense-sticky.html" . }}
 
 {{ if .Site.GoogleAnalytics }}
-<amp-analytics type=googleanalytics>
   <script type=application/json>
-    {
-      "vars": { "account": {{ .Site.GoogleAnalytics }} },
-      "triggers": { "trackPageview": { "on": "visible", "request": "pageview" } }
-    }
+    var galite = galite || {};
+    galite.UA = {{ .Site.GoogleAnalytics }}'
   </script>
-</amp-analytics>
 {{ end }}
