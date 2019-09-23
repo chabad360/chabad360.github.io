@@ -1,2 +1,5 @@
 <div id="commento"></div>
-<script src="https://cdn.commento.io/js/commento.js"></script>
+{{ $commento := resources.Get "js/commento.js" }}
+{{ $js := slice $commento | resources.Concat "js/commento.js" | resources.Minify | fingerprint }}
+<script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
+
