@@ -2,9 +2,8 @@ env:
   - HUGO=0.58.3
 
 install:
-  - wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO/hugo_extended_$HUGO_Linux-64bit.tar.gz"
-  - tar -zxf hugo_extended_$HUGO_Linux-64bit.tar.gz
-  - mv hugo /usr/bin
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v$HUGO/hugo_$HUGO_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.55.4_Linux-64bit.deb
   
 script:
   - hugo
