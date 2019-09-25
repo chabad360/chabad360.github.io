@@ -29,9 +29,9 @@
   <nav class="menu">
     <ul class="menu-list">
       {{ if isset .Site.Params "googlecseid" }}
-        <div class="search">
+        <li class="search menu-item" style="padding-top: 0.5rem;">
           {{ partial "cse" . }}
-        </div>
+        </li>
       {{ end }}
       {{ $type := .Type }}
       {{ $kind := .Kind }}
