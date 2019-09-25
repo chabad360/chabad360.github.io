@@ -21,7 +21,7 @@ a {
   }
 }
 
-amp-img {
+img {
   margin: 0 auto;
   box-shadow: 2px 20px 40px 10px $box-shadow-dark;
 }
@@ -31,14 +31,14 @@ button:hover {
 }
 
 .main {
-  margin-left: 20rem;
+  margin-left: 18rem;
   padding: 1rem 2rem;
   max-width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
 
   @media screen and (max-width: $widescreen) {
-    width: calc(100% - 20rem);
+    width: calc(100% - 18rem);
   }
 
   @media (min-width: $tablet) and (max-width: $desktop) {
@@ -60,7 +60,7 @@ button:hover {
 
 .footer {
   display: block;
-  padding: 1rem 1rem 1rem 21rem;
+  padding: 1rem 1rem 1rem 18rem;
   font-size: $size-7;
   text-align: center;
   font-family: $family-monospace;
