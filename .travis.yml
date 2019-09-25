@@ -1,0 +1,19 @@
+env:
+  HUGO:0.58.3
+
+install:
+  - wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO/hugo_extended_$HUGO_Linux-64bit.tar.gz"
+  - tar -zxf hugo_extended_$HUGO_Linux-64bit.tar.gz
+  - mv hugo /usr/bin
+  
+script:
+  - hugo
+  
+deploy:
+  provider: pages:git
+  token: $PAGES_TOKEN
+  repo: chabad360/chabad360.github.io
+  target_branch: master
+  fqdn: chabad360.me
+  verbose: true
+  edge: true # opt in to dpl v2
