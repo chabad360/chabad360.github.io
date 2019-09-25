@@ -1,9 +1,11 @@
 env:
-  - HUGO="0.58.3"
+  global:
+    - HUGO=0.58.3
 
 install:
-  - curl -LO "https://github.com/gohugoio/hugo/releases/download/v$HUGO/hugo_$HUGO_Linux-64bit.deb"
-  - sudo dpkg -i "hugo_$HUGO_Linux-64bit.deb"
+  - curl -LO "https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_${HUGO}_Linux-64bit.deb"
+  - sudo dpkg -i hugo*.deb
+  - hugo version
   
 script:
   - hugo
