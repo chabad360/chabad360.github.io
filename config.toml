@@ -19,7 +19,7 @@ pygmentsCodeFences=true
   subtitle = "(aka chabad360)"
   author = "Mendel Greenberg"
   logo = "/img/avatar.jpg"
-#  description = "A light responsive Hugo AMP-ish theme for blogger"
+  description = "Different things I've done, tried, or found interesting enough to blog about."
   paginate = 10
 
   # SEO configs
