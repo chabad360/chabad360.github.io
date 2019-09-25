@@ -2,11 +2,6 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <meta charset="utf-8" />
-    {{ $sidebar := resources.Get "js/sidebar.js" }}
-    {{ $galite := resources.Get "js/ga-lite.min.js" }}
-    {{ $js := slice $sidebar $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
-    <script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
-
     <!-- Script for publisher using Google Adsense -->
     {{ if .Site.Params.adsensePublisher }}
       <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
