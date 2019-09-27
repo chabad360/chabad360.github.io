@@ -65,8 +65,8 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 
 {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed") }}
-{{ $styles := resources.Get "scss/main.scss" | resources.ToCSS $options | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity}}" />
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
 
 {{ $galite := resources.Get "js/ga-lite.min.js" }}
 {{ $js := slice $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
