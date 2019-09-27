@@ -1,6 +1,3 @@
 source 'https://rubygems.org'
-gem 'dpl'
-gem 'octokit'
-gem 'public_suffix'
 gem 'sitemap-parser'
 gem 'http'
