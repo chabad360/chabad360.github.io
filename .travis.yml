@@ -20,9 +20,9 @@ deploy:
   target_branch: "master"
   fqdn: "chabad360.me"
   verbose: true
-  cleanup: flase
+  cleanup: false
   local_dir: "public"
-  edge: ture
+  edge: true
 
 after_deploy:
   - ruby purge_cache.rb
