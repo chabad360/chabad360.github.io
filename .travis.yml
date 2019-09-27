@@ -1,3 +1,12 @@
+language: ruby
+cache: bundler
+rvm:
+  - dpl
+  - octokit
+  - public_suffix
+  - sitemap-parser
+  - http
+
 env:
   global:
     - HUGO=0.58.3
@@ -22,6 +31,4 @@ deploy:
   edge: true
 
 after_deploy:
-  - gem install http
-  - gem install sitemap-parser -v 0.2.1
   - ruby purge_cache.rb
