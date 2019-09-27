@@ -68,7 +68,9 @@
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
 
+<!-- Scripts -->
 {{ $galite := resources.Get "js/ga-lite.min.js" }}
 {{ $js := slice $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 <script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open",""),t.setAttribute("hidden","")}</script>
+<script type="text/javascript">Array.prototype.slice.call(document.getElementsByIDName("preload-img")).forEach(function(e){var a=new Image;a.src=e.dataset.src,a.onload=function(){e.idList.remove("preload-img"),e.src=e.dataset.src}});</script>

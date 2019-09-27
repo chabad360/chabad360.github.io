@@ -1,12 +1,14 @@
 <a href="{{ .Permalink }}" class="entry-link">
   <article class="entry-single">
     {{ if isset .Params "cover" }}
-      <amp-img alt="{{ .Title }}"
+      <img alt="{{ .Title }}"
         height="244"
+        id="preload-img"
         layout="fixed-height"
         class="entry-cover"
-        src="{{ .Params.cover }}">
-      </amp-img>
+        data-src="{{ .Params.cover }}"
+        src="{{ .Params.cover.Resize '300x' }}">
+      </img>
     {{ end }}
     <header class="entry-header">
       <h3 class="entry-title">{{ .Title }}</h3>
