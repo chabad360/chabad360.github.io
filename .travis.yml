@@ -15,15 +15,15 @@ script:
   - hugo
 
 deploy:
-  provider: pages:git
+  provider: pages
   token: $GITHUB_TOKEN
   repo: "chabad360/chabad360.github.io"
   target_branch: "master"
   fqdn: "chabad360.me"
   verbose: true
-  cleanup: false
+  skip_cleanup: true
   local_dir: "public"
-  edge: true
+  edge: false
 
 after_deploy:
   - ruby purge_cache.rb
