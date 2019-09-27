@@ -11,17 +11,15 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@master
-      # with:
-      #   submodules: true
 
     - name: Build and Push Hugo Site
       uses: chabad360/actions-hugo@master
       with:
         hugo-version: '0.58.3'
         args: --gc --minify
+      env:
         BRANCH: master
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: Purge Cloudflare Cache
       uses: jakejarvis/cloudflare-purge-action@master
