@@ -1,5 +1,0 @@
-<div id="commento"></div>
-{{ $commento := resources.Get "js/commento.js" }}
-{{ $js := slice $commento | resources.Concat "js/commento.js" | resources.Minify | fingerprint }}
-<script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
-
