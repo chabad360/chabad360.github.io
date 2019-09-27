@@ -9,27 +9,21 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout Repo
+      uses: actions/checkout@master
       # with:
       #   submodules: true
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2.2.1
+    - name: Build and Push Hugo Site
+      uses: chabad360/actions-hugo@master
       with:
         hugo-version: '0.58.3'
-        extended: true
+        args: --gc --minify
+        BRANCH: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
-    - name: Build
-      run: hugo --gc --minify --cleanDestinationDir
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.4.0
-      env:
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./public
-
-    - name: Purge cache
+    - name: Purge Cloudflare Cache
       uses: jakejarvis/cloudflare-purge-action@master
       env:
         CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
