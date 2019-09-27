@@ -6,7 +6,7 @@ env:
     - HUGO=0.58.3
 
 install:
-  - bundle install --jobs=3 --retry=3
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S bundle install --jobs=3 --retry=3
   - curl -LO "https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_extended_${HUGO}_Linux-64bit.deb"
   - sudo dpkg -i hugo*.deb
   - hugo version
