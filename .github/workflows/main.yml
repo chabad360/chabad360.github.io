@@ -19,6 +19,7 @@ jobs:
       uses: peaceiris/actions-hugo@v2.2.1
       with:
         hugo-version: '0.58.3'
+        extended: true
 
     - name: Build
       run: hugo --gc --minify --cleanDestinationDir
@@ -29,3 +30,10 @@ jobs:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./public
+
+    - name: Purge cache
+      uses: jakejarvis/cloudflare-purge-action@master
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+        CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
