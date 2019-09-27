@@ -1,7 +1,7 @@
 require 'sitemap-parser'
 require 'http'
 
-response =  HTTP.headers(
+response = HTTP.headers(
   "X-Auth-Email" => ENV.fetch("CLOUDFLARE_EMAIL"),
   "X-Auth-Key" => ENV.fetch("CLOUDFLARE_API_KEY"),
   "Content-Type" => "application/json"

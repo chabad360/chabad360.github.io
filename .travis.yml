@@ -22,4 +22,6 @@ deploy:
   edge: true
 
 after_deploy:
+  - gem install http
+  - gem install sitemap-parser -v 0.2.1
   - ruby purge_cache.rb
