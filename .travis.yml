@@ -1,11 +1,5 @@
 language: ruby
 cache: bundler
-rvm:
-  - dpl
-  - octokit
-  - public_suffix
-  - sitemap-parser
-  - http
 
 env:
   global:
