@@ -1,5 +1,5 @@
-dpl
-octokit
-public_suffix
-sitemap-parser
-http
+gem 'dpl'
+gem 'octokit'
+gem 'public_suffix'
+gem 'sitemap-parser'
+gem 'http'
