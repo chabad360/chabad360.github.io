@@ -15,9 +15,9 @@ jobs:
     - name: Build and Push Hugo Site
       uses: chabad360/actions-hugo@master
       with:
-        hugo-version: '0.58.3'
         args: --gc --minify
       env:
+        hugo-version: '0.58.3'
         BRANCH: master
         GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
