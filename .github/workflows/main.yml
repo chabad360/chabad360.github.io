@@ -18,6 +18,7 @@ jobs:
         args: --gc --minify
       env:
         BRANCH: master
+        CNAME: chabad360.me
         GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: Purge Cloudflare Cache
