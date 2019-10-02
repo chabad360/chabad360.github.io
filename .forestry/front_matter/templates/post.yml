@@ -36,3 +36,5 @@ fields:
     required: false
   label: Project
   description: The project code name.
+pages:
+- content/post/running-a-blog-for-free.md
