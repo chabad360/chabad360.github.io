@@ -1,59 +1,36 @@
-baseURL = "https://chabad360.me/"
-languageCode = "en-us"
-title = "Mendel Greenberg"
-theme = "hugo-lamp"
-
-enableRobotsTXT = true
-
 DefaultContentLanguage = "en"
-
+baseURL = "https://chabad360.me/"
+enableRobotsTXT = true
 googleAnalytics = "UA-147634698-1"
-
-# Code highlighting
-pygmentsUseClasses=true
-linenos=true
-pygmentsCodeFences=true
-
+languageCode = "en-us"
+linenos = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+theme = "hugo-lamp"
+title = "Mendel Greenberg"
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 3
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/project/"
+weight = 2
 [params]
-  mainSections = ["posts"]
-  subtitle = "(aka chabad360)"
-  author = "Mendel Greenberg"
-  logo = "/img/avatar.jpg"
-  description = "Different things I've done, tried, or found interesting enough to blog about."
-  paginate = 10
-
-  # SEO configs
-  seotitle = "Mendel Greenberg (aka chabad360)"
-
-  # Page configs
-  showComments = true
-
-  # Search configs
-  googleCseId = "006958833182019350199:fiwtwuvmck8"
-
-  # Social networks
-  email = "mendel@chabad360.me"
-  github = "chabad360"
-  reddit = "chabad360"
-
+author = "Mendel Greenberg"
+description = "Different things I've done, tried, or found interesting enough to blog about."
+email = "mendel@chabad360.me"
+github = "chabad360"
+googleCseId = "006958833182019350199:fiwtwuvmck8"
+logo = "/img/avatar.jpg"
+mainSections = ["posts"]
+paginate = 10
+reddit = "chabad360"
+seotitle = "Mendel Greenberg (aka chabad360)"
+showComments = true
+subtitle = "(aka chabad360)"
 [taxonomies]
-  tag = "tags"
-  category = "categories"
-
-[[menu.main]]
-  name = "About Me"
-  weight = 1
-  identifier = "about-me"
-  url = "/page/about-me"
-
-[[menu.main]]
-  name = "Projects"
-  weight = 2
-  identifier = "projects"
-  url = "/project/"
-
-[[menu.main]]
-  name = "Tags"
-  weight = 3
-  identifier = "tags"
-  url = "/tags/"
+category = "categories"
+tag = "tags"

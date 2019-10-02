@@ -1,12 +1,14 @@
 ---
-title: "About Me"
-author: "Mendel Greenberg"
-date: 2019-09-13T21:22:25Z
+title: About Me
+author: Mendel Greenberg
+date: 2019-09-13T21:22:25.000+00:00
 notoc: true
+menu:
+  main:
+    weight: 1
+    identifier: about-me
 
-draft: false
 ---
-
 Hi my name is Mendel Greenberg ([chabad360](https://github.com/chabad360)), I'm into software enginering,
 DevOps, VFX (IKR), and a bunch of other random tech related things.
 
