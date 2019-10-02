@@ -42,3 +42,5 @@ fields:
       file: 
       path: 
   label: Project
+pages:
+- content/post/tests.md
