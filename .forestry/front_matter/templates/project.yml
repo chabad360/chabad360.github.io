@@ -19,4 +19,5 @@ fields:
   label: Date
   config:
     required: true
+    export_format: YYYY-MM-DDThh:mm:ssZZ
   default: now
