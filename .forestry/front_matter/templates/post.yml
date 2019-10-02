@@ -46,3 +46,5 @@ fields:
       required: false
     label: Project
   label: Other
+pages:
+- content/post/tesy.md
