@@ -30,26 +30,17 @@ fields:
   label: Author
   hidden: true
   default: Mendel Greenberg
-- name: other
-  type: field_group
-  config: {}
-  fields:
-  - name: categories
-    type: tag_list
-    default: []
-    label: Categories
-  - name: project
-    type: select
-    default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: pages
-        section: project
-        file: content/project/Test.md
-        path: 
-    label: Project
-  label: Other
+- name: project
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: project
+      file: 
+      path: 
+  label: Project
 pages:
 - content/post/test.md
