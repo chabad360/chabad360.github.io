@@ -13,6 +13,10 @@ name = "Posts"
 url = "/post/"
 weight = 1
 [[menu.main]]
+name = "About Me"
+url = "/page/about-me"
+weight = 2
+[[menu.main]]
 identifier = "projects"
 name = "Projects"
 url = "/project/"
