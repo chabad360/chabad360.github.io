@@ -31,16 +31,9 @@ fields:
   hidden: true
   default: Mendel Greenberg
 - name: project
-  type: select
-  default: []
+  type: text
   config:
     required: false
-    options: []
-    source:
-      type: pages
-      section: project
-      file: 
-      path: 
   label: Project
 pages:
 - content/post/tests.md
