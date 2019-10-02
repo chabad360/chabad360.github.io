@@ -7,11 +7,24 @@ fields:
   label: Title
   config:
     required: true
-- type: text
-  name: author
-  label: Author
-  hidden: true
-  default: Mendel Greenberg
+- name: cover
+  type: file
+  config:
+    maxSize: 250
+  label: Cover Image
+- name: project
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: project
+      file: 
+      path: 
+  label: Project
+  description: The project this post is part of (if applicable)
 - type: list
   name: tags
   label: Tags
@@ -28,8 +41,8 @@ fields:
     export_format: YYYY-MM-DDThh:mm:ssZZ
     required: true
   default: now
-- name: cover
-  type: file
-  config:
-    maxSize: 250
-  label: Cover Image
+- type: text
+  name: author
+  label: Author
+  hidden: true
+  default: Mendel Greenberg
