@@ -25,9 +25,6 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  preview_env:
-  - HUGO_ENV=staging
-  - HUGO_VERSION=0.58.3
   preview_output_directory: public
   preview_docker_image: registry.gitlab.com/pages/hugo/hugo_extended:latest
   mount_path: "/srv"
