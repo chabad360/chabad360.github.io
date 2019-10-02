@@ -15,5 +15,3 @@ fields:
     required: true
     export_format: YYYY-MM-DDThh:mm:ssZZ
   default: now
-pages:
-- content/project/test.md
