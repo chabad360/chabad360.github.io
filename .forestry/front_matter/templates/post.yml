@@ -4,16 +4,32 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: text
   name: author
-  label: author
+  label: Author
+  hidden: true
+  default: Mendel Greenberg
 - type: list
   name: tags
-  label: tags
+  label: Tags
+  config:
+    use_select: false
+    min: '1'
 - type: list
   name: catagories
-  label: catagories
+  label: Catagories
 - type: datetime
   name: date
-  label: date
+  label: Date
+  config:
+    export_format: YYYY-MM-DDThh:mm:ssZZ
+    required: true
+  default: now
+- name: cover
+  type: file
+  config:
+    maxSize: 250
+  label: Cover Image
