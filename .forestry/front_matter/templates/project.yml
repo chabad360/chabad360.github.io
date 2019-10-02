@@ -12,7 +12,7 @@ fields:
   name: project
   label: Project Name
   config:
-    required: true
+    required: false
   description: "(Can be same a Title)"
 - type: datetime
   name: date
