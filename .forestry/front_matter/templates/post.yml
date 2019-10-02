@@ -12,19 +12,6 @@ fields:
   config:
     maxSize: 250
   label: Cover Image
-- name: project
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: pages
-      section: project
-      file: 
-      path: 
-  label: Project
-  description: The project this post is part of (if applicable)
 - type: list
   name: tags
   label: Tags
@@ -43,17 +30,26 @@ fields:
   label: Author
   hidden: true
   default: Mendel Greenberg
-- name: test
+- name: other
   type: field_group
   config: {}
   fields:
-  - name: tests
+  - name: categories
     type: tag_list
     default: []
-    label: tests
-  label: Test
-- type: list
-  name: categories
-  label: Categories
+    label: Categories
+  - name: project
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: project
+        file: 
+        path: 
+    label: Project
+  label: Other
 pages:
 - content/post/test.md
