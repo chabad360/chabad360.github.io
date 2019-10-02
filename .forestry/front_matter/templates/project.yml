@@ -21,5 +21,3 @@ fields:
     required: true
   label: Project Code Name
   description: An easy to write name to reference this project by.
-pages:
-- content/project/test.md
