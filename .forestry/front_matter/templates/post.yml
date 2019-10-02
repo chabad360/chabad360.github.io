@@ -7,6 +7,12 @@ fields:
   label: Title
   config:
     required: true
+- name: summary
+  type: text
+  config:
+    required: false
+  label: Summary
+  description: A summary/subtitle to display.
 - name: cover
   type: file
   config:
