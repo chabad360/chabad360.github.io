@@ -1,7 +1,7 @@
 ---
 author: Mendel Greenberg
 cover: ''
-date: 2019-10-01T12:00:00PM
+date: 2019-10-02T6:00:00
 project: Test
 tags:
 - test
