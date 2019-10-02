@@ -22,7 +22,7 @@ fields:
   name: date
   label: Date
   config:
-    export_format: YYYY-MM-DDThh:mm:ssZZ
+    export_format: YYYY-MM-DDTh:mm:ssA
     required: true
   default: now
 - type: text
@@ -47,7 +47,7 @@ fields:
       source:
         type: pages
         section: project
-        file: 
+        file: content/project/Test.md
         path: 
     label: Project
   label: Other
