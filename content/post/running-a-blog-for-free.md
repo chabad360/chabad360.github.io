@@ -5,7 +5,7 @@ date = "2019-10-02T1:14:27"
 draft = true
 project = ""
 tags = ["Setup", "Blog"]
-title = "Running a blog for free"
+title = "Running a blog for free!"
 
 +++
 # Free!?
