@@ -30,21 +30,11 @@ fields:
   label: Author
   hidden: true
   default: Mendel Greenberg
-- name: projects
+- name: project
   type: text
   config:
     required: false
   label: Project
   description: The project code name.
-- name: other
-  type: field_group
-  config: {}
-  fields:
-  - name: project
-    type: text
-    config:
-      required: false
-    label: Project
-  label: Other
 pages:
 - content/post/tesy.md
