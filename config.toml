@@ -10,7 +10,7 @@ theme = "hugo-lamp"
 title = "Mendel Greenberg"
 [[menu.main]]
 name = "Posts"
-url = "/post/"
+url = "/"
 weight = 1
 [[menu.main]]
 name = "About Me"

@@ -3,10 +3,6 @@ title: About Me
 author: Mendel Greenberg
 date: 2019-09-13T21:22:25.000+00:00
 notoc: true
-menu:
-  main:
-    weight: 2
-    identifier: about-me
 
 ---
 Hi my name is Mendel Greenberg ([chabad360](https://github.com/chabad360)), I'm into software enginering,
