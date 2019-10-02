@@ -31,9 +31,6 @@ fields:
   config:
     use_select: false
     min: '1'
-- type: list
-  name: catagories
-  label: Catagories
 - type: datetime
   name: date
   label: Date
@@ -46,3 +43,15 @@ fields:
   label: Author
   hidden: true
   default: Mendel Greenberg
+- name: test
+  type: field_group
+  config: {}
+  fields:
+  - name: tests
+    type: tag_list
+    default: []
+    label: tests
+  label: Test
+- type: list
+  name: categories
+  label: Categories
