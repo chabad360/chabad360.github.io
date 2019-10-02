@@ -22,7 +22,7 @@ fields:
   name: date
   label: Date
   config:
-    export_format: YYYY-MM-DDTh:mm:ssA
+    export_format: YYYY-MM-DDTh:mm:ss
     required: true
   default: now
 - type: text
