@@ -1,8 +1,8 @@
 ---
-cover = ""
-date = "2019-10-02T11:20:13-0700"
-draft = true
-title = "Test"
+cover: ""
+date: "2019-10-02T11:20:13-0700"
+draft: true
+title: "Test"
 
 ---
 
