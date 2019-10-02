@@ -4,16 +4,19 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: file
   name: cover
-  label: cover
+  label: Cover Image
 - type: text
   name: project
-  label: project
+  label: Project Name
+  config:
+    required: true
+  description: "(Can be same a Title)"
 - type: datetime
   name: date
-  label: date
-- type: boolean
-  name: notoc
-  label: notoc
+  label: Date
+  config:
+    required: true
+  default: now
