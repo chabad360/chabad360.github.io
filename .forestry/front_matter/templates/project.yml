@@ -1,0 +1,19 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: cover
+  label: cover
+- type: text
+  name: project
+  label: project
+- type: datetime
+  name: date
+  label: date
+- type: boolean
+  name: notoc
+  label: notoc
