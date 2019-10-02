@@ -8,12 +8,6 @@ fields:
 - type: file
   name: cover
   label: Cover Image
-- type: text
-  name: project
-  label: Project Name
-  config:
-    required: false
-  description: "(Can be same a Title)"
 - type: datetime
   name: date
   label: Date
