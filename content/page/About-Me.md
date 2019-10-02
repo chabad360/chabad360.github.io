@@ -5,7 +5,7 @@ date: 2019-09-13T21:22:25.000+00:00
 notoc: true
 menu:
   main:
-    weight: 1
+    weight: 2
     identifier: about-me
 
 ---

@@ -9,15 +9,19 @@ pygmentsUseClasses = true
 theme = "hugo-lamp"
 title = "Mendel Greenberg"
 [[menu.main]]
-identifier = "tags"
-name = "Tags"
-url = "/tags/"
-weight = 3
+name = "Posts"
+url = "/post/"
+weight = 1
 [[menu.main]]
 identifier = "projects"
 name = "Projects"
 url = "/project/"
-weight = 2
+weight = 3
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 4
 [params]
 author = "Mendel Greenberg"
 description = "Different things I've done, tried, or found interesting enough to blog about."
