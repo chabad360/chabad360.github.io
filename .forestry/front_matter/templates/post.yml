@@ -36,5 +36,3 @@ fields:
     required: false
   label: Project
   description: The project code name.
-pages:
-- content/post/tesy.md
