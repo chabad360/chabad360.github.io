@@ -4,7 +4,7 @@ cover = ""
 date = "2019-10-01T11:34:29-0700"
 draft = true
 tags = ["test"]
-title = "Test"
+title = "Tests"
 [other]
 categories = []
 project = "project/Test.md"
