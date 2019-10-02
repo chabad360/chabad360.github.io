@@ -15,5 +15,11 @@ fields:
     required: true
     export_format: YYYY-MM-DDThh:mm:ss
   default: now
+- name: project
+  type: text
+  config:
+    required: true
+  label: Project Code Name
+  description: An easy to write name to reference this project by.
 pages:
 - content/project/test.md
