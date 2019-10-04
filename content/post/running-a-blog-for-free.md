@@ -9,15 +9,15 @@ tags = ["Setup", "Blog"]
 title = "Running a blog for free!"
 
 +++
-# Free!?
+### Free!?
 
-Um, yes, for the most part...
+Um, yes, to "Run" it.
 
-#### Liar!
+##### To "Run" it?
 
-Well, the only thing you actually pay for is the domain name (unless you want to use [commento](https://commento.io) instead of [disqus](https://disqus.com), but I'll get to that later).
+Well, the only thing you actually pay for is the domain name, and thats only a (usually) small and yearly fee.
 
-Now that I've got your attention, let's get on with the process.
+But now that I've got your attention, let's get on with the process.
 
 ### Setup
 
@@ -31,7 +31,7 @@ Next you'll need an account with [GitHub](https://github.com) and you'll want to
 
 #### 3. Get a Domain
 
-You'll need to have a domain, you can get one at a great price from [Namecheap](https://namecheap.com). Finally, you'll also want an account with [Cloudflare](https://cloudflare.com), now would be a good time to setup your site with cloudflare too.
+You'll need to have a domain, you can get one at a great price from [Namecheap](https://namecheap.com). Finally, you'll also want an account with [Cloudflare](https://cloudflare.com), now would be a good time to setup your site with cloudflare (hopfully the process is pretty self-explanatory) too.
 
 ### Let's setup our site!
 
@@ -51,7 +51,7 @@ adding `gitpod.io/#` to the begining of the URL, and hit <kbd>Enter</kbd>. You'l
 
 ![The Gitpod Theia Interface](/uploads/terminal.png)
 
-Now you'll want to click your mouse on big box on the bottom, thats a terminal! 
+Now you'll want to click your mouse on big box on the bottom, thats a terminal!
 In this terminal, copy and paste the following, then hit <kbd>Enter</kbd>:
 
 ```bash
@@ -73,8 +73,93 @@ Perfect! Your site is now done!
 .
 .
 
-##### Not Really... 
+##### Not Really...
 
 Now you've got to add a theme!
 
-First, start of by picking one of the many [Hugo Themes Available](https://themes.gohugo.io/) (and while your at it I would suggest looking for one that has a `Resposive` tag, they will load fast and look great on mobile). Once you've setteled on the on you like, click on the download button, it will take you to the github page for that theme. For this example, I'm gonna be using the 
+First, start of by picking one of the many [Hugo Themes Available](https://themes.gohugo.io/) (and while your at it I would suggest looking for one that has a `Resposive` tag, they will load fast and look great on mobile). Once you've setteled on the on you like, click on the download button, it will take you to the github page for that theme. For this example, I'm gonna be using the [Raphael Riegger's Minimalistic Ghost theme](https://github.com/digitalcraftsman/hugo-minimalist-theme) which was ported to Hugo.
+
+Now you need to install your theme, to do that run:
+
+```bash
+git submodule add <the URL for your theme> themes/<theme-name>
+```
+
+In my case that would surmount to:
+
+```bash
+git submodule add https://github.com/digitalcraftsman/hugo-minimalist-theme themes/minimalist
+```
+
+Now we need to configure our site, so right click on the File Explorer bar on the left of your screen, and click New File in the menu that comes up, and when prompted name the file `config.toml`.
+In the center of your screen, where the editor window just opened paste the following:
+
+```toml
+title = "<Your Name, or some other title for your site>"
+DefaultContentLanguage = "en"
+baseURL = "<The full URL your site will be reachable at>"
+theme = "<The theme name>"
+```
+
+For me, that would look like:
+
+```toml
+title = "Mendel Greenberg"
+DefaultContentLanguage = "en"
+baseURL = "https://chabad360.me/"
+theme = "minimalist"
+```
+
+Now you'll want to commit that. So click on the Icon that looks like this:
+
+![](/uploads/vcs.png)
+
+And where it says message, type `First commit`. Mouse-over the the word `Changes` and click on the plus icon when it shows up.
+Next, press the check button to commit. But you still need to push your changes. So click on the blue footer bar where you see a little _"Upload to the cloud"_ icon. You'll now be prompted about publishing your changes, click ok.
+
+Your site is almost live!
+
+Now you need to navigate your repositories homepage on github (i.e. `https://github.com/username/username.github.io`) and click on where it says "Actions":
+
+![](/uploads/actions.png)
+
+Then press <kbd>Set up a workflow yourself</kbd>.
+
+Replace all the text in the text editor with this:
+
+```yaml
+
+name: Hugo Build
+
+on:
+  push:
+    branches:
+    - build
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@master
+      with:
+        submodules: true
+        
+    - name: Publish Site
+      uses: chabad360/hugo-gh-pages@master
+      with:
+        args: --gc --minify --cleanDestinationDir
+      env:
+        BRANCH: master
+        CNAME: <Your site name>
+        GITHUB_TOKEN: ${{'{{ secrets.PERSONAL_TOKEN }}'}}
+
+    - name: Purge Cloudflare Cache
+      uses: jakejarvis/cloudflare-purge-action@master
+      env:
+        CLOUDFLARE_ZONE: ${{'{{ secrets.CLOUDFLARE_ZONE }}'}}
+        CLOUDFLARE_EMAIL: ${{'{{ secrets.CLOUDFLARE_EMAIL }}'}}
+        CLOUDFLARE_KEY: ${{'{{ secrets.CLOUDFLARE_KEY }}'}}
+        
+```
