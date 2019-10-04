@@ -8,6 +8,7 @@
   box-sizing: border-box;
   text-align: center;
   background-color: $sidebar-background;
+  box-shadow: 5px 0px 20px 1px $box-shadow-dark;
 
   @media screen and (max-width: $tablet) {
     width: 100%;

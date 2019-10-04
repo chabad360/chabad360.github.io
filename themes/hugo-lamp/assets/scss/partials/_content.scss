@@ -160,13 +160,7 @@
     color: $text;
 
     code {
-      font-size: 0.9rem;
       background-color: transparent;
-
-      &::before,
-      &::after {
-        content: none;
-      }
     }
   }
 
