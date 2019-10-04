@@ -13,7 +13,7 @@ title = "Running a blog for free!"
 
 Um, yes, to "Run" it.
 
-##### To "Run" it?
+#### To "Run" it?
 
 Well, the only thing you actually pay for is the domain name, and thats only a (usually) small and yearly fee.
 
@@ -49,7 +49,7 @@ to
 
 adding `gitpod.io/#` to the begining of the URL, and hit <kbd>Enter</kbd>. You'll be asked to sign in with GitHub, go ahead and do that. Now you'll just have to wait a min for Gitpod to startup and then you'll be greeted by a nice code editor!
 
-![The Gitpod Theia Interface](/uploads/terminal.png)
+<img src="/uploads/terminal.png" width="100%"></img>
 
 Now you'll want to click your mouse on big box on the bottom, thats a terminal!
 In this terminal, copy and paste the following, then hit <kbd>Enter</kbd>:
@@ -73,7 +73,7 @@ Perfect! Your site is now done!
 .
 .
 
-##### Not Really...
+#### Not Really...
 
 Now you've got to add a theme!
 
@@ -110,9 +110,7 @@ baseURL = "https://chabad360.me/"
 theme = "minimalist"
 ```
 
-Now you'll want to commit that. So click on the Icon that looks like this:
-
-![](/uploads/vcs.png)
+Now you'll want to commit that. So click on this Icon: &nbsp;&nbsp;&nbsp;&nbsp; ![](/uploads/vcs.png)
 
 And where it says message, type `First commit`. Mouse-over the the word `Changes` and click on the plus icon when it shows up.
 Next, press the check button to commit. But you still need to push your changes. So click on the blue footer bar where you see a little _"Upload to the cloud"_ icon. You'll now be prompted about publishing your changes, click ok.
@@ -153,13 +151,15 @@ jobs:
       env:
         BRANCH: master
         CNAME: <Your site name>
-        GITHUB_TOKEN: ${{'{{ secrets.PERSONAL_TOKEN }}'}}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: Purge Cloudflare Cache
       uses: jakejarvis/cloudflare-purge-action@master
       env:
-        CLOUDFLARE_ZONE: ${{'{{ secrets.CLOUDFLARE_ZONE }}'}}
-        CLOUDFLARE_EMAIL: ${{'{{ secrets.CLOUDFLARE_EMAIL }}'}}
-        CLOUDFLARE_KEY: ${{'{{ secrets.CLOUDFLARE_KEY }}'}}
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+        CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
         
 ```
+
+Make sure to set the value for `CNAME` to that of your website (i.e. `chabad360.me`, no `https://` or that stuff.
