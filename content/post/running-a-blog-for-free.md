@@ -110,12 +110,14 @@ baseURL = "https://chabad360.me/"
 theme = "minimalist"
 ```
 
-Now you'll want to commit that. So click on this Icon: &nbsp;&nbsp;&nbsp;&nbsp; ![](/uploads/vcs.png)
+Now you'll want to commit that. So click on this Icon:      ![](/uploads/vcs.png)
 
 And where it says message, type `First commit`. Mouse-over the the word `Changes` and click on the plus icon when it shows up.
 Next, press the check button to commit. But you still need to push your changes. So click on the blue footer bar where you see a little _"Upload to the cloud"_ icon. You'll now be prompted about publishing your changes, click ok.
 
 Your site is almost live!
+
+### Publishing
 
 Now you need to navigate your repositories homepage on github (i.e. `https://github.com/username/username.github.io`) and click on where it says "Actions":
 
@@ -125,7 +127,7 @@ Then press <kbd>Set up a workflow yourself</kbd>.
 
 Replace all the text in the text editor with this:
 
-```yaml
+{{< highlight yml >}}
 
 name: Hugo Build
 
@@ -160,6 +162,8 @@ jobs:
         CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
         CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
         
-```
+{{</ highlight >}}
 
-Make sure to set the value for `CNAME` to that of your website (i.e. `chabad360.me`, no `https://` or that stuff.
+Make sure to set the value for `CNAME` to that of your website (i.e. just `chabad360.me`, no `https://` or that stuff).
+
+#### Secrets
