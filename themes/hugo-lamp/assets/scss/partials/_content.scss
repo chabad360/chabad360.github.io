@@ -124,12 +124,6 @@
     font-size: 0.9em;
     background-color: $pre-background;
     font-family: $family-monospace;
-
-    &::before,
-    &::after {
-      letter-spacing: -0.2em;
-      content: "\00a0";
-    }
   }
 
   kbd {
@@ -156,8 +150,6 @@
     white-space: pre;
     word-wrap: normal;
     word-break: normal;
-    background: $pre-background;
-    color: $text;
 
     code {
       background-color: transparent;
