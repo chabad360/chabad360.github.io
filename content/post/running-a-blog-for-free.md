@@ -41,11 +41,15 @@ Once your done with that, you'll need to clone that repository. To do that we ar
 
 To use GitPod, make sure the you have the repository open in your browser and change the URL from
 
-    https://github.com/username/username.github.io
+```
+https://github.com/username/username.github.io
+```
 
 to
 
-    gitpod.io/#https://github.com/username/username.github.io
+```
+gitpod.io/#https://github.com/username/username.github.io
+```
 
 adding `gitpod.io/#` to the begining of the URL, and hit <kbd>Enter</kbd>. You'll be asked to sign in with GitHub, go ahead and do that. Now you'll just have to wait a min for Gitpod to startup and then you'll be greeted by a nice code editor!
 
@@ -128,7 +132,6 @@ Then press <kbd>Set up a workflow yourself</kbd>.
 Replace all the text in the text editor with this:
 
 {{< highlight yml >}}
-
 name: Hugo Build
 
 on:
@@ -160,8 +163,7 @@ jobs:
       env:
         CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
         CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
-        CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
-        
+        CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}   
 {{</ highlight >}}
 
 Make sure to set the value for `CNAME` to that of your website (i.e. just `chabad360.me`, no `https://` or that stuff).
