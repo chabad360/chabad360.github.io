@@ -152,7 +152,7 @@ jobs:
         args: --gc --minify --cleanDestinationDir
       env:
         BRANCH: master
-        CNAME: <Your site name>
+        CNAME: "<Your site name>"
         GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: Purge Cloudflare Cache
@@ -163,6 +163,6 @@ jobs:
         CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
 ```
 
-Make sure to set the value for `CNAME` to that of your website (i.e. just `chabad360.me`, no `https://` or that stuff).
+Make sure to set the value of `CNAME` to that of your website (i.e. just `chabad360.me`, no `https://` or that stuff).
 
 #### Secrets
