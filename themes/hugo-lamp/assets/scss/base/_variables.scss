@@ -11,24 +11,25 @@ $blue: #3f9adc;
 /* Theme colors */
 $primary: $dark-blue;
 $light: darken($white, 5%);
-$pre-background: $grey-light;
+$dark: lighten($black, 5%);
+$pre-background: $grey-dark;
 
 /* Layout */
-$main-background: darken($white, 5%);
+$main-background: lighten($dark, 10%);
 $sidebar-background: rgba($primary, 0.9);
 
 /* Text colors */
-$text: $grey;
-$text-title: lighten($black, 15%);
+$text: $grey-light;
+$text-title: darken($white, 15%);
 $text-invert: findcolorinvert($text);
-$text-light: $grey;
-$text-strong: $grey-dark;
-$text-content-title: $dark-blue-light;
+$text-light: $grey-light;
+$text-strong: $grey-light;
+$text-content-title: $grey-light;
 $text-link: $blue;
 
 /* Border colors */
-$border-color: $grey-light;
-$border-hover: $grey-light;
+$border-color: $grey-dark;
+$border-hover: $grey-dark;
 
 /* Box shadow colors */
 $box-shadow: rgba($black, 0.05);
@@ -37,8 +38,8 @@ $box-shadow-darker: rgba($black, 0.3);
 
 /* Typography */
 $base-font-size: 18px;
-$family-sans-serif: "Roboto",sans-serif;
-$family-monospace: "Roboto Mono",Menlo,Monaco,Consolas,"Courier New",monospace;
+$family-sans-serif: "Roboto", sans-serif;
+$family-monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
 $family-roboto: $family-sans-serif;
 $size-1: 3rem;
 $size-2: 2.5rem;

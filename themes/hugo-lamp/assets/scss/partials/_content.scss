@@ -117,9 +117,8 @@
 
   tt,
   code {
-    padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.2em;
+    border-radius: $radius;
     margin: 0;
     font-size: 0.9em;
     background-color: $pre-background;
@@ -129,7 +128,7 @@
   kbd {
     display: inline-block;
     padding: 0.25em;
-    background-color: $light;
+    background-color: $dark;
     border: 1px solid $border-color;
     border-bottom-color: $border-color;
     border-radius: $radius;
@@ -141,10 +140,7 @@
   }
 
   pre {
-    margin: 2rem auto;
-    padding: 1rem;
-    overflow-x: auto;
-    border-radius: $radius;
+    margin: 0em;
     font-size: 0.9rem;
     line-height: 1.618;
     white-space: pre;

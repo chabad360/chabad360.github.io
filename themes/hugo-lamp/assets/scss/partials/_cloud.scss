@@ -10,11 +10,11 @@
     margin: 0 0.5rem 0 0;
     border-radius: $radius;
     padding: $space-small/2 $space-small;
-    background: $white;
-    box-shadow: 0 0 2px 0 rgba(137, 146, 177, 0.15), 0px 3px 10px 0 rgba(137, 146, 177, 0.1);
+    background: $dark;
     font-size: $size-7;
 
     &:hover {
+      background: $grey-dark;
       box-shadow: 0px 1px 15px 0 rgba(137, 146, 177, 0.15), 0px 10px 20px 0 rgba(137, 146, 177, 0.15);
     }
   }

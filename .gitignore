@@ -5,6 +5,6 @@ npm-debug.log
 yarn-error.log
 node_modules
 !.gitignore
-
+.gitpod.yml
 public
 resources

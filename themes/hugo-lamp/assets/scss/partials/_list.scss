@@ -11,7 +11,7 @@
   &-single {
     line-height: 1.8;
     margin-bottom: 22px;
-    background-color: $white;
+    background-color: darken($grey-dark, 10%);
     box-shadow: 0 0 2px 0 rgba(137, 146, 177, 0.15), 0px 3px 10px 0 rgba(137, 146, 177, 0.1);
     border-radius: $radius-large;
 
@@ -33,7 +33,7 @@
   }
 
   &-link {
-    color: #444;
+    color: $grey;
     font-weight: $weight-normal
   }
 
@@ -60,7 +60,7 @@
   }
 
   &-time {
-    color: $grey-dark;
+    color: $grey-light;
 
     &:after {
       content: '';

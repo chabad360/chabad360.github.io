@@ -1,14 +1,13 @@
-+++
-author = "Mendel Greenberg"
-cover = ""
-date = "2019-10-02T1:14:27"
-draft = true
-project = ""
-summary = "Yes, you read correctly! But it takes some effort..."
-tags = ["Setup", "Blog"]
-title = "Running a blog for free!"
+---
+author: "Mendel Greenberg"
+date: "2019-10-02T1:14:27"
+draft: true
+summary: "Yes, you read correctly! But it takes some effort..."
+tags: ["Setup", "Blog"]
+title: "Running a blog for free!"
 
-+++
+---
+
 ### Free!?
 
 Um, yes, to "Run" it.
@@ -41,13 +40,13 @@ Once your done with that, you'll need to clone that repository. To do that we ar
 
 To use GitPod, make sure the you have the repository open in your browser and change the URL from
 
-```
+```text
 https://github.com/username/username.github.io
 ```
 
 to
 
-```
+```text
 gitpod.io/#https://github.com/username/username.github.io
 ```
 
@@ -59,11 +58,9 @@ Now you'll want to click your mouse on big box on the bottom, thats a terminal!
 In this terminal, copy and paste the following, then hit <kbd>Enter</kbd>:
 
 ```bash
-git branch site
-git checkout site
-cd ..
-wget https://github.com/gohugoio/hugo/releases/download/v0.58.3/hugo_extended_0.58.3_Linux-64bit.tar.gz
-tar zxf hugo*
+git branch site && git checkout site \
+  && cd .. && wget "https://github.com/gohugoio/hugo/releases/download/v0.58.3/hugo_extended_0.58.3_Linux-64bit.tar.gz" \
+  && tar zxf hugo*
 ```
 
 Great! Now you've installed Installed hugo!
@@ -71,7 +68,7 @@ Great! Now you've installed Installed hugo!
 The next thing to do, is run `hugo new site <your username here>.github.io` (remember, always hit <kbd>Enter</kbd>).
 The next step is to run `cd <your username here>.github.io`.
 
-Perfect! Your site is now done!  
+Perfect! Your site is now done!
 .
 .
 .
@@ -86,13 +83,13 @@ First, start of by picking one of the many [Hugo Themes Available](https://theme
 Now you need to install your theme, to do that run:
 
 ```bash
-git submodule add <the URL for your theme> themes/<theme-name>
+git submodule add "<the URL for your theme>" themes/<theme-name>
 ```
 
 In my case that would surmount to:
 
 ```bash
-git submodule add https://github.com/digitalcraftsman/hugo-minimalist-theme themes/minimalist
+git submodule add "https://github.com/digitalcraftsman/hugo-minimalist-theme" themes/minimalist
 ```
 
 Now we need to configure our site, so right click on the File Explorer bar on the left of your screen, and click New File in the menu that comes up, and when prompted name the file `config.toml`.
@@ -131,7 +128,7 @@ Then press <kbd>Set up a workflow yourself</kbd>.
 
 Replace all the text in the text editor with this:
 
-{{< highlight yml >}}
+```yaml
 name: Hugo Build
 
 on:
@@ -142,13 +139,13 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-18.04
-    
+
     steps:
     - name: Checkout Repo
       uses: actions/checkout@master
       with:
         submodules: true
-        
+
     - name: Publish Site
       uses: chabad360/hugo-gh-pages@master
       with:
@@ -163,8 +160,8 @@ jobs:
       env:
         CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
         CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
-        CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}   
-{{</ highlight >}}
+        CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
+```
 
 Make sure to set the value for `CNAME` to that of your website (i.e. just `chabad360.me`, no `https://` or that stuff).
 
