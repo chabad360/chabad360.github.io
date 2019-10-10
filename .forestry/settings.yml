@@ -25,13 +25,10 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  preview_env:
-  - HUGO_ENV=staging
-  - HUGO_VERSION=0.58.2
   preview_output_directory: public
-  preview_docker_image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+  preview_docker_image: chabad360/hugo
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: hugo server -D --port 8080 --bind 0.0.0.0 --disableFastRender
+  instant_preview_command: server -D --port 8080 --bind 0.0.0.0 --disableFastRender
     --ignoreCache
 version: 0.58.2
