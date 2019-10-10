@@ -1,6 +1,7 @@
 ---
 title: About Me
 author: Mendel Greenberg
+summary: Hi, My name is Mendel Greenberg, and welcome to my blog!
 date: 2019-09-13T21:22:25.000+00:00
 notoc: true
 
