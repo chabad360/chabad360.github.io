@@ -64,7 +64,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 
-{{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "sourceMap" "true") }}
+{{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
 
