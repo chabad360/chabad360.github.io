@@ -18,11 +18,9 @@ jobs:
     - name: Publish Site
       uses: chabad360/hugo-gh-pages@master
       with:
-        args: --gc --minify --cleanDestinationDir
-      env:
-        BRANCH: master
-        CNAME: chabad360.me
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        branch: master
+        cname: chabad360.me
+        githubToken: ${{ secrets.PERSONAL_TOKEN }}
 
     - name: Purge Cloudflare Cache
       uses: jakejarvis/cloudflare-purge-action@master
