@@ -66,7 +66,7 @@
 
 {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | fingerprint }}
-<link rel="stylesheet" crossorigin="anonymous" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+<link rel="stylesheet" crossorigin="anonymous" href="{{ $style.Permalink }}"></link>
 
 {{ $galite := resources.Get "js/ga-lite.min.js" }}
 {{ $js := slice $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}

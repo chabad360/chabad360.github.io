@@ -1,7 +1,7 @@
 <div id="commento"></div>
 {{ $options := (dict "targetPath" "commento.css" "outputStyle" "compressed") }}
 {{ $commento := resources.Get "scss/commento.scss" | resources.ToCSS $options | fingerprint }}
-<link rel="stylesheet" crossorigin="anonymous" href="{{ $commento.Permalink }}" integrity="{{ $commento.Data.Integrity }}" />
+<link rel="stylesheet" crossorigin="anonymous" href="{{ $commento.Permalink }}"></link>
 {{ $commento := resources.Get "js/commento.js" }}
 {{ $js := slice $commento | resources.Concat "js/commento.js" | resources.Minify | fingerprint }}
 <script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
