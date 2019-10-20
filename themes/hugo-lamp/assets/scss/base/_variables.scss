@@ -19,12 +19,12 @@ $main-background: lighten($dark, 10%);
 $sidebar-background: rgba($primary, 0.9);
 
 /* Text colors */
-$text: $grey-light;
-$text-title: darken($white, 15%);
+$text: $white;
+$text-title: $white;
 $text-invert: findcolorinvert($text);
-$text-light: $grey-light;
-$text-strong: $grey-light;
-$text-content-title: $grey-light;
+$text-light: $white;
+$text-strong: $white;
+$text-content-title: $white;
 $text-link: $blue;
 
 /* Border colors */

@@ -1,5 +1,7 @@
 // Style for list template
 .entry {
+  color: $text-title;
+
   &-list {
     background-color: $main-background;
 
@@ -21,6 +23,7 @@
   }
 
   &-cover {
+    color: $text-title;
     max-width: 100%;
     border-radius: $radius-large $radius-large 0 0;
     object-fit: cover;
@@ -28,6 +31,7 @@
   }
 
   &-title {
+    color: $text-title;
     margin: 0;
     padding: $space-normal $space-large 0;
   }
@@ -38,6 +42,7 @@
   }
 
   &-summary {
+    color: $text-title;
     padding: 0 $space-large;
     text-align: justify;
     max-height: 4rem;
@@ -45,6 +50,7 @@
   }
 
   &-footer {
+    color: $text-title;
     margin: 0 $space-large;
     padding: $space-small 0;
     border-top: 1px solid $border-color;
@@ -60,7 +66,7 @@
   }
 
   &-time {
-    color: $grey-light;
+    color: $text-title;
 
     &:after {
       content: '';

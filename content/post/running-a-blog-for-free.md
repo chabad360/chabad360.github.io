@@ -52,7 +52,7 @@ gitpod.io/#https://github.com/username/username.github.io
 
 adding `gitpod.io/#` to the begining of the URL, and hit <kbd>Enter</kbd>. You'll be asked to sign in with GitHub, go ahead and do that. Now you'll just have to wait a min for Gitpod to startup and then you'll be greeted by a nice code editor!
 
-<img src="/uploads/terminal.png" width="100%"></img>
+<img src="/uploads/terminal.png" alt="The Gitpod Theia IDE" width="100%"></img>
 
 Now you'll want to click your mouse on big box on the bottom, thats a terminal!
 In this terminal, copy and paste the following, then hit <kbd>Enter</kbd>:

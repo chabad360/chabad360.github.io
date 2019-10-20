@@ -5,6 +5,7 @@
   {{ $description := .Description | default .Summary }}
   <!-- Page Author & Description -->
   {{ partial "post-structured.html" . }}
+  <meta name="description" content="{{ .Site.Params.description }}" />
 
   <!-- Twitter Card -->
   {{ if isset .Params "cover" }}
@@ -62,13 +63,12 @@
 
 <!-- Styles -->
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 
 {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed") }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+<link rel="stylesheet" crossorigin="anonymous" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
 
 {{ $galite := resources.Get "js/ga-lite.min.js" }}
 {{ $js := slice $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
-<script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+<script type="text/javascript" crossorigin="anonymous" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 <script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open",""),t.setAttribute("hidden","")}</script>
