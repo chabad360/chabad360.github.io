@@ -21,6 +21,7 @@ jobs:
           branch: master
           cname: chabad360.me
           githubToken: ${{ secrets.PERSONAL_TOKEN }}
+          hugo: extended_0.58.3
 
       - name: Purge Cloudflare Cache
         uses: jakejarvis/cloudflare-purge-action@master
