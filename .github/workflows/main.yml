@@ -1,4 +1,4 @@
-name: Hugo Build
+name: Build Site
 
 on:
   push:
