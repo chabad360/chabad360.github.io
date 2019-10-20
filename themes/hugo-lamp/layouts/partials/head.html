@@ -68,7 +68,4 @@
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | fingerprint }}
 <link rel="stylesheet" crossorigin="anonymous" href="{{ $style.Permalink }}"></link>
 
-{{ $galite := resources.Get "js/ga-lite.min.js" }}
-{{ $js := slice $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
-<script type="text/javascript" crossorigin="anonymous" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 <script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open",""),t.setAttribute("hidden","")}</script>

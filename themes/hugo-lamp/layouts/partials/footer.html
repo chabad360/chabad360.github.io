@@ -6,6 +6,9 @@
 {{ partial "adsense-sticky.html" . }}
 
 {{ if .Site.GoogleAnalytics }}
+{{ $galite := resources.Get "js/ga-lite.min.js" }}
+{{ $js := slice $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
+<script type="text/javascript" crossorigin="anonymous" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   <script type="text/javascript">
     var galite = galite || {};
     galite.UA = {{ .Site.GoogleAnalytics }}
