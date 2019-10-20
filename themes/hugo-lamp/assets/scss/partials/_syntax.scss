@@ -1,15 +1,11 @@
 .highlighttable {
 	color: #d0d0d0;
-  overflow: hidden;
-  -moz-border-radius: $radius;
   border-radius: $radius;
-  background: transparent;
   box-shadow: 2px 20px 40px 10px $box-shadow-dark;
   width: 100%;
 
   :hover {
     background-color: #202020;
-    background: transparent;
   }
 
   .err {
@@ -31,7 +27,6 @@
   .linenos,
   .code {
     padding: 1rem 0.1rem 1rem 1rem;
-    background-color: #202020;
 		border-spacing: 0;
     border-collapse: separate;
 		margin: 0;
