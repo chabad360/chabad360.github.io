@@ -1,14 +1,9 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    <meta charset="utf-8" />
-    <!-- Script for publisher using Google Adsense -->
-    {{ if .Site.Params.adsensePublisher }}
-      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-      {{ if .Site.Params.adsenseSlotSticky }}
-        <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script>
-      {{ end }}
-    {{ end }}
+    <!-- Site & Page Meta Data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Page Title -->
     <title>
@@ -17,14 +12,55 @@
       {{- end -}}
     </title>
 
-    <!-- Shared Head -->
-    {{ partial "head.html" . }}
+    {{ $logo := "/img/avatar.jpg" }}
+
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/schema.html" . }}
+
+    <!-- Site Author & Description -->
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+
+    <!-- Hugo info -->
+    {{ hugo.Generator }}
+
+    <!-- Permalink & RSSlink -->
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="alternative" href="/index.xml" title="{{ .Site.Title }}" type="application/atom+xml">
+
+    <!-- SEO Prefs -->
+    <meta name="robots" content="index,follow" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+
+    <!-- Favicon and Touch icons -->
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ $logo }}">
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+    {{ $cssOpts := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
+    {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+
+    <!-- Scripts -->
+    <script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open",""),t.setAttribute("hidden","")}</script>
   </head>
   <body>
+
     {{ partial "header.html" . }}
+
     {{ partial "sidebar.html" . }}
+
     {{ block "main" . }}{{ end }}
+
     {{ partial "footer.html" . }}
-    <div class="sidebar-mask" id="sidebar-mask" hidden="" onclick="closeSidebar()"></div>
+
   </body>
 </html>
