@@ -4,8 +4,12 @@ author: Mendel Greenberg
 summary: Hi, My name is Mendel Greenberg, and welcome to my blog!
 date: 2019-09-13T21:22:25.000+00:00
 notoc: true
-
+identifier: about
+menu:
+  main:
+    weight: 2
 ---
+
 Hi my name is Mendel Greenberg ([chabad360](https://github.com/chabad360)), I'm into software enginering,
 DevOps, VFX (IKR), and a bunch of other random tech related things.
 

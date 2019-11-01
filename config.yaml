@@ -1,0 +1,69 @@
+baseURL: "https://chabad360.me/"
+enableRobotsTXT: true
+googleAnalytics: "UA-147634698-1"
+languageCode: "en-us"
+
+theme: "hugo-lamp"
+title: "Mendel Greenberg"
+
+# Pygments info
+pygmentsOptions: "linenos=table"
+pygmentsStyle: "native"
+pygmentsUseClassic: true
+pygmentsCodeFences: true
+pygmentsUseClasses: true
+pygmentsCodefencesGuessSyntax: true
+
+menu:
+  main:
+    - name: "Posts"
+      url: "/"
+      weight: 1
+
+    - identifier: "projects"
+      name: "Projects"
+      url: "/project/"
+      weight: 3
+
+    - identifier: "tags"
+      name: "Tags"
+      url: "/tags/"
+      weight: 4
+
+params:
+  author: "Mendel Greenberg"
+  description: "Different things I've done, tried, or found interesting enough to blog about."
+  email: "mendel@chabad360.me"
+  logo: "/img/avatar.jpg"
+  seotitle: "Mendel Greenberg (aka chabad360)"
+  subtitle: "(aka chabad360)"
+
+  search: true
+  mainSections: ["posts"]
+  paginate: 25
+  showComments: true
+
+  social:
+    - name: "Github"
+      icon: "fab fa-github"
+      weight: 1
+      url: "https://github.com/chabad360/"
+
+    - name: "Gitlab"
+      icon: "fab fa-gitlab"
+      weight: 2
+      url: "https://gitlab.com/chabad360/"
+
+    - name: "Reddit"
+      icon: "fab fa-reddit"
+      weight: 3
+      url: "https://reddit.com/u/chabad360/"
+
+    - name: "Email"
+      icon: "fab fa-envelope"
+      weight: 4
+      url: "mailto:mendel@chabad360.me"
+
+taxonomies:
+  category: "categories"
+  tag: "tags"

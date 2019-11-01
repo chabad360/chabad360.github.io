@@ -1,78 +1,17 @@
-<ul class="social-list">
-  {{ if isset .Site.Params "email" }}
-  <li class="social-item">
-    <a href="mailto:{{ .Site.Params.email }}" aria-label="Email" title="Email">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-email" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  {{ if isset .Site.Params "github" }}
-  <li class="social-item">
-    <a href="//github.com/{{ .Site.Params.github }}" aria-label="GitHub" title="GitHub">
-      <svg class="icon" fill="currentColor" ><use xlink:href="#icon-github" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  {{ if isset .Site.Params "twitter" }}
-  <li class="social-item">
-    <a href="//twitter.com/{{ .Site.Params.twitter }}" title="Twitter" aria-label="Twitter">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-twitter" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  {{ if isset .Site.Params "linkedin" }}
-  <li class="social-item">
-    <a href="//www.linkedin.com/in/{{ .Site.Params.linkedin }}" title="Linkedin" aria-label="Linkedin">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-linkedin" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  {{ if isset .Site.Params "facebook" }}
-  <li class="social-item">
-    <a href="//www.facebook.com/{{ .Site.Params.facebook }}" title="Facebook" aria-label="Facebook">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-facebook" /></svg>
-    </a>
-  </li>
-  {{ end }}
-  {{ if isset .Site.Params "instagram" }}
-  <li class="social-item">
-    <a href="//www.instagram.com/{{ .Site.Params.instagram }}" title="Instagram" aria-label="Facebook">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-instagram" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  {{ if isset .Site.Params "youtube" }}
-  <li class="social-item">
-    <a href="//www.youtube.com/user/{{ .Site.Params.youtube }}" title="YouTube" aria-label="Youtube">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-youtube" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  {{ if isset .Site.Params "dribbble" }}
-  <li class="social-item">
-    <a href="//dribbble.com/{{ .Site.Params.dribbble }}" title="Dribbble" aria-label="Dribble">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-dribbble" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  {{ if isset .Site.Params "reddit" }}
-  <li class="social-item">
-    <a href="//reddit.com/user/{{ .Site.Params.reddit }}" title="Reddit" aria-label="Reddit">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-reddit" /></svg>
-    </a>
-  </li>
-  {{ end }}
-
-  <li class="social-item">
-    <a href="/index.xml" title="RSS" aria-label="RSS">
-      <svg class="icon" fill="currentColor"><use xlink:href="#icon-rss" /></svg>
-    </a>
-  </li>
-</ul>
+{{ with .Site.Params.social }}
+  <ul class="social-list">
+    {{ range sort .}}
+      {{ if .icon }}
+        <li class="social-item">
+          <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+            <i class="{{ .icon }}" aria-hidden="true"></i>
+          </a>
+        </li>
+      {{ else }}
+        <li class="social-item">
+          <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ end }}

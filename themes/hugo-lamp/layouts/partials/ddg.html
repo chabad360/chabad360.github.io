@@ -1,0 +1,16 @@
+<form id="search-bar" method="GET" class="p2" action="https://duckduckgo.com/" target="_top">
+  <div class="inline-block relative mb3">
+    <input type="search" id="search" placeholder="Search with DDG" name="q" required aria-label="Search Query">
+    <input name="kz" type="hidden" value="-1" />
+    <input name="kae" type="hidden" value="d" />
+    <input name="kn" type="hidden" value="1" />
+    <input name="kak" type="hidden" value="-1" />
+    <input name="kax" type="hidden" value="-1" />
+    <input name="kaq" type="hidden" value="-1" />
+    <input name="kao" type="hidden" value="-1" />
+    <input name="kap" type="hidden" value="-1" />
+    <input name="kam" type="hidden" value="osm" />
+    <input name="kt" type="hidden" value="Roboto" />
+  </div>
+</form>
+<script type="text/javascript">window.onload=function(){document.getElementById("search-bar").onsubmit=function(){var e=document.getElementById("search");return e.value="site:{{ .Site.BaseURL }} "+e.value,!0}};</script>
