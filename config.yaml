@@ -30,6 +30,10 @@ menu:
       url: "/tags/"
       weight: 4
 
+author:
+  name: "Mendel Greenberg"
+  email: "mendel@chabad360.me"
+
 params:
   author: "Mendel Greenberg"
   description: "Different things I've done, tried, or found interesting enough to blog about."
