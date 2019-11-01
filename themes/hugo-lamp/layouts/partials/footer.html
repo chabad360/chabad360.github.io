@@ -1,9 +1,7 @@
 <footer class="footer">
-  <p>Copyright © {{ if eq now.Year 2018 }}2018{{ else }}2018-{{ now.Year }}{{ end }} {{ .Site.Title }}</p>
+  <p>Copyright © {{ if eq now.Year 2018 }}2019{{ else }}2019-{{ now.Year }}{{ end }} {{ .Site.Title }}</p>
   <p>Powered by <a href="https://gohugo.io/" rel="noreferrer" target="_blank">Hugo</a> with theme <a href="https://github.com/chabad360/hugo-lamp-plus" title="Hugo LAMP+" rel="noreferrer" target="_blank">LAMP+</a>.</p>
 </footer>
-
-{{ partial "adsense-sticky.html" . }}
 
 {{ if .Site.GoogleAnalytics }}
 {{ $galite := resources.Get "js/ga-lite.min.js" }}

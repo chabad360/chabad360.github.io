@@ -4,7 +4,6 @@
       <h1 class="post-title">{{ .Title }}</h1>
       <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read</p>
     </header>
-    {{ partial "adsense.html" . }}
     <article class="post-content">{{ .Content }}</article>
     <footer class="post-footer">
       {{ if isset .Params "tags" }}
