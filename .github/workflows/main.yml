@@ -1,4 +1,4 @@
-name: Build Site
+name: "Build Site"
 
 on:
   push:
@@ -10,21 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout Repo
+      - name: "Checkout Repo"
         uses: actions/checkout@master
         with:
           submodules: true
         
-      - name: Publish Site
+      - name: "Publish Site"
         uses: chabad360/hugo-gh-pages@master
         with:
-          branch: master
-          cname: chabad360.me
+          branch: "master"
+          cname: "chabad360.me"
           githubToken: ${{ secrets.PERSONAL_TOKEN }}
 
-      - name: Purge Cloudflare Cache
+      - name: "Purge Cloudflare Cache"
         uses: jakejarvis/cloudflare-purge-action@master
         env:
           CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
-          CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_KEY }}
