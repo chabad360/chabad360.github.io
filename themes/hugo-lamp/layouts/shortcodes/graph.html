@@ -1,18 +1,14 @@
 {{ $title := "Diagram" }}
-{{ if .IsNamedParams }}
-  {{ with .Get "title" }}
-    {{ $title = . }}
-  {{ end }}
+{{ with .Get "title" }}
+  {{ $title = . }}
 {{ else }}
-  {{ with .Get 0 }}
-    {{ $title = . }}
-  {{ end }}
+{{ errorf "missing value for param 'title': %s" .Position }}
 {{ end }}
 
 <figure>
   <img
     src='https://g.gravizo.com/svg?{{ .Inner }}'
     alt='{{ $title  }}'
-    />
-    <figcaption>{{ $title }}</figcaption>
+  />
+  <figcaption>{{ $title }}</figcaption>
 </figure>
