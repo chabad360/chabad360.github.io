@@ -48,10 +48,6 @@
     {{ $cssOpts := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
     {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
-
-    <!-- Scripts -->
-    <script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open",""),t.setAttribute("hidden","")}</script>
-
   </head>
   <body>
 
@@ -63,57 +59,12 @@
 
     {{ partial "footer.html" . }}
 
-  <script type="text/javascript">
-      (function() {
-      'use strict';
-
-  if(!document.queryCommandSupported('copy')) {
-    return;
-  }
-
-  function flashCopyMessage(el, msg) {
-    el.textContent = msg;
-    setTimeout(function() {
-      el.textContent = "Copy";
-    }, 1000);
-  }
-
-  function selectText(node) {
-    var selection = window.getSelection();
-    var range = document.createRange();
-    range.selectNodeContents(node);
-    selection.removeAllRanges();
-    selection.addRange(range);
-    return selection;
-  }
-
-  function addCopyButton(containerEl) {
-    var copyBtn = document.createElement("button");
-    copyBtn.className = "highlight-copy-btn";
-    copyBtn.textContent = "Copy";
-
-    var codeEl = containerEl.firstElementChild;
-    copyBtn.addEventListener('click', function() {
-      try {
-        var selection = selectText(codeEl);
-        document.execCommand('copy');
-        selection.removeAllRanges();
-
-        flashCopyMessage(copyBtn, 'Copied!')
-      } catch(e) {
-        console && console.log(e);
-        flashCopyMessage(copyBtn, 'Failed :\'(')
-      }
-    });
-
-    containerEl.appendChild(copyBtn);
-  }
-
-  // Add copy button to code blocks
-  var highlightBlocks = document.getElementsByClassName('highlight');
-  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
-})();
-    </script>
+    <!-- Scripts -->
+    {{ $copybtn := resources.Get "js/copy-btn.js" }}
+    {{ $headershrink := resources.Get "js/header-shrink.js"}}
+    {{ $js := slice $copybtn $headershrink | resources.Concat "js/bundle.js" | fingerprint }}
+    <script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
+    <script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open",""),t.setAttribute("hidden","")}</script>
 
   </body>
 </html>

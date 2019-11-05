@@ -9,14 +9,25 @@
   text-align: center;
   background-color: $sidebar-background;
   box-shadow: 5px 0px 20px 1px $box-shadow-dark;
+  transition: height 0.3s;
 
   @media screen and (max-width: $tablet) {
+    position: -webkit-sticky;
+    position: sticky;
     width: 100%;
-    position: relative;
+    bottom: unset;
+    z-index: 100000000;
+    height: 190px;
   }
 
   @media (min-width: $tablet) and (max-width: $desktop) {
     width: 15rem;
+  }
+}
+
+.header-shrunk {
+  @media screen and (max-width: $tablet) {
+    height: 67px;
   }
 }
 

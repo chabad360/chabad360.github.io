@@ -64,9 +64,14 @@ params:
       url: "https://reddit.com/u/chabad360/"
 
     - name: "Email"
-      icon: "fab fa-envelope"
+      icon: "fas fa-at"
       weight: 4
       url: "mailto:mendel@chabad360.me"
+
+    - name: "Feed"
+      icon: "fas fa-rss"
+      weight: 5
+      url: "https://chabad360.me/index.xml"
 
 taxonomies:
   category: "categories"
