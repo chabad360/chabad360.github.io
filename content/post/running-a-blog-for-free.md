@@ -129,7 +129,7 @@ Then press <kbd>Set up a workflow yourself</kbd>.
 Replace all the text in the text editor with this:
 
 ```yaml
-name: Hugo Build
+name: "Hugo Build"
 
 on:
   push:
@@ -138,29 +138,29 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: "ubuntu-18.04"
 
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@master
+    - name: "Checkout Repo"
+      uses: "actions/checkout@master"
       with:
         submodules: true
 
-    - name: Publish Site
-      uses: chabad360/hugo-gh-pages@master
+    - name: "Publish Site"
+      uses: "chabad360/hugo-gh-pages@master"
       with:
-        args: --gc --minify --cleanDestinationDir
+        args: "--gc --minify --cleanDestinationDir"
       env:
-        BRANCH: master
+        BRANCH: "master"
         CNAME: "<Your site name>"
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        GITHUB_TOKEN: "${{ secrets.PERSONAL_TOKEN }}"
 
-    - name: Purge Cloudflare Cache
-      uses: jakejarvis/cloudflare-purge-action@master
+    - name: "Purge Cloudflare Cache"
+      uses: "jakejarvis/cloudflare-purge-action@master"
       env:
-        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-        CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
-        CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_KEY }}
+        CLOUDFLARE_ZONE: "${{ secrets.CLOUDFLARE_ZONE }}"
+        CLOUDFLARE_EMAIL: "${{ secrets.CLOUDFLARE_EMAIL }}"
+        CLOUDFLARE_KEY: "${{ secrets.CLOUDFLARE_KEY }}"
 ```
 
 Make sure to set the value of `CNAME` to that of your website (i.e. just `chabad360.me`, no `https://` or that stuff).
