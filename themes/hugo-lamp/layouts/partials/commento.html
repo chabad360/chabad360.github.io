@@ -1,8 +1,6 @@
 <div id="commento"></div>
 {{ $cssOpts := (dict "targetPath" "css/commento.css" "outputStyle" "compressed") }}
-{{ $styles := resources.Get "scss/commento.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
-
-{{ $commento := resources.Get "js/commento.js" }}
-{{ $js := slice $commento | resources.Concat "js/commento.js" | resources.Minify | fingerprint }}
-<script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
+{{ $commento := resources.Get "scss/commento.scss" | resources.ExecuteAsTemplate "commento.main.css" . | toCSS $cssOpts | resources.Minify | fingerprint }}
+<link rel="stylesheet" href="{{ $commento.RelPermalink }}" integrity="{{ $commento.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+{{ $commentojs := slice (resources.Get "js/commento.js") | resources.Concat "js/commento.js" | resources.Minify | fingerprint }}
+<script type="text/javascript" integrity="{{ $commentojs.Data.Integrity }}" src="{{ $commentojs.Permalink }}"></script>
