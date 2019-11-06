@@ -2,13 +2,3 @@
   <p>Copyright © {{ if eq now.Year 2018 }}2019{{ else }}2019-{{ now.Year }}{{ end }} {{ .Site.Title }}</p>
   <p>Powered by <a href="https://gohugo.io/" rel="noreferrer" target="_blank">Hugo</a> with theme <a href="https://github.com/chabad360/hugo-lamp-plus" title="Hugo LAMP+" rel="noreferrer" target="_blank">LAMP+</a>.</p>
 </footer>
-
-{{ if .Site.GoogleAnalytics }}
-{{ $galite := resources.Get "js/ga-lite.min.js" }}
-{{ $gajs := slice $galite | resources.Concat "js/galite.js" | resources.Minify | fingerprint }}
-<script type="text/javascript" crossorigin="anonymous" src="{{ $gajs.Permalink }}" integrity="{{ $gajs.Data.Integrity }}"></script>
-  <script type="text/javascript">
-    var galite = galite || {};
-    galite.UA = {{ .Site.GoogleAnalytics }}
-  </script>
-{{ end }}

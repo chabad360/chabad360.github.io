@@ -12,7 +12,7 @@ pygmentsStyle: "native"
 pygmentsUseClassic: true
 pygmentsCodeFences: true
 pygmentsUseClasses: true
-pygmentsCodefencesGuessSyntax: true
+pygmentsCodeFencesGuessSyntax: true
 
 menu:
   main:
@@ -37,6 +37,7 @@ author:
 params:
   author: "Mendel Greenberg"
   description: "Different things I've done, tried, or found interesting enough to blog about."
+  keywords: "chabad360,blog,developer,personal"
   email: "mendel@chabad360.me"
   logo: "/img/avatar.jpg"
   seotitle: "Mendel Greenberg (aka chabad360)"

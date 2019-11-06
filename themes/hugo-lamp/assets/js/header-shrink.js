@@ -3,7 +3,7 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if(window.innerWidth <= 800){
-    if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
+    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
       document.getElementById("title").setAttribute("hidden", "true");
       document.getElementById("subtitle").setAttribute("hidden", "true");
       document.getElementById("social").setAttribute("hidden", "true");

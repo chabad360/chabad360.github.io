@@ -42,11 +42,11 @@
     <link rel="apple-touch-icon" sizes="120x120" href="{{ $logo }}">
 
     <!-- Styles -->
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
     {{ $cssOpts := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
-    {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | minify | fingerprint }}
+    {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.css" . | toCSS $cssOpts | resources.Minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
   </head>
   <body>
@@ -62,9 +62,16 @@
     <!-- Scripts -->
     {{ $copybtn := resources.Get "js/copy-btn.js" }}
     {{ $headershrink := resources.Get "js/header-shrink.js"}}
-    {{ $js := slice $copybtn $headershrink | resources.Concat "js/bundle.js" | fingerprint }}
-    <script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}"></script>
-    <script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open",""),t.setAttribute("hidden","")}</script>
+    {{ $galite := resources.Get "js/ga-lite.min.js" }}
+    {{ $js := slice $copybtn $headershrink $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
+    <script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}" crossorigin="anonymous"></script>
+
+    {{ if .Site.GoogleAnalytics }}
+    <script type="text/javascript">
+      var galite = galite || {};
+      galite.UA = {{ .Site.GoogleAnalytics }}
+    </script>
+    {{ end }}
 
   </body>
 </html>

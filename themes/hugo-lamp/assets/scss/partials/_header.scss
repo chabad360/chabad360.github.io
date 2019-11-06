@@ -12,8 +12,8 @@
   transition: height 0.3s;
 
   @media screen and (max-width: $tablet) {
-    position: -webkit-sticky;
-    position: sticky;
+ //   position: -webkit-sticky;
+    position: fixed;
     width: 100%;
     bottom: unset;
     z-index: 100000000;

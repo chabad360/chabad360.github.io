@@ -1,4 +1,4 @@
-<sidebar id="sidebar" class="sidebar" layout="nodisplay">
+<sidebar id="sidebar" class="sidebar" layout="nodisplay" hidden="true">
   <ul class="sidebar-list">
     <li class="sidebar-menu"><button class="sidebar-icon" onclick="closeSidebar()">X</button></li>
     {{ $type := .Type }}
@@ -10,3 +10,5 @@
   </ul>
 </sidebar>
 <div class="sidebar-mask" id="sidebar-mask" hidden="true" onclick="closeSidebar()"></div>
+<script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("hidden","");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),e.setAttribute("hidden","true");t.removeAttribute("open",""),t.setAttribute("hidden","true")}</script>
+
