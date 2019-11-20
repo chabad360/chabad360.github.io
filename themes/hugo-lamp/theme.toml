@@ -1,7 +1,7 @@
 name = "hugo-lamp-plus"
 license = "MIT"
 licenselink = "https://github.com/chabad360/hugo-lamp-plus/blob/master/LICENSE.md"
-description = "A light, responsive Hugo theme for blogs"
+description = "A light, responsive Hugo theme for blogs."
 homepage = "https://github.com/chabad360/hugo-lamp-plus"
 tags = ["hugo", "blog", "theme", "responsive"]
 features = ["Blog", "Responsive", "Search"]
@@ -9,4 +9,4 @@ min_version = "extended_0.53.3"
 
 [author]
   name = "Mendel Greenberg"
-  homepage = "https://chabad360.me/page/about-me"
+  homepage = "https://chabad360.me/"
