@@ -5,7 +5,7 @@ tags: ["cluster", "self-hosting", "intro"]
 date: 2019-11-22T05:38:19Z
 summary: "Not a how-to guide per-se, but if you're looking to learn something, here we go!"
 
-draft: true
+draft: false
 ---
 
 Over the next little while I will be going over the processes I took to setting up my own little, private ARM server cluster.
