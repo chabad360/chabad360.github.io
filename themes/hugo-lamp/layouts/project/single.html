@@ -1,17 +1,28 @@
 {{ define "main" }}
   <section class="main post-detail">
     <header class="post-header">
+      {{ if isset .Params "cover" }}
+      <img alt="{{ .Title }}"
+        layout="fixed-height"
+        class="cover-img"
+        src="{{ .Params.cover }}">
+      </img>
+      {{ else }}
+      </br>
+      {{ end }}
       <h1 class="post-title">{{ .Title }}</h1>
+      <p class="post-subtitle">{{ .Summary }}</p>
       <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read</p>
     </header>
-    {{ partial "adsense.html" . }}
-    <article class="post-content">{{ .Content }}</article>
+    <article class="post-content">
+    {{ .Content }}
+    </article>
     <section class="post-content">
       <h2>Posts</h2>
       <ul>
         {{ $project := ( cond ( isset .Params "project" ) .Params.project .Title  ) }}
         {{ range where ( where .Site.Pages "Type" "post") ".Params.project" $project }}
-          {{ .Render "summary" }}
+          {{ .Render "li" }}
         {{ end }}
       </ul>
     </section>

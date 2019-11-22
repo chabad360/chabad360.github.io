@@ -60,6 +60,7 @@
 
   strong {
     color: $text-strong;
+    font-weight: bold;
   }
 
   del {
@@ -75,6 +76,7 @@
   hr {
     position: relative;
     margin: 2rem auto;
+ 
     border-top: 1px dashed $border-color;
     border-bottom: none;
 
@@ -227,17 +229,21 @@
     }
   }
 
+  .cover-img {
+    color: #fff;
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 340px;
+  }
+
   figure {
     display: block;
     margin: 2rem auto;
 
     img {
       max-width: 100%;
-      box-shadow: 2px 20px 40px 10px $box-shadow-dark;
-
-      @media screen and (max-width: $tablet) {
-        box-shadow: none;
-      }
     }
 
     figcaption {

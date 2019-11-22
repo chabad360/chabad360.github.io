@@ -1,7 +1,17 @@
 {{ define "main" }}
   <section class="main post-detail">
     <header class="post-header">
+      {{ if isset .Params "cover" }}
+      <img alt="{{ .Title }}"
+        layout="fixed-height"
+        class="cover-img"
+        src="{{ .Params.cover }}">
+      </img>
+      {{ else }}
+      </br>
+      {{ end }}
       <h1 class="post-title">{{ .Title }}</h1>
+      <p class="post-subtitle">{{ .Summary }}</p>
       <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read</p>
     </header>
     <article class="post-content">{{ .Content }}</article>

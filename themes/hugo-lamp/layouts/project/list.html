@@ -22,9 +22,9 @@
         {{ end }}
       {{ end }}
     </header>
-    {{ $paginator := .Paginate (where .Pages "Type" "project") (index .Site.Params "paginate" | default 10) }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "project").ByDate.Reverse (index .Site.Params "paginate" | default 10) }}
     {{ if ne $paginator.TotalPages 0 }}
-      {{ range $paginator.Pages.ByDate.Reverse }}
+      {{ range $paginator.Pages }}
         {{ .Render "summary" }}
       {{ end }}
     {{ else }}
