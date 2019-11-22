@@ -24,8 +24,14 @@
     </header>
     {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "post" "project")).ByDate.Reverse (index .Site.Params "paginate" | default 10) }}
     {{ if ne $paginator.TotalPages 0 }}
-      {{ range $paginator.Pages }}
-        {{ .Render "summary" }}
+      {{ if eq .Data.Singular "tag" }}
+        {{ range where $paginator.Pages ".Params.tags" "intersect" ( slice .Data.Term ) }}
+          {{ .Render "summary" }}
+        {{ end }}
+      {{ else }}
+        {{ range $paginator.Pages }}
+          {{ .Render "summary" }}
+        {{ end }}
       {{ end }}
     {{ else }}
       <p>There's nothing here.<br>Create an interesting post with the command:</p>

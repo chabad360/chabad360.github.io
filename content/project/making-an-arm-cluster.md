@@ -1,7 +1,7 @@
 ---
 title: "Making an ARM Cluster"
 cover: "/uploads/project/making-an-arm-cluster/armcluster.jpg"
-tags: ["cluster", "self-hosting"]
+tags: ["cluster", "self-hosting", "intro"]
 date: 2019-11-22T05:38:19Z
 summary: "Not a how-to guide per-se, but if you're looking to learn something, here we go!"
 
