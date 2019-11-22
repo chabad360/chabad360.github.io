@@ -11,7 +11,7 @@
       </br>
       {{ end }}
       <h1 class="post-title">{{ .Title }}</h1>
-      <p class="post-subtitle">{{ .Summary | plainify }}</p>
+      <p class="post-subtitle">{{ .Summary | plainify | htmlUnescape }}</p>
       <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read</p>
     </header>
     <article class="post-content">

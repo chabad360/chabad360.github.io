@@ -9,6 +9,6 @@ draft: true
 ---
 
 Over the next little while I will be going over the processes I took to setting up my own little, private ARM server cluster.
-This is **not a how-to guide**, this is me documenting my experiences in a format that may or may not be helpful for other people.
-This will also act as a nice test to my `Project` format, so we'll see how it goes!
+This is **not a how-to guide**, this is me documenting my experiences in a format that you find informative (maybe you'll learn something).
+This will also act as a nice test to my [Project](/project) format, so we'll see how it goes!
 
