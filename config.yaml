@@ -75,5 +75,4 @@ params:
       url: "https://chabad360.me/index.xml"
 
 taxonomies:
-  category: "categories"
   tag: "tags"
