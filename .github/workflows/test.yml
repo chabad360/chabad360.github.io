@@ -1,0 +1,31 @@
+name: "Build Site"
+
+on:
+  push:
+    branches:
+      - build
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "Checkout Repo"
+        uses: actions/checkout@master
+        with:
+          submodules: true
+        
+      - name: "Build Site"
+        uses: chabad360/hugo-gh-pages@master
+        with:
+          branch: "master"
+          cname: "chabad360.me"
+          githubToken: ${{ secrets.PERSONAL_TOKEN }}
+          
+      - name: "Compress IMG"
+        uses: chabad360/image-actions@master
+        
+      - name: "Test HTML"
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "./public"
