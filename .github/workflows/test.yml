@@ -20,6 +20,8 @@ jobs:
           
       - name: "Compress IMG"
         uses: chabad360/image-actions@master
+        with:
+          jpegQuality: 70
         
       - name: "Test HTML"
         uses: chabad360/htmlproofer@master
