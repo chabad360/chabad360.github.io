@@ -1,4 +1,4 @@
-name: "Build Site"
+name: "Build Site test"
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - build
 
 jobs:
-  build-deploy:
+  build-deploy-test:
     runs-on: ubuntu-latest
     
     steps:
