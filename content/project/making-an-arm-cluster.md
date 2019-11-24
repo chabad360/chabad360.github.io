@@ -12,3 +12,5 @@ Over the next little while I will be going over the processes I took to setting 
 This is **not a how-to guide**, this is me documenting my experiences in a format that you find informative (maybe you'll learn something).
 This will also act as a nice test to my [Project](/project) format, so we'll see how it goes!
 
+[Stay Tunned!](/index.xml)
+
