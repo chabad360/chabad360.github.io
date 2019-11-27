@@ -25,9 +25,15 @@
   &-cover {
     color: $text-title;
     max-width: 100%;
+    width: 100%;
+    height: 250px;
     border-radius: $radius-large $radius-large 0 0;
     object-fit: cover;
     box-shadow: none;
+
+    @media screen and (max-width: $phone) {
+      height: 150px;
+    }
   }
 
   &-title {

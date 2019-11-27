@@ -20,7 +20,7 @@
     height: 190px;
   }
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet + 1px ) and (max-width: $desktop) {
     width: 15rem;
   }
 }
@@ -78,7 +78,7 @@
 .menu {
   display: none;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     display: block;
   }
 
@@ -120,7 +120,7 @@
     top: 1rem;
     right: 1rem;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       display: none;
     }
   }
@@ -179,7 +179,7 @@
     padding: 0;
     list-style: none;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       position: absolute;
       bottom: 10px;
       left: 0;
