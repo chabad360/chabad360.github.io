@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: true
-        
-      - name: "Build Site"
-        uses: chabad360/hugo-actions@master
-          
+      
       - name: "Compress IMG"
         uses: chabad360/image-actions@master
         with:
           jpegQuality: 70
+        
+      - name: "Build Site"
+        uses: chabad360/hugo-actions@master
         
       - name: "Test HTML"
         uses: chabad360/htmlproofer@master
