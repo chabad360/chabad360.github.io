@@ -18,7 +18,7 @@ jobs:
       - name: "Compress IMG"
         uses: chabad360/image-actions@master
         with:
-          jpegQuality: 70
+          ignorepaths: "themes/**"
         
       - name: "Build Site"
         uses: chabad360/hugo-actions@master
