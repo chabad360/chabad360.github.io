@@ -21,3 +21,6 @@ So this is a nice table with prices of what I got, a BOM (a Bill of Materials):
 | :--- | --: | ----: | ----------: |
 | [ODroid MC1 Solo](https://ameridroid.com/products/odroid-mc1-solo) | 3x | $149.85 | $49.95 |
 | [ODroid HC1](https://ameridroid.com/products/odroid-hc1) | 1x | $49.95 | $49.95 |
+| A Gigabit Router | 1x | $49.99 | $49.99 |
+| Cat5e Cable | 5x | $9.95 | $1.99 |
+| [32GB MicroSD card](https://www.amazon.com/dp/B073JWXGNT)
