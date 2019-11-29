@@ -43,4 +43,5 @@ fields:
   label: Project
   description: The project code name.
 pages:
+- content/post/mac-the-hardware.md
 - content/post/running-a-blog-for-free.md
