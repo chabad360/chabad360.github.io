@@ -7,6 +7,7 @@ tags:
 - intro
 date: 2019-11-22T05:38:19.000+00:00
 summary: Not a how-to, but if you're looking to learn something, here we go!
+project: MAC
 
 ---
 Over the next little while I will be going over the processes I took to setting up my own little, private ARM server cluster.
