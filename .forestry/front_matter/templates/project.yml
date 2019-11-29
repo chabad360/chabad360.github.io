@@ -8,6 +8,11 @@ fields:
 - type: file
   name: cover
   label: Cover Image
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: tags
 - type: datetime
   name: date
   label: Date
