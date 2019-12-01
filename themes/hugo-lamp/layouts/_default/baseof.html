@@ -28,7 +28,8 @@
 
     <!-- Permalink & RSSlink -->
     <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="alternative" href="/index.xml" title="{{ .Site.Title }}" type="application/atom+xml">
+    <link rel="alternate" href="/index.xml" title="{{ .Site.Title }}" type="application/atom+xml">
+    <link rel="alternate" title="{{ .Site.Title }}" type="application/json" href="/index.json" />
 
     <!-- SEO Prefs -->
     <meta name="robots" content="index,follow" />

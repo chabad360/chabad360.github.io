@@ -1,0 +1,42 @@
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := $pctx.RegularPages -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "{{ .Site.Title }}",
+  "home_page_url": "{{ .Site.BaseURL }}",
+  {{ with  .OutputFormats.Get "json" -}}
+  "feed_url": "{{ .Permalink }}",
+  {{- end}}
+  "description": "{{ .Site.Params.Description }}",
+  "icon": "/static/img/avatar.jpg",
+  "author": {
+    "name": "{{ .Site.Author.name }}",
+    "url": "{{ .Site.BaseURL }}",
+    "icon": "/static/img/avatar.jpg"
+  },
+  items: [
+    {{- range $pages }}
+    {
+      "id": "{{ .Permalink }}",
+      "url": "{{ .Permalink }}",
+      "title": "{{ .Title }}",
+      "content_html": "{{ .Content }}",
+      "content_text": "{{ .Content | plainify }}",
+      "summary": "{{ .Summary | plainify }}",
+      {{ if .Params.Cover -}}
+      "image": "{{ .Params.cover }}",
+      "banner_image": "{{ .Params.cover }}",
+      {{- end }}
+      "date_published": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
+      "tags": {{ .Params.Tags | jsonify }}
+      
+    },
+    {{- end -}}
+  ]
+
+}
