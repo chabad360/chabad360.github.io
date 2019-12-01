@@ -19,7 +19,7 @@
     "url": "{{ .Site.BaseURL }}",
     "icon": "/static/img/avatar.jpg"
   },
-  items: [
+  "items": [
     {{- range $pages }}
     {
       "id": "{{ .Permalink }}",
@@ -37,6 +37,5 @@
       
     },
     {{- end -}}
-  ]
-
+  ],
 }
