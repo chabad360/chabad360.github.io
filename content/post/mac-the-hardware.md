@@ -15,6 +15,18 @@ It's an [ODroid MC1](https://www.hardkernel.com/shop/odroid-mc1-my-cluster-one-w
 a board based on the [ODroid XU4](https://www.hardkernel.com/shop/odroid-xu4-special-price/), 
 an SBC that is multiple times more powerful than the Pi.
 
+### An ODroid What?
+
+The ODroid XU4, which has (to quote the landing page):
+
+> * Samsung Exynos 5422 Cortex™-A15 2Ghz and Cortex™-A7 Octa core CPUs
+> * Mali-T628 MP6(OpenGL ES 3.1/2.0/1.1 and OpenCL 1.2 Full profile)
+> * 2Gbyte LPDDR3 RAM PoP stacked
+
+Now, sure there is a 2GB model of the Pi,  but nothing the Pi has compares to an overpowered 8 core processor, plus a GPU featuring OpenGL (ES) and OpenCL support.
+
+If you still don't think that's good enough, you can check that landing page for some benchmarks.
+
 ## What I Got
 
 So this is a nice table with prices of what I got, a BOM (a Bill of Materials):
@@ -52,5 +64,4 @@ You'll also need to strip at **Grounded (three prong)** power cable and screw th
     > ⚠️ Warning: This will be the connections that are going straight into the wall outlet (i.e. 120V), make sure you screw the wires in tightly. Otherwise you may get very hurt.
 
 * Plug everything in, but not the SD Cards, and the not the cables that go into the wall, those will go in later.
-
 
