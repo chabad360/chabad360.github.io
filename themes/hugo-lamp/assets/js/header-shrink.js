@@ -1,18 +1,31 @@
-// When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
+var scrollPos = 0;
 
-function scrollFunction() {
-  if(window.innerWidth <= 800){
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-      document.getElementById("title").setAttribute("hidden", "true");
-      document.getElementById("subtitle").setAttribute("hidden", "true");
-      document.getElementById("social").setAttribute("hidden", "true");
-      document.getElementById("header").classList.add("header-shrunk");
+var title = document.getElementById("title");
+var subtitle = document.getElementById("subtitle");
+var social = document.getElementById("social");
+var header = document.getElementById("header");
+var db = document.body;
+
+window.onscroll = function() {
+  if(window.innerWidth <= 800) {
+    if (db.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+      title.setAttribute("hidden", "true");
+      subtitle.setAttribute("hidden", "true");
+      social.setAttribute("hidden", "true");
+      header.classList.add("header-shrunk");
+      if (db.scrollTop > 160 || document.documentElement.scrollTop > 160) {
+        if ((db.getBoundingClientRect()).top > scrollPos ) {
+          header.classList.remove("header-hidden");
+	      } else {
+          header.classList.add("header-hidden");
+        }
+        scrollPos = (db.getBoundingClientRect()).top;
+      }
     } else {
-      document.getElementById("header").classList.remove("header-shrunk");
-      document.getElementById("title").removeAttribute("hidden", "");
-      document.getElementById("subtitle").removeAttribute("hidden", "");
-      document.getElementById("social").removeAttribute("hidden", "");
+      header.classList.remove("header-shrunk");
+      title.removeAttribute("hidden", "");
+      subtitle.removeAttribute("hidden", "");
+      social.removeAttribute("hidden", "");
     }
   }
 }

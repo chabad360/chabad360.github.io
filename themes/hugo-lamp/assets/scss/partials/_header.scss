@@ -9,7 +9,7 @@
   text-align: center;
   background-color: $sidebar-background;
   box-shadow: 5px 0px 20px 1px $box-shadow-dark;
-  transition: height 0.3s;
+  transition: 0.3s;
 
   @media screen and (max-width: $tablet) {
  //   position: -webkit-sticky;
@@ -26,9 +26,12 @@
 }
 
 .header-shrunk {
-  @media screen and (max-width: $tablet) {
     height: 67px;
-  }
+
+}
+
+.header-hidden {
+    top: -67px;
 }
 
 .logo {
