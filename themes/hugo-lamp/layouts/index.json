@@ -20,22 +20,22 @@
     "icon": "/static/img/avatar.jpg"
   },
   "items": [
-    {{- range $pages }}
+    {{ range $i, $e := $pages }}
+		{{ if $i }}, {{ end }}
     {
       "id": "{{ .Permalink }}",
       "url": "{{ .Permalink }}",
       "title": "{{ .Title }}",
-      "content_html": "{{ .Content }}",
-      "content_text": "{{ .Content | plainify }}",
-      "summary": "{{ .Summary | plainify }}",
-      {{ if .Params.Cover -}}
+      "summary": {{ .Summary | jsonify }},
+      "content_html": {{ .Content | safeHTML | jsonify }},
+      "content_text": {{ .Content | plainify | jsonify }},
+      {{- if .Params.Cover }}
       "image": "{{ .Params.cover }}",
       "banner_image": "{{ .Params.cover }}",
       {{- end }}
       "date_published": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
       "tags": {{ .Params.Tags | jsonify }}
-      
-    },
-    {{- end -}}
-  ],
+    }
+    {{- end }}
+  ]
 }
