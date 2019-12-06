@@ -1,18 +1,16 @@
-.highlighttable {
-	color: #d0d0d0;
+.highlight {
+  color: #cccccc;
+  background-color: #131313;
   border-radius: $radius;
   box-shadow: 2px 20px 40px 10px $box-shadow-dark;
   width: 100%;
   position: relative;
-
-  :hover {
-    background-color: #0d0d0d;
-    border-radius: $radius;
-  }
+  white-space: nowrap;
 
   .highlight-copy-btn {
     position: absolute;
     right: 7px;
+    top: 1rem;
     border: 0;
     border-radius: 4px;
     padding: 1px;
@@ -29,51 +27,74 @@
   }
 
   .err {
-		color: #a61717;
-		background-color: #e3d2d2;
-	}
-
-	.linenodiv {
-		vertical-align: top;
-		padding: 0;
-		margin: 0;
-	}
-
-  .highlight {
-    display: grid;
-    white-space: nowrap;
+    color: #a61717;
+    background-color: #e3d2d2;
   }
 
-  .linenos,
-  .code {
-    padding: 1rem 0.1rem 1rem 1rem;
-		border-spacing: 0;
+  .lntd {
+    vertical-align: top;
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  .lntable {
+    padding: 1rem;
+    border-spacing: 0;
+    margin: 0;
+    border: 0;
+    background-color: inherit;
+    display: block;
     border-collapse: separate;
-		margin: 0;
+    border-radius: $radius;
 
-    code {
-      padding: 0;
+    &:hover {
+      background-color: #131313;
     }
-	}
 
-  .code {
-    width: 100%;
+    tbody {
+      overflow-x: auto;
+      display: block;
+
+      tr {
+        width: 100%;
+        display: block;
+
+        &:hover {
+          background-color: #131313;
+        }
+      }
+
+    }
   }
 
-	.hl {
-		display: block;
-		width: 100%;
-		background-color: #ffffcc;
-	}
+  code {
+    padding: unset;
+    background-color: transparent;
 
-	.lnt,
+    * {
+      height: 23.3px
+    }
+  }
+
+  .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc;
+  }
+
+  .lnt,
   .ln {
-		margin-right: 0.4rem;
-		padding: 0 0.4rem 0 0.4rem;
-		color: #686868;
-	}
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #686868;
+  }
 
-	.k,
+  .lnt {
+    display: block;
+  }
+
+  .k,
   .kc,
   .kd,
   .kn,
@@ -81,50 +102,44 @@
   .kt,
   .nt,
   .ow {
-		color: #6ab825;
-		font-weight: bold;
-	}
+    color: #6ab825;
+    font-weight: bold;
+  }
 
-	.kp {
-		color: #6ab825;
-	}
+  .kp {
+    color: #6ab825;
+  }
 
-	.na,
+  .na,
   .ne {
-		color: #bbbbbb;
-	}
-
-	.nb {
-		color: #24909d;
-	}
-
-	.nc {
-		color: #447fcf;
-		text-decoration: underline;
-	}
-
-	.no {
-		color: #40ffff;
-	}
-
-	.nd {
-		color: #ffa500;
-	}
-
-	.nf {
-		color: #447fcf;
-	}
-
-	.nn {
-		color: #447fcf;
-		text-decoration: underline;
-	}
-
-	.nv {
-		color: #40ffff;
-	}
-
-	.s,
+    color: #bbbbbb;
+  }
+  
+  .nb {
+    color: #24909d;
+  }
+  
+  .nc,
+  .nn {
+    color: #447fcf;
+    text-decoration: underline;
+  }
+  
+  .no,
+  .nv {
+    color: #40ffff;
+  }
+  
+  .nd,
+  .sx {
+    color: #ffa500;
+  }
+  
+  .nf {
+    color: #447fcf;
+  }
+  
+  .s,
   .sa,
   .sb,
   .sc,
@@ -137,84 +152,75 @@
   .sr,
   .s1,
   .ss {
-		color: #ed9d13;
-	}
+    color: #ed9d13;
+  }
 
-	.sx {
-		color: #ffa500;
-	}
-
-	.m,
+  .m,
   .mb,
   .mf,
   .mh,
   .mi,
   .il,
   .mo {
-		color: #3677a9;
-	}
+    color: #3677a9;
+  }
 
-	.c,
+  .c,
   .ch,
   .cm,
   .c1 {
-		color: #999999;
-		font-style: italic;
-	}
+    color: #999999;
+    font-style: italic;
+  }
 
   .cs {
-		color: #e50808;
-		background-color: #520000;
-		font-weight: bold;
-	}
+    color: #e50808;
+    background-color: #520000;
+    font-weight: bold;
+  }
 
   .cp,
   .cpf {
-		color: #cd2828;
-		font-weight: bold;
-	}
-
+    color: #cd2828;
+    font-weight: bold;
+  }
+  
   .gd,
   .gr,
   .gt {
-		color: #d22323;
-	}
+    color: #d22323;
+  }
 
   .ge {
-		font-style: italic;
-	}
+    font-style: italic;
+  }
 
-  .gh {
-		color: #ffffff;
-		font-weight: bold;
-	}
-
+  .gh,
+  .gu {
+    color: #ffffff;
+    font-weight: bold;
+  }
   .gi {
-		color: #589819;
-	}
+    color: #589819;
+  }
 
   .go {
-		color: #cccccc;
-	}
+    color: #cccccc;
+  }
 
   .gp {
-		color: #aaaaaa;
-	}
+    color: #aaaaaa;
+  }
 
   .gs {
-		font-weight: bold;
-	}
-
-  .gu {
-		color: #ffffff;
-		text-decoration: underline;
-	}
+    font-weight: bold;
+  }
 
   .gl {
-		text-decoration: underline;
-	}
-
+    text-decoration: underline;
+  }
+  
   .w {
-		color: #666666;
-	}
+    color: #666666;
+  }
 }

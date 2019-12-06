@@ -6,13 +6,15 @@ languageCode: "en-us"
 theme: "hugo-lamp"
 title: "Mendel Greenberg"
 
-# Pygments info
-pygmentsOptions: "linenos=table"
-pygmentsStyle: "native"
-pygmentsUseClassic: true
-pygmentsCodeFences: true
-pygmentsUseClasses: true
-pygmentsCodeFencesGuessSyntax: true
+markup:
+  highlight:
+    codeFences: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    tabWidth: 2
+
 
 menu:
   main:
