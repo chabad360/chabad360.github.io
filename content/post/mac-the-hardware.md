@@ -3,10 +3,10 @@ author: "Mendel Greenberg"
 cover: "/uploads/project/making-an-arm-cluster/armcluster.jpg"
 date: 2019-11-28T08:39:58Z
 draft: true
-project: "MAC"
+project: "CaaB"
 summary: "No, that's not a Pi..."
 tags: ["cluster", "hardware"]
-title: "MAC: The Hardware"
+title: "CaaB: The Hardware"
 
 ---
 ## No it's not a Pi
