@@ -17,12 +17,12 @@
     <article class="post-content">
     {{ .Content }}
     </article>
-    <section class="post-content">
-      <h2>Posts</h2>
-      <ul>
+    <section style="padding: 0;">
+      <h2>Project Posts</h2>
+      <ul style="padding: 0;">
         {{ $project := ( cond ( isset .Params "project" ) .Params.project .Title  ) }}
         {{ range where ( where .Site.Pages "Type" "post") ".Params.project" $project }}
-          {{ .Render "li" }}
+          {{ .Render "summary" }}
         {{ end }}
       </ul>
     </section>

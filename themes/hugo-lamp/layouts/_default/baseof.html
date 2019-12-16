@@ -8,7 +8,13 @@
     <!-- Page Title -->
     <title>
       {{- block "title" . -}}
-        {{ if eq .Kind "page" }}{{ .Title }}{{ else if isset .Site.Params "seotitle" }}{{ .Site.Params.seotitle }}{{ else }}{{ .Site.Title }}{{ end }}
+        {{ if eq .Kind "page" }}
+          {{ .Title }}
+        {{ else if isset .Site.Params "seotitle" }}
+          {{ .Site.Params.seotitle }}
+        {{ else }}
+          {{ .Site.Title }}
+        {{ end }}
       {{- end -}}
     </title>
 
@@ -27,9 +33,9 @@
     {{ hugo.Generator }}
 
     <!-- Permalink & RSSlink -->
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="alternate" href="/index.xml" title="{{ .Site.Title }}" type="application/atom+xml">
-    <link rel="alternate" title="{{ .Site.Title }}" type="application/json" href="/index.json" />
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="alternate" title="{{ .Site.Title }}" href="/index.xml" type="application/atom+xml" />
+    <link rel="alternate" title="{{ .Site.Title }}" href="/index.json" type="application/json" />
 
     <!-- SEO Prefs -->
     <meta name="robots" content="index,follow" />
@@ -60,16 +66,15 @@
     <!-- Scripts -->
     {{ $copybtn := resources.Get "js/copy-btn.js" }}
     {{ $headershrink := resources.Get "js/header-shrink.js"}}
-    {{ $galite := resources.Get "js/ga-lite.min.js" }}
-    {{ $js := slice $copybtn $headershrink $galite | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
+    {{ $js := slice $copybtn $headershrink | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
     <script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}" crossorigin="anonymous"></script>
 
-    {{ if .Site.GoogleAnalytics }}
+    <!--{{ if .Site.GoogleAnalytics }}
     <script type="text/javascript">
       var galite = galite || {};
       galite.UA = {{ .Site.GoogleAnalytics }}
     </script>
-    {{ end }}
+    {{ end }}-->
 
   </body>
 </html>

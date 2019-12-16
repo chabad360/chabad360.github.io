@@ -5,10 +5,12 @@
     {{ $kind := .Kind }}
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-      <li class="sidebar-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{ end }}{{ if and (eq .Identifier "home") (eq $type "post") }} is-active{{ end }}{{ if and (eq .Identifier "home") (and (eq $type "page") (eq $kind "taxonomy"))}} is-active{{ end }}"><a class="sidebar-link" href="{{ .URL }}">{{ .Name }}</a></li>
+    <a class="sidebar-link" href="{{ .URL }}">
+      <li class="sidebar-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} is-active{{ end }}">{{ .Name }}</li>
+    </a>
     {{ end }}
   </ul>
 </sidebar>
 <div class="sidebar-mask" id="sidebar-mask" hidden="true" onclick="closeSidebar()"></div>
-<script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("hidden","");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),e.setAttribute("hidden","true");t.removeAttribute("open",""),t.setAttribute("hidden","true")}</script>
+<script type="text/javascript">function openSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("hidden","");e.setAttribute("open",""),t.removeAttribute("hidden",""),t.setAttribute("open","")}function closeSidebar(){var e=document.getElementById("sidebar"),t=document.getElementById("sidebar-mask");e.removeAttribute("open",""),t.removeAttribute("open","");setTimeout(function(){t.setAttribute("hidden","true");},240);}</script>
 

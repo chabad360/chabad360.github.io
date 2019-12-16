@@ -26,7 +26,7 @@
     color: $text-title;
     max-width: 100%;
     width: 100%;
-    height: 250px;
+    height: 200px;
     border-radius: $radius-large $radius-large 0 0;
     object-fit: cover;
     box-shadow: none;
@@ -53,6 +53,7 @@
     text-align: justify;
     max-height: 4rem;
     overflow: hidden;
+    margin: 0.2rem 0;
   }
 
   &-footer {

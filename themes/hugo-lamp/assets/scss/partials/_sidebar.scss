@@ -13,6 +13,13 @@ sidebar {
   right: 0 !important;
   transform: translateX(100%);
   animation-name: sidebar-slide-out-right;
+
+  .is-active {
+    color: $grey-light;
+    opacity: 1;
+    font-weight: bold;
+  }
+
 }
 
 sidebar[open] {
