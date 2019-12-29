@@ -1,11 +1,16 @@
 ---
 author: "Mendel Greenberg"
-cover: "/uploads/project/making-an-arm-cluster/armcluster.jpg"
+cover: "images/armcluster.jpg"
+resources:
+  - src: '*armcluster.jpg'
+    title: 'armcluster'
 date: 2019-11-28T08:39:58Z
 draft: true
 project: "CaaB"
 summary: "No, that's not a Pi..."
-tags: ["cluster", "hardware"]
+tags: 
+  - "cluster"
+  - "hardware"
 title: "CaaB: The Hardware"
 
 ---
