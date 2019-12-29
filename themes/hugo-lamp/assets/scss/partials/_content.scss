@@ -234,7 +234,7 @@
   }
 
   figure {
-    display: block;
+    display: grid;
     margin: 2rem auto;
 
     img {
@@ -242,11 +242,9 @@
     }
 
     figcaption {
-      h4 {
-        color: $grey-light;
-        font-size: 0.9rem;
-        text-align: center;
-      }
+      color: $grey-light;
+      font-size: 15px;
+      text-align: center;
     }
   }
 }

@@ -66,7 +66,8 @@
     <!-- Scripts -->
     {{ $copybtn := resources.Get "js/copy-btn.js" }}
     {{ $headershrink := resources.Get "js/header-shrink.js"}}
-    {{ $js := slice $copybtn $headershrink | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
+    {{ $images := resources.Get "js/images.js" }}
+    {{ $js := slice $copybtn $headershrink $images | resources.Concat "js/bundle.js" | resources.Minify | fingerprint }}
     <script type="text/javascript" integrity="{{ $js.Data.Integrity }}" src="{{ $js.Permalink }}" crossorigin="anonymous"></script>
 
     <!--{{ if .Site.GoogleAnalytics }}

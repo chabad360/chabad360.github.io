@@ -1,10 +1,13 @@
 <a href="{{ .Permalink }}" class="entry-link" aria-label="{{ .Title }}">
   <article class="entry-single">
     {{ if isset .Params "cover" }}
+      {{ $image := .Resources.GetMatch .Params.Cover }}
+      {{ $imagesmall := $image.Resize "x400" -}}
       <img alt="{{ .Title }}"
         layout="fixed-height"
-        class="entry-cover"
-        src="{{ .Params.cover }}">
+        class="entry-cover js-img"
+        data-src="{{ $image.RelPermalink }}"
+        src="{{ $imagesmall.RelPermalink }}">
       </img>
     {{ end }}
     <header class="entry-header">

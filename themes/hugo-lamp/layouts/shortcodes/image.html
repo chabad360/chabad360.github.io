@@ -1,0 +1,16 @@
+{{ $title := .Get "title" }}
+{{ $image := "image"}}
+{{ with .Get "image" }}
+  {{ $image := $.Page.Resources.GetMatch . }}
+    <figure>
+      {{ $imagesmall := $image.Resize "x400" -}}
+      <img alt="{{ $title }}"
+        class="js-img"
+        data-src="{{ $image.RelPermalink }}"
+        src="{{ $imagesmall.RelPermalink }}">
+      </img>
+      <figcaption>{{ $title }}</figcaption>
+    </figure>
+{{ else }}
+    {{ errorf "missing value for param 'image': %s" .Position }}
+{{ end }}
