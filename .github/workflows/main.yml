@@ -15,6 +15,11 @@ jobs:
         with:
           submodules: true
         
+      - name: "Compress Images"
+        uses: chabad360/image-actions@master
+        with:
+          ignorePaths: "themes/**"
+        
       - name: "Publish Site"
         uses: chabad360/hugo-gh-pages@master
         with:
