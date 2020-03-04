@@ -16,7 +16,7 @@ jobs:
           submodules: true
         
       - name: "Compress Images"
-        uses: chabad360/image-actions@master
+        uses: chabad360/image-actions@yaml-test
         with:
           ignorePaths: "themes/**"
         
