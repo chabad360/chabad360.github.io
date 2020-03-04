@@ -1,9 +1,6 @@
 ---
 title: "Cluster as a Box: CaaB"
-cover: "images/armcluster.jpg"
-resources:
-  - src: '*armcluster.jpg'
-    title: 'armcluster'
+cover: "images/caab_logo.png"
 tags:
   - "cluster"
   - "self-hosting"

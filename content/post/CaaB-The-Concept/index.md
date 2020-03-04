@@ -1,12 +1,12 @@
 ---
 title: "CaaB: The Concept"
-cover: "images/armcluster.jpg"
+cover: "images/caab_logo.png"
 tags:
   - "cluster"
   - "concept"
 summary: "Sticking a cluster in a boom box"
 project: "CaaB"
-date: 2019-12-29T00:44:54Z
+date: 2020-03-04T00:44:54Z
 
 draft: false
 ---
@@ -23,6 +23,8 @@ The boom box is powerful and portable, and so is the *CaaB*, it packs a punch fo
 
 The design of the *CaaB* is to be similar in that of a boom box, a wide rectangular box with a handle on top. It would fit a router, four ODroid HC1s, a PSU, some cables, and some special OLED Display toys (I'll cover what those are in [hardware](#hardware)). One of the sides would swing open to reveal the innards of the device, while the other would have USB, my OLED displays and other ports plus a switch or two.
 
+{{< image title="Drawing of the inside view of the CaaB (image copyright: Mendel Greenberg)" image="images/front_inside.png" >}}
+
 ## Hardware
 
 The hardware required would be:
@@ -36,4 +38,4 @@ The hardware required would be:
 
 ## Conclusion
 
-That's the idea, I'll be back soon with more precise details, and watch this page for updates, because it will be updated.
+That's the idea, I'll be back soon with more precise details in another article, and watch this page for updates, because it will be updated.
