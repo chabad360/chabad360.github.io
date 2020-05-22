@@ -1,40 +1,45 @@
-/* Colors */
-$grey: #777;
-$grey-dark: darken($grey, 20%);
-$grey-light: lighten($grey, 40%);
-$white: #fff;
-$black: #000;
-$dark-blue: #020206;
-$dark-blue-light: saturate($dark-blue, 10%);
-$blue: #3f9adc;
+@function dp($base, $dp) {
+  @return mix(white, $base, $dp);
+}
 
 /* Theme colors */
-$primary: $dark-blue;
-$light: darken($white, 5%);
-$dark: lighten($black, 5%);
-$pre-background: $grey-dark;
+$primary: #bb86fc;
+$primary-variant: #3730bb;
+$secondary: #03dac6;
+$bg: #121212;
+$surface: #121212;
+$error: #cf6679;
+
+$on-primary: #000000;
+$on-secondary: #000000;
+$on-bg: #ffffff;
+$on-surface: #ffffff;
+$on-error: #000000;
 
 /* Layout */
-$main-background: lighten($dark, 10%);
-$sidebar-background: rgb(6, 6, 9);
+$main-background: $bg;
+$sidebar-background: dp($surface, 9%);
 
 /* Text colors */
-$text: $white;
-$text-title: $white;
+$text: opacify($on-surface, 0.6);
+$text-strong: opacify($on-surface, 0.87);
 $text-invert: findcolorinvert($text);
-$text-light: $white;
-$text-strong: $white;
-$text-content-title: $white;
-$text-link: $blue;
+$text-light: $text;
+$text-content-title: $text;
+$text-link: $primary;
 
 /* Border colors */
-$border-color: $grey-dark;
-$border-hover: $grey-dark;
+$border: solid rgba(255, 255, 255, 0.24) 2px;
+$border-color: rgba(255, 255, 255, 0.24);
+$border-hover: white;
 
 /* Box shadow colors */
-$box-shadow: rgba($black, 0.05);
-$box-shadow-dark: rgba($black, 0.15);
-$box-shadow-darker: rgba($black, 0.5);
+$box-shadow-2dp: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+$box-shadow-3dp: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+$box-shadow-4dp: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+$box-shadow-6dp: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+
+$box-shadow: $box-shadow-4dp;
 
 /* Typography */
 $base-font-size: 18px;
@@ -48,7 +53,6 @@ $size-4: 1.5rem;
 $size-5: 1.25rem;
 $size-6: 1rem;
 $size-7: 0.8rem;
-$weight-light: 100;
 $weight-normal: 300;
 $weight-semibold: 400;
 $weight-bold: 600;
@@ -56,7 +60,7 @@ $weight-bold: 600;
 /* Radius */
 $radius-small: 2px;
 $radius: 3px;
-$radius-large: 5px;
+$radius-large: 20px;
 
 /* Responsive break point */
 $phone: 640px;
@@ -84,15 +88,7 @@ $icon-clock: 'e800';
   content: #{"\"\\"}#{$icon-code + "\""};
 }
 
-$color-linkedin: #007bb6;
-$color-twitter: #55acee;
-$color-facebook: #3b5998;
-$color-instagram: #3f729b;
-$color-youtube: #bb0000;
-
-/* Animation */
-$easing: ease-out;
-$speed: 0.5s;
+$transition: all 0.3s ease-out;
 
 /* Metrics */
 $space-small: 10px;

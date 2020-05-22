@@ -86,8 +86,8 @@
       top: -12px;
       left: calc(50% - 40px);
       padding: 0 0.5rem;
-      background-color: $white;
-      color: $grey-light;
+      background-color: $on-surface;
+      color: $text;
       font-size: $size-7;
       font-family: $family-monospace;
     }
@@ -100,7 +100,7 @@
   }
 
   blockquote {
-    background-color: $dark;
+    background-color: $surface;
     border-left: 5px solid $border-color;
     padding: 0.5rem 1rem;
     margin: 2rem 0;
@@ -123,14 +123,14 @@
     border-radius: $radius;
     margin: 0;
     font-size: 0.9em;
-    background-color: $pre-background;
+    background-color: dp($surface, 5%);
     font-family: $family-monospace;
   }
 
   kbd {
     display: inline-block;
     padding: 0.25em;
-    background-color: $dark;
+    background-color: $surface;
     border: 1px solid $border-color;
     border-bottom-color: $border-color;
     border-radius: $radius;
@@ -242,7 +242,7 @@
     }
 
     figcaption {
-      color: $grey-light;
+      color: $text;
       font-size: 15px;
       text-align: center;
     }

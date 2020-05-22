@@ -1,8 +1,8 @@
 .highlight {
-  color: #cccccc;
-  background-color: #131313;
+  color: $text-strong;
+  background-color: dp($surface, 7%);
   border-radius: $radius;
-  box-shadow: 2px 20px 40px 10px $box-shadow-dark;
+  box-shadow: $box-shadow-2dp;
   width: 100%;
   position: relative;
   white-space: nowrap;
@@ -49,7 +49,7 @@
     border-radius: $radius;
 
     &:hover {
-      background-color: #131313;
+      background-color: inherit;
     }
 
     tbody {
@@ -61,7 +61,7 @@
         display: block;
 
         &:hover {
-          background-color: #131313;
+          background-color: inherit;
         }
       }
 

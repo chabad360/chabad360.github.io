@@ -16,13 +16,15 @@
     color: $text;
     padding-left: 0.75em;
     width: 70%;
-    background-color: rgba($dark-blue-light, 0.9);
+    background-color: dp($surface, 7%);
     font-family: $family-roboto;
     border-radius: 6px;
+    border: $border;
+    transition: $transition;
 
     &:hover, &:focus {
-      background-color: rgba($dark-blue-light, 0.5);
-      border: none;
+      background-color: dp($surface, 12%);
+      border: solid white 2px;
     }
   }
 }

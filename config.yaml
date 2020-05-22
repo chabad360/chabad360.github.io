@@ -19,7 +19,7 @@ markup:
 menu:
   main:
     - name: "Posts"
-      url: "/"
+      url: "/post/"
       weight: 1
 
     - identifier: "projects"
@@ -41,7 +41,7 @@ params:
   description: "Different things I've done, tried, or found interesting enough to blog about."
   keywords: "chabad360,blog,developer,personal"
   email: "mendel@chabad360.me"
-  logo: "/img/avatar.jpg"
+  avatarurl: "/img/avatar.jpg"
   seotitle: "Mendel Greenberg (aka chabad360)"
   subtitle: "(aka chabad360)"
 
@@ -49,6 +49,10 @@ params:
   mainSections: ["posts"]
   paginate: 25
   showComments: true
+
+  since: "2020"
+
+  colorscheme: "dark"
 
   social:
     - name: "Github"

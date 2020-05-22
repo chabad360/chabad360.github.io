@@ -1,8 +1,8 @@
-$table: $grey-light;
-$table-background: $dark;
-$table-border: $grey-dark;
-$table-head: $grey;
-$table-row-hover-background: $grey-dark;
+$table: $text;
+$table-background: dp($surface, 7%);
+$table-border: $border;
+$table-head: dp($surface, 8%);
+$table-row-hover-background: dp($surface, 7%);
 
 table {
   background-color: $table-background;
@@ -14,7 +14,7 @@ table {
 
   td,
   th {
-    border: 1px solid $table-border;
+    border: $table-border;
     border-width: 0 0 1px;
     padding: 0.5em 0.75em;
     vertical-align: center;

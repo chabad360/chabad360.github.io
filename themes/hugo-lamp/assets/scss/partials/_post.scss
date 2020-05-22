@@ -27,7 +27,7 @@
 
   &-title {
     font-size: $size-3;
-    color: $text-title;
+    color: $text-strong;
     line-height: 1.5;
     margin-top: 0.5rem;
     margin-bottom: 0px;
@@ -35,7 +35,7 @@
 
   &-subtitle {
     font-size: 1.1rem;
-    color: $grey;
+    color: $text-strong;
     margin-top: 0px;
   }
 
@@ -55,12 +55,17 @@
     margin: 0 0.5rem 0 0;
     border-radius: $radius;
     padding: $space-small/2 $space-small;
-    background: $dark;
+    background: dp($primary, 7%);
     font-size: $size-7;
+    color: $on-primary;
+    box-shadow: $box-shadow-2dp;
+    transition: $transition;
 
     &:hover {
-      background: $grey-dark;
-      box-shadow: 0px 1px 15px 0 rgba(47, 50, 61, 0.15);
+      background: dp($primary, 12%);
+      box-shadow: $box-shadow-4dp;
+      font-size: 0.9em;
+      opacity: 1;
     }
   }
 }
