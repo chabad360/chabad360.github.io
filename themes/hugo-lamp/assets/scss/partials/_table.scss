@@ -1,8 +1,8 @@
 $table: $text;
 $table-background: dp($surface, 7%);
 $table-border: $border;
-$table-head: dp($surface, 8%);
-$table-row-hover-background: dp($surface, 7%);
+$table-head: $text-strong;
+$table-row-hover-background: dp($surface, 8%);
 
 table {
   background-color: $table-background;
@@ -11,6 +11,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-radius: $radius-large;
+  box-shadow: $box-shadow-2dp;
 
   td,
   th {
@@ -25,8 +26,11 @@ table {
   }
 
   tr {
+    transition: $transition;
     &:hover {
       background-color: $table-row-hover-background;
+      box-shadow: $box-shadow-3dp;
+      font-size: 19px;
     }
   }
 

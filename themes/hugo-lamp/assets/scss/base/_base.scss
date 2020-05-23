@@ -7,6 +7,19 @@ body {
   background: $main-background;
   text-rendering: optimizeLegibility;
   -webkit-overflow-scrolling: touch; // Smoothly on mobile browser
+  margin-left: 20rem;
+
+  @media screen and (max-width: $widescreen) {
+    margin-left: 20rem;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-left: 15rem;;
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin-left: 0;
+  }
 }
 
 a {
@@ -31,7 +44,7 @@ button:hover {
 }
 
 .main {
-  margin-left: 18rem;
+  margin: 0 18%;
   padding: 1rem 2rem;
   max-width: 100%;
   min-height: 100vh;
@@ -61,7 +74,7 @@ button:hover {
 
 .footer {
   display: block;
-  padding: 1rem 1rem 1rem 18rem;
+  padding: 1rem 1rem 1rem 1rem;
   font-size: $size-7;
   text-align: center;
   font-family: $family-monospace;

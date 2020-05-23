@@ -19,6 +19,7 @@
     object-fit: cover;
     width: 100%;
     height: 340px;
+    box-shadow: $box-shadow-4dp;
     
     @media screen and (max-width: $tablet) {
       margin-top: 1rem;
@@ -64,8 +65,7 @@
     &:hover {
       background: dp($primary, 12%);
       box-shadow: $box-shadow-4dp;
-      font-size: 0.9em;
-      opacity: 1;
+      opacity: .8;
     }
   }
 }

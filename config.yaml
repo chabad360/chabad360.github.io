@@ -19,7 +19,7 @@ markup:
 menu:
   main:
     - name: "Posts"
-      url: "/post/"
+      url: "/"
       weight: 1
 
     - identifier: "projects"

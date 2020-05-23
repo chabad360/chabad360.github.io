@@ -16,13 +16,7 @@
     </header>
     <article class="post-content">{{ .Content }}</article>
     <footer class="post-footer">
-      {{ if isset .Params "tags" }}
-      <ul class="post-tags">
-        {{ range $tag := .Params.tags }}
-          <a href="/tags/{{ $tag | urlize }}" class="post-tag"><span class="tag">{{ $tag | title }}</span></a>
-        {{ end }}
-      </ul>
-      {{ end }}
+      {{ partial "tags.html" . }}
       {{ if ( .Params.showComments | default true ) }}
         {{ partial "commento.html" . }}
       {{ end }}

@@ -100,10 +100,12 @@
   }
 
   blockquote {
-    background-color: $surface;
+    background-color: dp($surface, 5%);
     border-left: 5px solid $border-color;
     padding: 0.5rem 1rem;
     margin: 2rem 0;
+    box-shadow: $box-shadow-1dp;
+    border-radius: $radius-small;
 
     p {
       margin-top: 0.5rem;
@@ -231,6 +233,7 @@
     object-fit: cover;
     width: 100%;
     height: 340px;
+    box-shadow: $box-shadow-4dp;
   }
 
   figure {
@@ -239,6 +242,7 @@
 
     img {
       max-width: 100%;
+      box-shadow: $box-shadow-4dp;
     }
 
     figcaption {
