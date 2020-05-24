@@ -34,6 +34,14 @@ a {
   }
 }
 
+.no-a {
+  &:focus,
+  &:hover {
+    opacity: 1;
+    outline: none;
+  }
+}
+
 img {
   margin: 0 auto;
   box-shadow: $box-shadow-2dp;

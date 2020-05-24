@@ -8,8 +8,8 @@
   h4,
   h5,
   h6 {
-    color: $text-content-title;
-    font-weight: bold;
+    color: $text-strong;
+    font-weight: $weight-bold;
     line-height: 1.125;
   }
 
@@ -97,6 +97,7 @@
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: justify;
+    color: $text;
   }
 
   blockquote {
@@ -243,6 +244,7 @@
     img {
       max-width: 100%;
       box-shadow: $box-shadow-4dp;
+      border-radius: $radius-small;
     }
 
     figcaption {

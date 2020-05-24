@@ -19,12 +19,12 @@
     background-color: dp($surface, 7%);
     font-family: $family-roboto;
     border-radius: 6px;
-    border: $border;
+    border: $border-thin;
     transition: $transition;
 
     &:hover, &:focus {
       background-color: dp($surface, 12%);
-      border: solid white 2px;
+      border: solid white 1px;
     }
   }
 }

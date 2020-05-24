@@ -25,14 +25,10 @@ table {
     color: $text-strong;
   }
 
-  tr {
-    transition: $transition;
-    &:hover {
-      background-color: $table-row-hover-background;
-      box-shadow: $box-shadow-3dp;
-      font-size: 19px;
-    }
-  }
+  // tr {
+  //   &:hover {
+  //   }
+  // }
 
   thead {
     td,
