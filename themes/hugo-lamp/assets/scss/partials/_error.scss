@@ -1,5 +1,5 @@
 .not-found {
-  margin: 5rem 0 10rem 18rem;
+  margin: 5rem 0 10rem 0;
   font-family: $family-monospace;
   text-align: center;
 }
@@ -12,6 +12,7 @@
 
   &-text {
     font-size: $size-5;
+    color: $error;
   }
 
   &-link {

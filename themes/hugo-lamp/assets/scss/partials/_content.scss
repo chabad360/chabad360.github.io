@@ -122,26 +122,26 @@
 
   tt,
   code {
-    padding: 0.2em;
+    padding: 0.1rem 0.5em;
     border-radius: $radius;
     margin: 0;
     font-size: 0.9em;
     background-color: dp($surface, 5%);
+    box-shadow: $box-shadow-1dp;
     font-family: $family-monospace;
   }
 
   kbd {
     display: inline-block;
-    padding: 0.25em;
-    background-color: $surface;
-    border: 1px solid $border-color;
-    border-bottom-color: $border-color;
+    padding: 0.25em 0.55em;
+    background-color: dp($surface, 5%);
+    border: $border-thin;
     border-radius: $radius;
-    box-shadow: inset 0 -1px 0 $box-shadow;
+    box-shadow: $box-shadow-1dp;
     font-size: 0.8em;
     line-height: 1.25;
     font-family: $family-monospace;
-    color: $text;
+    color: $text-strong;
   }
 
   pre {

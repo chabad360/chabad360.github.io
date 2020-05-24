@@ -1,29 +1,36 @@
 .highlight {
   color: $text-strong;
-  background-color: dp($surface, 7%);
+  background-color: dp($surface, 5%);
   border-radius: $radius;
-  box-shadow: $box-shadow-2dp;
+  box-shadow: $box-shadow-1dp;
   width: 100%;
   position: relative;
   white-space: nowrap;
 
   .highlight-copy-btn {
     position: absolute;
-    right: 7px;
-    top: 1rem;
+    right: 0.25rem;
+    top: 0.3rem;
     border: 0;
     border-radius: 4px;
     padding: 1px;
     font-size: 0.7em;
     line-height: 1.8;
-    color: #fff;
-    background-color: #131313;
+    color: $text-strong;
+    background-color: dp($surface, 7%);
     min-width: 55px;
     text-align: center;
+    box-shadow: $box-shadow-2dp;
 
     &:hover {
-      background-color: #2b2b2b;
+      background-color: dp($surface, 9%);
+      box-shadow: $box-shadow-4dp;
     }
+  }
+
+  .chroma {
+    padding: 0.3rem .7rem;
+    overflow-x: auto;
   }
 
   .err {
@@ -71,6 +78,7 @@
   code {
     padding: unset;
     background-color: transparent;
+    box-shadow: unset;
 
     * {
       height: 23.3px

@@ -7,10 +7,13 @@ theme: "hugo-lamp"
 title: "Mendel Greenberg"
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     codeFences: true
     lineNoStart: 1
-    lineNos: true
+    lineNos: false
     lineNumbersInTable: true
     noClasses: false
     tabWidth: 2
