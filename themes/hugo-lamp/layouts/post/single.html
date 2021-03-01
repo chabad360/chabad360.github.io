@@ -14,7 +14,8 @@
       <p class="post-subtitle">{{ .Summary | plainify | htmlUnescape }}</p>
       <p class="entry-meta"><span class="entry-time">{{ .Date.Format "Jan 2, 2006" }}</span> {{ .ReadingTime }} min read</p>
     </header>
-    <article class="post-content">{{ .Content }}</article>
+    <article class="post-content">
+    {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="anchor" href="#${2}"><i class="fas fa-link fa-xs"></i></a> ${3}` | safeHTML }}</article>
     <footer class="post-footer">
       {{ partial "tags.html" . }}
       {{ if ( .Params.showComments | default true ) }}
