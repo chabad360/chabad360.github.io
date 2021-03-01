@@ -148,6 +148,11 @@ Yes, a `404` because we haven't actualy created a `boot.ipxe` that can be downlo
 
 Now we need to write the `boot.ipxe` that lives on our server -->
 
+At this point, if you want to use Secure Boot, this is the time to set it up. I'm not going to include how to create secure boot keys, as that's a rather [well](http://jk.ozlabs.org/docs/sbkeysync-maintaing-uefi-key-databases/) [documented](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface/Secure_Boot#Creating_keys) [process](https://github.com/Foxboron/sbctl).
+
+> Note: However you end up going about creating your keys and signing iPXE, don't follow the methods that use shim/mokmanager, as this is not compatible with how we are going to set up the Rock Pi X.  
+> Also, make sure to sign the iPXE image.
+
 ## X-PXE
 
 I'm going to detour from the iPXE setup to talk about the iPXE bootup.
@@ -161,4 +166,4 @@ There are a few steps involved in setting up the Rock Pi X to boot with iPXE:
 
 If you're setting up PXE booting, you're probably planning to do it on multiple devices, if so, you'll probably want to have a script that does everything (or most of it) in one shot.
 
-Currently I've been using a UEFI Shell script plus some manual workon, it's rather inconvenient but it works.
+Currently I've been using a UEFI Shell script plus some manual work, it's rather inconvenient but it works.
