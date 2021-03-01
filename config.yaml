@@ -25,15 +25,18 @@ menu:
       url: "/"
       weight: 1
 
-    - identifier: "projects"
-      name: "Projects"
+    - name: "Projects"
       url: "/project/"
+      weight: 4
+    
+    - name: "Portfolio"
+      url: "/portfolio/"
       weight: 3
 
     - identifier: "tags"
       name: "Tags"
       url: "/tags/"
-      weight: 4
+      weight: 5
 
 author:
   name: "Mendel Greenberg"
@@ -83,6 +86,14 @@ params:
       weight: 5
       url: "https://chabad360.me/index.xml"
 
+  portfolio:
+    - name: "Covey"
+      summary: "Lightweight linux cluster orchestration system"
+      startdate: 2020
+      enddate: "Ongoing"
+      url: "https://github.com/chabad360/covey"
+      
+     
 taxonomies:
   tag: "tags"
 

@@ -1,15 +1,16 @@
 @function dp($base, $dp) {
-  @return mix(white, $base, $dp);
+    @return mix(white, $base, $dp);
 }
 
+
 /* Theme colors */
+
 $primary: #bb86fc;
 $primary-variant: #3730bb;
 $secondary: #03dac6;
 $bg: #121212;
 $surface: #121212;
 $error: #cf6679;
-
 $on-primary: #000000;
 $on-secondary: #000000;
 $on-bg: #ffffff;
@@ -17,45 +18,61 @@ $on-surface: #ffffff;
 $on-error: #000000;
 
 /* Layout */
+
 $main-background: $bg;
 $sidebar-background: dp($surface, 14%);
 
 /* Text colors */
+
 $text: opacify($on-surface, 0.6);
 $text-strong: opacify($on-surface, 0.87);
 $text-invert: findcolorinvert($text);
 $text-light: $text;
 $text-content-title: $text;
 $text-link: $primary;
-
 $primary-text: opacify($primary, 0.6);
 $primary-text-strong: opacify($primary, 0.87);
 $primary-text-invert: findcolorinvert($primary-text);
 $primary-text-content-title: $primary-text;
 
 /* Border colors */
+
 $border: solid rgba(255, 255, 255, 0.24) 2px;
 $border-thin: solid rgba(255, 255, 255, 0.24) 1px;
 $border-color: rgba(255, 255, 255, 0.24);
-
 $primary-border: solid opacify($primary, 0.24) 2px;
 $primary-border-thin: solid opacify($primary, 0.24) 1px;
 
 /* Box shadow colors */
-$box-shadow-1dp: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-$box-shadow-2dp: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-$box-shadow-3dp: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
-$box-shadow-4dp: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-$box-shadow-6dp: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
 
-$box-shadow-12dp: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
-
+$box-shadow-1dp: 0 2px 1px -1px rgba(0, 0, 0, .2),
+0 1px 1px 0 rgba(0, 0, 0, .14),
+0 1px 3px 0 rgba(0, 0, 0, .12);
+$box-shadow-2dp: 0 3px 1px -2px rgba(0, 0, 0, .2),
+0 2px 2px 0 rgba(0, 0, 0, .14),
+0 1px 5px 0 rgba(0, 0, 0, .12);
+$box-shadow-3dp: 0 3px 3px -2px rgba(0, 0, 0, .2),
+0 3px 4px 0 rgba(0, 0, 0, .14),
+0 1px 8px 0 rgba(0, 0, 0, .12);
+$box-shadow-4dp: 0 2px 4px -1px rgba(0, 0, 0, .2),
+0 4px 5px 0 rgba(0, 0, 0, .14),
+0 1px 10px 0 rgba(0, 0, 0, .12);
+$box-shadow-6dp: 0 3px 5px -1px rgba(0, 0, 0, .2),
+0 6px 10px 0 rgba(0, 0, 0, .14),
+0 1px 18px 0 rgba(0, 0, 0, .12);
+$box-shadow-12dp: 0 7px 8px -4px rgba(0, 0, 0, .2),
+0 12px 17px 2px rgba(0, 0, 0, .14),
+0 5px 22px 4px rgba(0, 0, 0, .12);
 $box-shadow: $box-shadow-4dp;
 
 /* Typography */
+
 $base-font-size: 18px;
-$family-sans-serif: "Roboto", sans-serif;
-$family-monospace: "Roboto Mono", Consolas, monospace;
+$family-sans-serif: "Roboto",
+sans-serif;
+$family-monospace: "Roboto Mono",
+Consolas,
+monospace;
 $family-roboto: $family-sans-serif;
 $size-1: 3rem;
 $size-2: 2.5rem;
@@ -69,17 +86,20 @@ $weight-semibold: 400;
 $weight-bold: 600;
 
 /* Radius */
+
 $radius-small: 2px;
 $radius: 3px;
 $radius-large: 20px;
 
 /* Responsive break point */
+
 $phone: 640px;
 $tablet: 800px;
-$desktop: 960px;
+$desktop: 1024px;
 $widescreen: 1440px;
 
 /* Icons */
+
 $icon-menu: 'e802';
 $icon-close: 'e801';
 $icon-email: 'e804';
@@ -92,16 +112,16 @@ $icon-facebook: 'f30c';
 $icon-instagram: 'f16d';
 $icon-youtube: 'f16a';
 $icon-clock: 'e800';
-
 // Mixin for convert variable font
 // Read more at: https://github.com/sass/sass/issues/659#issuecomment-71759457
 @mixin variable-icon-font($icon-code) {
-  content: #{"\"\\"}#{$icon-code + "\""};
+    content: #{"\"\\"}#{$icon-code + "\""};
 }
 
 $transition: all 0.3s ease-out;
 
 /* Metrics */
+
 $space-small: 10px;
 $space-normal: 20px;
 $space-large: 30px;

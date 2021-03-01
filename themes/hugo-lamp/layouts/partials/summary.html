@@ -1,0 +1,19 @@
+<a href="{{ .url }}" class="portfolio-entry-link" aria-label="{{ .name }}" style="{{ if isset . "cover" }}grid-row-end:span 2;{{ else }}grid-row-end:span 1;{{ end }}">
+  <article class="portfolio-entry-single">
+    {{ if isset . "cover" }}
+      <img alt="{{ .Title }}"
+        layout="fixed-height"
+        class="portfolio-entry-cover"
+        src="{{ .cover }}">
+      </img>
+    {{ end }}
+    <header class="portfolio-entry-header">
+      <h3 class="portfolio-entry-title">{{ .name }}</h3>
+    </header>
+
+    <p class="portfolio-entry-summary">{{ .summary | plainify | htmlUnescape }}</p>
+    <footer class="portfolio-entry-footer">
+      <p class="portfolio-entry-meta"><span class="portfolio-entry-time">{{ .startdate }}</span>{{ .enddate }}</p>
+    </footer>
+  </article>
+</a>
