@@ -92,6 +92,22 @@ params:
       startdate: 2020
       enddate: "Ongoing"
       url: "https://github.com/chabad360/covey"
+    - name: "go-plugins"
+      summary: "Plugins system for Go based on Yaegi"
+      startdate: 2021
+      enddate: "Ongoing"
+      url: "https://github.com/chabad360/plugins"
+    - name: "resolume-timecode"
+      summary: "Display time remaining for a Resolume clip in the browser."
+      startdate: 2021
+      enddate: 2022
+      url: "https://github.com/chabad360/resolume-timecode"
+    - name: "TickerTime"
+      summary: "Live ticker software for 321Motion"
+      startdate: 2022
+      enddate: "Ongoing"
+      cover: "/images/tickersnapshot.jpg"
+      coverposition: "bottom left"
       
      
 taxonomies:

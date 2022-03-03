@@ -33,6 +33,7 @@
         object-fit: cover;
         box-shadow: none;
         margin-bottom: -8px;
+        background-position: center;
         @media screen and (max-width: $phone) {
             height: 150px;
         }

@@ -4,7 +4,13 @@
       <h1 class="post-title">Portfolio</h1>
     </header>
     <div class="portfolio-entry-list">
-        {{ range .Site.Params.Portfolio }}
+    {{- $sliceOriginal := .Site.Params.Portfolio -}}
+{{- $len := len $sliceOriginal -}}
+{{- $sliceReversed := slice -}}
+{{- range seq $len -}}
+  {{- $sliceReversed = $sliceReversed | append (index $sliceOriginal (sub $len .)) }}
+{{- end -}}
+        {{ range $sliceReversed }}
           {{ partial "summary" . }}
         {{ end }}
     </div>

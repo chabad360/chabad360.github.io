@@ -4,7 +4,7 @@
       <img alt="{{ .Title }}"
         layout="fixed-height"
         class="portfolio-entry-cover"
-        src="{{ .cover }}">
+        style="background: url('{{ .cover }}'); {{if .coverposition }}background-position: {{.coverposition}};{{end}}">
       </img>
     {{ end }}
     <header class="portfolio-entry-header">
