@@ -1,5 +1,58 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>CaaB: The Hardware</title><meta name=twitter:card content="summary"><meta name=twitter:title content="CaaB: The Hardware"><meta name=twitter:description content="No, that&rsquo;s not a Pi&mldr;"><meta property="og:title" content="CaaB: The Hardware"><meta property="og:description" content="No, that&rsquo;s not a Pi&mldr;"><meta property="og:type" content="article"><meta property="og:url" content="https://chabad360.me/post/caab-the-hardware/"><meta property="article:section" content="post"><meta property="article:published_time" content="2020-03-04T00:39:58+00:00"><meta property="article:modified_time" content="2020-03-04T00:39:58+00:00"><meta itemprop=name content="CaaB: The Hardware"><meta itemprop=description content="No, that&rsquo;s not a Pi&mldr;"><meta itemprop=datePublished content="2020-03-04T00:39:58+00:00"><meta itemprop=dateModified content="2020-03-04T00:39:58+00:00"><meta itemprop=wordCount content="300"><meta itemprop=keywords content="cluster,hardware,"><meta name=author content="Mendel Greenberg"><meta name=description content="Different things I've done, tried, or found interesting enough to blog about."><meta name=keywords content="chabad360,blog,developer,personal"><meta name=generator content="Hugo 0.81.0"><link rel=canonical href=https://chabad360.me/post/caab-the-hardware/><link rel=alternate title="Mendel Greenberg" href=/index.xml type=application/atom+xml><link rel=alternate title="Mendel Greenberg" href=/index.json type=application/json><meta name=robots content="index,follow"><meta name=referrer content="origin-when-cross-origin"><link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16><meta name=apple-mobile-web-app-capable content="yes"><link rel=apple-touch-icon sizes=120x120 href=/img/avatar.jpg><link rel=stylesheet href=https://chabad360.me/css/style.min.1c24a1bae254bf0406a220bdb9f1956f0681cafc6a650ba11d57a4e3bce0b2c3.css integrity="sha256-HCShuuJUvwQGoiC9ufGVbwaByvxqZQuhHVek47zgssM=" crossorigin=anonymous media=screen></head><body><header class=header id=header><p class=subtitle style="margin-top:1rem 0 1rem">B"H</p><a class=no-a href=https://chabad360.me/><img alt="Mendel Greenberg" width=128px height=128px class=logo src=/img/avatar.jpg sizes="(max-width: 800px) 36px, 128px"></img></a><h2 class=title id=title><a href=https://chabad360.me/ title="Mendel Greenberg">Mendel Greenberg</a></h2><p class=subtitle id=subtitle>(aka chabad360)</p><button class=menu-toggle type=button aria-label="Open Sidebar" onclick=openSidebar()>
-<span class="icon icon-menu"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span></button><nav class=menu><ul class=menu-list><li class="search menu-item" style=padding-top:.5rem><form id=search-bar method=get class=p2 action=https://duckduckgo.com/ target=_top><div class="inline-block relative mb3"><input type=search id=search placeholder="Search with DDG" name=q required aria-label="Search Query">
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>
+CaaB: The Hardware
+</title>
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="CaaB: The Hardware">
+<meta name=twitter:description content="No, that&rsquo;s not a Pi&mldr;">
+<meta property="og:title" content="CaaB: The Hardware">
+<meta property="og:description" content="No, that&rsquo;s not a Pi&mldr;">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chabad360.me/post/caab-the-hardware/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2020-03-04T00:39:58+00:00">
+<meta property="article:modified_time" content="2020-03-04T00:39:58+00:00">
+<meta itemprop=name content="CaaB: The Hardware">
+<meta itemprop=description content="No, that&rsquo;s not a Pi&mldr;"><meta itemprop=datePublished content="2020-03-04T00:39:58+00:00">
+<meta itemprop=dateModified content="2020-03-04T00:39:58+00:00">
+<meta itemprop=wordCount content="300">
+<meta itemprop=keywords content="cluster,hardware,">
+<meta name=author content="Mendel Greenberg">
+<meta name=description content="Different things I've done, tried, or found interesting enough to blog about.">
+<meta name=keywords content="chabad360,blog,developer,personal">
+<meta name=generator content="Hugo 0.92.2">
+<link rel=canonical href=https://chabad360.me/post/caab-the-hardware/>
+<link rel=alternate title="Mendel Greenberg" href=/index.xml type=application/atom+xml>
+<link rel=alternate title="Mendel Greenberg" href=/index.json type=application/json>
+<meta name=robots content="index,follow">
+<meta name=referrer content="origin-when-cross-origin">
+<link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16>
+<meta name=apple-mobile-web-app-capable content="yes">
+<link rel=apple-touch-icon sizes=120x120 href=/img/avatar.jpg>
+<link rel=stylesheet href=https://chabad360.me/css/style.min.40ec55e124295573ff17ec49a7dea115fe51df38efbde1a5b76a0c8994260347.css integrity="sha256-QOxV4SQpVXP/F+xJp96hFf5R3zjvveGlt2oMiZQmA0c=" crossorigin=anonymous media=screen>
+</head>
+<body>
+<header class=header id=header>
+<p class=subtitle style="margin-top:1rem 0 1rem">B"H</p>
+<a class=no-a href=https://chabad360.me/>
+<img alt="Mendel Greenberg" width=128px height=128px class=logo src=/img/avatar.jpg sizes="(max-width: 800px) 36px, 128px">
+</img>
+</a>
+<h2 class=title id=title><a href=https://chabad360.me/ title="Mendel Greenberg">Mendel Greenberg</a></h2>
+<p class=subtitle id=subtitle>(aka chabad360)</p>
+<button class=menu-toggle type=button aria-label="Open Sidebar" onclick=openSidebar()>
+<span class="icon icon-menu"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="3" stroke-linecap="round" stroke-linejoin="bevel"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</span>
+</button>
+<nav class=menu>
+<ul class=menu-list>
+<li class="search menu-item" style=padding-top:.5rem>
+<form id=search-bar method=get class=p2 action=https://duckduckgo.com/ target=_top>
+<div class="inline-block relative mb3">
+<input type=search id=search placeholder="Search with DDG" name=q required aria-label="Search Query">
 <input name=kz type=hidden value=-1>
 <input name=kae type=hidden value=d>
 <input name=kn type=hidden value=1>
@@ -9,8 +62,204 @@
 <input name=kao type=hidden value=-1>
 <input name=kap type=hidden value=-1>
 <input name=kam type=hidden value=osm>
-<input name=kt type=hidden value=Roboto></div></form><script type=text/javascript>window.onload=function(){document.getElementById("search-bar").onsubmit=function(){var a=document.getElementById("search");return a.value="site:https://chabad360.me/ "+a.value,!0}}</script></li><li class=menu-item><a href=/>Posts</a></li><li class=menu-item><a href=/page/about-me/>About Me</a></li><li class=menu-item><a href=/portfolio/>Portfolio</a></li><li class=menu-item><a href=/project/>Projects</a></li><li class=menu-item><a href=/tags/>Tags</a></li></ul></nav><ul class=social-list id=social><li class=social-item><a href=https://github.com/chabad360/ aria-label=Github><i class="fab fa-github" aria-hidden=true></i></a></li><li class=social-item><a href=https://gitlab.com/chabad360/ aria-label=Gitlab><i class="fab fa-gitlab" aria-hidden=true></i></a></li><li class=social-item><a href=https://reddit.com/u/chabad360/ aria-label=Reddit><i class="fab fa-reddit" aria-hidden=true></i></a></li><li class=social-item><a href=mailto:mendel@chabad360.me aria-label=Email><i class="fas fa-at" aria-hidden=true></i></a></li><li class=social-item><a href=https://chabad360.me/index.xml aria-label=Feed><i class="fas fa-rss" aria-hidden=true></i></a></li></ul></header><sidebar id=sidebar class=sidebar layout=nodisplay hidden><ul class=sidebar-list><li class=sidebar-menu><button class=sidebar-icon onclick=closeSidebar()>X</button></li><a class=sidebar-link href=/><li class=sidebar-item>Posts</li></a><a class=sidebar-link href=/page/about-me/><li class=sidebar-item>About Me</li></a><a class=sidebar-link href=/portfolio/><li class=sidebar-item>Portfolio</li></a><a class=sidebar-link href=/project/><li class=sidebar-item>Projects</li></a><a class=sidebar-link href=/tags/><li class=sidebar-item>Tags</li></a></ul></sidebar><div class=sidebar-mask id=sidebar-mask hidden onclick=closeSidebar()></div><script type=text/javascript>function openSidebar(){var a=document.getElementById("sidebar"),b=document.getElementById("sidebar-mask");a.removeAttribute("hidden",""),a.setAttribute("open",""),b.removeAttribute("hidden",""),b.setAttribute("open","")}function closeSidebar(){var b=document.getElementById("sidebar"),a=document.getElementById("sidebar-mask");b.removeAttribute("open",""),a.removeAttribute("open",""),setTimeout(function(){a.setAttribute("hidden","true")},240)}</script><section class="main post-detail"><header class=post-header><img alt="CaaB: The Hardware" layout=fixed-height class=post-cover src=images/armcluster.jpg></img><h1 class=post-title>CaaB: The Hardware</h1><p class=post-subtitle>No, that’s not a Pi…</p><p class=entry-meta><span class=entry-time>Mar 4, 2020</span> 2 min read</p></header><article class=post-content><h2 id=no-its-not-a-pi>No it&rsquo;s not a Pi&nbsp;<a class=anchor href=#no-its-not-a-pi><i class="fas fa-link fa-xs"></i></a></h2><p>It&rsquo;s an <a href=https://www.hardkernel.com/shop/odroid-mc1-my-cluster-one-with-32-cpu-cores-and-8gb-dram/>ODroid MC1</a>,
+<input name=kt type=hidden value=Roboto>
+</div>
+</form>
+<script type=text/javascript>window.onload=function(){document.getElementById("search-bar").onsubmit=function(){var a=document.getElementById("search");return a.value="site:https://chabad360.me/ "+a.value,!0}}</script>
+</li>
+<li class=menu-item>
+<a href=/>Posts</a>
+</li>
+<li class=menu-item>
+<a href=/page/about-me/>About Me</a>
+</li>
+<li class=menu-item>
+<a href=/portfolio/>Portfolio</a>
+</li>
+<li class=menu-item>
+<a href=/project/>Projects</a>
+</li>
+<li class=menu-item>
+<a href=/tags/>Tags</a>
+</li>
+</ul>
+</nav>
+<ul class=social-list id=social>
+<li class=social-item>
+<a href=https://github.com/chabad360/ aria-label=Github>
+<i class="fab fa-github" aria-hidden=true></i>
+</a>
+</li>
+<li class=social-item>
+<a href=https://gitlab.com/chabad360/ aria-label=Gitlab>
+<i class="fab fa-gitlab" aria-hidden=true></i>
+</a>
+</li>
+<li class=social-item>
+<a href=https://reddit.com/u/chabad360/ aria-label=Reddit>
+<i class="fab fa-reddit" aria-hidden=true></i>
+</a>
+</li>
+<li class=social-item>
+<a href=mailto:mendel@chabad360.me aria-label=Email>
+<i class="fas fa-at" aria-hidden=true></i>
+</a>
+</li>
+<li class=social-item>
+<a href=https://chabad360.me/index.xml aria-label=Feed>
+<i class="fas fa-rss" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</header>
+<sidebar id=sidebar class=sidebar layout=nodisplay hidden>
+<ul class=sidebar-list>
+<li class=sidebar-menu><button class=sidebar-icon onclick=closeSidebar()>X</button></li>
+<a class=sidebar-link href=/>
+<li class=sidebar-item>Posts</li>
+</a>
+<a class=sidebar-link href=/page/about-me/>
+<li class=sidebar-item>About Me</li>
+</a>
+<a class=sidebar-link href=/portfolio/>
+<li class=sidebar-item>Portfolio</li>
+</a>
+<a class=sidebar-link href=/project/>
+<li class=sidebar-item>Projects</li>
+</a>
+<a class=sidebar-link href=/tags/>
+<li class=sidebar-item>Tags</li>
+</a>
+</ul>
+</sidebar>
+<div class=sidebar-mask id=sidebar-mask hidden onclick=closeSidebar()></div>
+<script type=text/javascript>function openSidebar(){var a=document.getElementById("sidebar"),b=document.getElementById("sidebar-mask");a.removeAttribute("hidden",""),a.setAttribute("open",""),b.removeAttribute("hidden",""),b.setAttribute("open","")}function closeSidebar(){var b=document.getElementById("sidebar"),a=document.getElementById("sidebar-mask");b.removeAttribute("open",""),a.removeAttribute("open",""),setTimeout(function(){a.setAttribute("hidden","true")},240)}</script>
+<section class="main post-detail">
+<header class=post-header>
+<img alt="CaaB: The Hardware" layout=fixed-height class=post-cover src=images/armcluster.jpg>
+</img>
+<h1 class=post-title>CaaB: The Hardware</h1>
+<p class=post-subtitle>No, that’s not a Pi…</p>
+<p class=entry-meta><span class=entry-time>Mar 4, 2020</span> 2 min read</p>
+</header>
+<article class=post-content>
+<h2 id=no-its-not-a-pi>No it&rsquo;s not a Pi&nbsp;<a class=anchor href=#no-its-not-a-pi><i class="fas fa-link fa-xs"></i></a> </h2>
+<p>It&rsquo;s an <a href=https://www.hardkernel.com/shop/odroid-mc1-my-cluster-one-with-32-cpu-cores-and-8gb-dram/>ODroid MC1</a>,
 a board based on the <a href=https://www.hardkernel.com/shop/odroid-xu4-special-price/>ODroid XU4</a>,
-an SBC that is multiple times more powerful than the Pi (however, I&rsquo;ll be using an <a href=https://www.hardkernel.com/shop/odroid-hc1-home-cloud-one/>ODroid HC1</a> as it has a SATA port in the back that I&rsquo;ll be taking advantage of).</p><h3 id=an-odroid-what>An ODroid What?&nbsp;<a class=anchor href=#an-odroid-what><i class="fas fa-link fa-xs"></i></a></h3><p>The ODroid XU4, which has (to quote the landing page):</p><blockquote><ul><li>Samsung Exynos 5422 Cortex™-A15 2Ghz and Cortex™-A7 Octa core CPUs</li><li>Mali-T628 MP6(OpenGL ES 3.1/2.0/1.1 and OpenCL 1.2 Full profile)</li><li>2Gbyte LPDDR3 RAM PoP stacked</li></ul></blockquote><p>Now, sure there is a 2GB model of the Pi, heck, there&rsquo;s even a 4GB model of the Pi, but nothing the Pi has compares to an overpowered 8 core processor, plus a GPU featuring OpenGL (ES) and OpenCL support.</p><p>If you still don&rsquo;t think that&rsquo;s good enough, you can check that <a href=https://www.hardkernel.com/shop/odroid-xu4-special-price/>landing page</a> for some benchmarks.</p><h2 id=what-i-got>What I Got&nbsp;<a class=anchor href=#what-i-got><i class="fas fa-link fa-xs"></i></a></h2><p>So this is a nice table with prices of what I&rsquo;m getting, a BOM (a Bill of Materials):</p><blockquote><p>Note: This is not exactly what I purchased, as some of the items I bought are bad quality or no-longer available.<br>Also, This list and all the other parts of this project will be updated over time, so stay tuned.</p></blockquote><table><thead><tr><th style=text-align:left>Name</th><th style=text-align:right>Qty</th><th style=text-align:right>Price (ea.)</th><th style=text-align:right>Price</th></tr></thead><tbody><tr><td style=text-align:left><a href=https://ameridroid.com/products/odroid-hc1>ODroid HC1</a></td><td style=text-align:right>4x</td><td style=text-align:right>$49.95</td><td style=text-align:right>$199.80</td></tr><tr><td style=text-align:left><a href=https://www.amazon.com/dp/B07N1L5HX1>TP-Link AC1200</a></td><td style=text-align:right>1x</td><td style=text-align:right>$49.99</td><td style=text-align:right>$49.99</td></tr><tr><td style=text-align:left><a href=https://www.amazon.com/dp/B01I5PXEKE>Cat5e Cable (6")</a></td><td style=text-align:right>1x</td><td style=text-align:right>$8.99</td><td style=text-align:right>$8.99</td></tr><tr><td style=text-align:left><a href=https://www.amazon.com/dp/B073K14CVB/>16GB MicroSD card</a></td><td style=text-align:right>4x</td><td style=text-align:right>$5.99</td><td style=text-align:right>$23.96</td></tr><tr><td style=text-align:left><a href=https://www.amazon.com/dp/B01FYD9SKU>128GB SATA SSD</a></td><td style=text-align:right>4x</td><td style=text-align:right>$25.99</td><td style=text-align:right>$103.96</td></tr><tr><td style=text-align:left><a href=https://www.newegg.com/p/N82E16817151230>PSU Unit</a></td><td style=text-align:right>1x</td><td style=text-align:right>$99.99</td><td style=text-align:right>$99.99</td></tr><tr><td style=text-align:left><a href=https://www.amazon.com/dp/B072BXB2Y8>18awg 2.1x5.5mm Barrel Plugs</a></td><td style=text-align:right>1x</td><td style=text-align:right>$9.89</td><td style=text-align:right>$9.89</td></tr><tr><td style=text-align:left><a href=https://www.amazon.com/dp/B06XZJQ7LV/>ESP8266 OLED WiFi Board</a></td><td style=text-align:right>1x</td><td style=text-align:right>$29.90</td><td style=text-align:right>$29.90</td></tr><tr><td style=text-align:left><a href=https://www.amazon.com/dp/B01M1JZZV7/>USB 3.1 Extension Cables (1')</a></td><td style=text-align:right>4x</td><td style=text-align:right>$6.99</td><td style=text-align:right>$27.96</td></tr><tr><td style=text-align:left><a href=https://ameridroid.com/products/rtc-battery>RTC Battery</a></td><td style=text-align:right>4x</td><td style=text-align:right>$3.45</td><td style=text-align:right>$13.80</td></tr><tr><td style=text-align:left><strong>Total</strong></td><td style=text-align:right></td><td style=text-align:right></td><td style=text-align:right><strong>$550</strong> (approx.)</td></tr></tbody></table><h2 id=on-the-way>On The Way&mldr;&nbsp;<a class=anchor href=#on-the-way><i class="fas fa-link fa-xs"></i></a></h2><p>Coming soon are is a more updated BoM, CAD renderings (and possibly files), and more.
-So <a href=/index.xml>stay tuned</a> so you&rsquo;ll get to see this stuff.</p></article><footer class=post-footer><ul class=post-tags><a href=/tags/cluster class=post-tag><span class=tag>Cluster</span></a>
-<a href=/tags/hardware class=post-tag><span class=tag>Hardware</span></a></ul><div id=commento></div><link rel=stylesheet href=/css/commento.min.4e6025d136c0493a5dcb068b9c82f1979c222bda74ae9ae5610d2aa215f73f99.css integrity="sha256-TmAl0TbASTpdywaLnILxl5wiK9p0rprlYQ0qohX3P5k=" crossorigin=anonymous media=screen><script type=text/javascript integrity="sha256-DS+7ie+sfysxxkPCHMCFtaTdwoWf3/6TdwfQvxytoq8=" src=https://chabad360.me/js/commento.min.0d2fbb89efac7f2b31c643c21cc085b5a4ddc2859fdffe937707d0bf1cada2af.js></script></footer></section><footer class=footer><p>Copyright © 2019-2021 Mendel Greenberg</p><p>Powered by <a href=https://gohugo.io/ rel=noreferrer target=_blank>Hugo</a> with theme <a href=https://github.com/chabad360/hugo-lamp-plus title="Hugo LAMP+" rel=noreferrer target=_blank>LAMP+</a>.</p></footer><script type=text/javascript integrity="sha256-x1okCLBp+wakREQ6dDXrSV3NhvvQhOIpBBv/Ataigno=" src=https://chabad360.me/js/bundle.min.c75a2408b069fb06a444443a7435eb495dcd86fbd084e229041bff02d6a2827a.js crossorigin=anonymous></script></body></html>
+an SBC that is multiple times more powerful than the Pi (however, I&rsquo;ll be using an <a href=https://www.hardkernel.com/shop/odroid-hc1-home-cloud-one/>ODroid HC1</a> as it has a SATA port in the back that I&rsquo;ll be taking advantage of).</p>
+<h3 id=an-odroid-what>An ODroid What?&nbsp;<a class=anchor href=#an-odroid-what><i class="fas fa-link fa-xs"></i></a> </h3>
+<p>The ODroid XU4, which has (to quote the landing page):</p>
+<blockquote>
+<ul>
+<li>Samsung Exynos 5422 Cortex™-A15 2Ghz and Cortex™-A7 Octa core CPUs</li>
+<li>Mali-T628 MP6(OpenGL ES 3.1/2.0/1.1 and OpenCL 1.2 Full profile)</li>
+<li>2Gbyte LPDDR3 RAM PoP stacked</li>
+</ul>
+</blockquote>
+<p>Now, sure there is a 2GB model of the Pi, heck, there&rsquo;s even a 4GB model of the Pi, but nothing the Pi has compares to an overpowered 8 core processor, plus a GPU featuring OpenGL (ES) and OpenCL support.</p>
+<p>If you still don&rsquo;t think that&rsquo;s good enough, you can check that <a href=https://www.hardkernel.com/shop/odroid-xu4-special-price/>landing page</a> for some benchmarks.</p>
+<h2 id=what-i-got>What I Got&nbsp;<a class=anchor href=#what-i-got><i class="fas fa-link fa-xs"></i></a> </h2>
+<p>So this is a nice table with prices of what I&rsquo;m getting, a BOM (a Bill of Materials):</p>
+<blockquote>
+<p>Note: This is not exactly what I purchased, as some of the items I bought are bad quality or no-longer available.<br>
+Also, This list and all the other parts of this project will be updated over time, so stay tuned.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:right>Qty</th>
+<th style=text-align:right>Price (ea.)</th>
+<th style=text-align:right>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><a href=https://ameridroid.com/products/odroid-hc1>ODroid HC1</a></td>
+<td style=text-align:right>4x</td>
+<td style=text-align:right>$49.95</td>
+<td style=text-align:right>$199.80</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.amazon.com/dp/B07N1L5HX1>TP-Link AC1200</a></td>
+<td style=text-align:right>1x</td>
+<td style=text-align:right>$49.99</td>
+<td style=text-align:right>$49.99</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.amazon.com/dp/B01I5PXEKE>Cat5e Cable (6")</a></td>
+<td style=text-align:right>1x</td>
+<td style=text-align:right>$8.99</td>
+<td style=text-align:right>$8.99</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.amazon.com/dp/B073K14CVB/>16GB MicroSD card</a></td>
+<td style=text-align:right>4x</td>
+<td style=text-align:right>$5.99</td>
+<td style=text-align:right>$23.96</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.amazon.com/dp/B01FYD9SKU>128GB SATA SSD</a></td>
+<td style=text-align:right>4x</td>
+<td style=text-align:right>$25.99</td>
+<td style=text-align:right>$103.96</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.newegg.com/p/N82E16817151230>PSU Unit</a></td>
+<td style=text-align:right>1x</td>
+<td style=text-align:right>$99.99</td>
+<td style=text-align:right>$99.99</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.amazon.com/dp/B072BXB2Y8>18awg 2.1x5.5mm Barrel Plugs</a></td>
+<td style=text-align:right>1x</td>
+<td style=text-align:right>$9.89</td>
+<td style=text-align:right>$9.89</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.amazon.com/dp/B06XZJQ7LV/>ESP8266 OLED WiFi Board</a></td>
+<td style=text-align:right>1x</td>
+<td style=text-align:right>$29.90</td>
+<td style=text-align:right>$29.90</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://www.amazon.com/dp/B01M1JZZV7/>USB 3.1 Extension Cables (1')</a></td>
+<td style=text-align:right>4x</td>
+<td style=text-align:right>$6.99</td>
+<td style=text-align:right>$27.96</td>
+</tr>
+<tr>
+<td style=text-align:left><a href=https://ameridroid.com/products/rtc-battery>RTC Battery</a></td>
+<td style=text-align:right>4x</td>
+<td style=text-align:right>$3.45</td>
+<td style=text-align:right>$13.80</td>
+</tr>
+<tr>
+<td style=text-align:left><strong>Total</strong></td>
+<td style=text-align:right></td>
+<td style=text-align:right></td>
+<td style=text-align:right><strong>$550</strong> (approx.)</td>
+</tr>
+</tbody>
+</table>
+<h2 id=on-the-way>On The Way&mldr;&nbsp;<a class=anchor href=#on-the-way><i class="fas fa-link fa-xs"></i></a> </h2>
+<p>Coming soon are is a more updated BoM, CAD renderings (and possibly files), and more.
+So <a href=/index.xml>stay tuned</a> so you&rsquo;ll get to see this stuff.</p>
+</article>
+<footer class=post-footer>
+<ul class=post-tags>
+<a href=/tags/cluster class=post-tag><span class=tag>Cluster</span></a>
+<a href=/tags/hardware class=post-tag><span class=tag>Hardware</span></a>
+</ul>
+<div id=commento></div>
+<link rel=stylesheet href=/css/commento.min.4e6025d136c0493a5dcb068b9c82f1979c222bda74ae9ae5610d2aa215f73f99.css integrity="sha256-TmAl0TbASTpdywaLnILxl5wiK9p0rprlYQ0qohX3P5k=" crossorigin=anonymous media=screen>
+<script type=text/javascript integrity="sha256-DS+7ie+sfysxxkPCHMCFtaTdwoWf3/6TdwfQvxytoq8=" src=https://chabad360.me/js/commento.min.0d2fbb89efac7f2b31c643c21cc085b5a4ddc2859fdffe937707d0bf1cada2af.js></script>
+</footer>
+</section>
+<footer class=footer>
+<p>Copyright © 2019-2022 Mendel Greenberg</p>
+<p>Powered by <a href=https://gohugo.io/ rel=noreferrer target=_blank>Hugo</a> with theme <a href=https://github.com/chabad360/hugo-lamp-plus title="Hugo LAMP+" rel=noreferrer target=_blank>LAMP+</a>.</p>
+</footer>
+<script type=text/javascript integrity="sha256-x1okCLBp+wakREQ6dDXrSV3NhvvQhOIpBBv/Ataigno=" src=https://chabad360.me/js/bundle.min.c75a2408b069fb06a444443a7435eb495dcd86fbd084e229041bff02d6a2827a.js crossorigin=anonymous></script>
+</body>
+</html>

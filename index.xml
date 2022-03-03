@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Mendel Greenberg</title><link href="https://chabad360.me/"/><icon>https://chabad360.me/images/favicon-32x32.png</icon><logo>https://chabad360.me/images/logo.png</logo><subtitle>Recent content on https://chabad360.me/</subtitle><id>https://chabad360.me/</id><generator uri="https://gohugo.io">Hugo</generator><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><updated>2020-03-04T00:39:58+00:00</updated><link href="https://chabad360.me/index.xml" rel="self" type="application/rss+xml"/><entry><title>CaaB: The Hardware</title><link href="https://chabad360.me/post/caab-the-hardware/"/><id>https://chabad360.me/post/caab-the-hardware/</id><published>2020-03-04T00:39:58+00:00</published><updated>2020-03-04T00:39:58+00:00</updated><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><summary type="html">No, that&amp;amp;rsquo;s not a Pi&amp;amp;hellip;</summary><content type="html">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Mendel Greenberg</title><link href="https://chabad360.me/"/><icon>https://chabad360.me/images/favicon-32x32.png</icon><logo>https://chabad360.me/images/logo.png</logo><subtitle>Recent content on https://chabad360.me/</subtitle><id>https://chabad360.me/</id><generator uri="https://gohugo.io">Hugo</generator><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><updated>2022-03-02T21:22:25+00:00</updated><link href="https://chabad360.me/index.xml" rel="self" type="application/rss+xml"/><entry><title>About Me</title><link href="https://chabad360.me/page/about-me/"/><id>https://chabad360.me/page/about-me/</id><published>2022-03-02T21:22:25+00:00</published><updated>2022-03-02T21:22:25+00:00</updated><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><summary type="html">Hi, My name is Mendel Greenberg, and welcome to my blog!</summary><content type="html">
+&amp;lt;p&amp;gt;Hi my name is Mendel Greenberg (&amp;lt;a href=&amp;#34;https://github.com/chabad360&amp;#34;&amp;gt;chabad360&amp;lt;/a&amp;gt;), I&amp;amp;rsquo;m into software engineering, DevOps, VFX (IKR), live production
+and a bunch of other random tech related things.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;I started this blog because I need a good way to document my ideas in a way that they can be shared
+(plus kept together and in an organized and presentable format), and found that this is (probably) the best format.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;If you think I might have something interesting to write, or find my personality (that small glimpse that you got) interesting,
+than you might enjoy my content. So stick around, and hopefully I&amp;amp;rsquo;ll have something that appeases you!
+I&amp;amp;rsquo;ll admit I&amp;amp;rsquo;m not the best about writing, but hopefully in the future there will be more content here.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;Thanks for visiting!&amp;lt;/p&amp;gt;</content></entry><entry><title>CaaB: The Hardware</title><link href="https://chabad360.me/post/caab-the-hardware/"/><id>https://chabad360.me/post/caab-the-hardware/</id><published>2020-03-04T00:39:58+00:00</published><updated>2020-03-04T00:39:58+00:00</updated><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><summary type="html">No, that&amp;amp;rsquo;s not a Pi&amp;amp;hellip;</summary><content type="html">
 &amp;lt;h2 id=&amp;#34;no-its-not-a-pi&amp;#34;&amp;gt;No it&amp;amp;rsquo;s not a Pi&amp;lt;/h2&amp;gt;
 &amp;lt;p&amp;gt;It&amp;amp;rsquo;s an &amp;lt;a href=&amp;#34;https://www.hardkernel.com/shop/odroid-mc1-my-cluster-one-with-32-cpu-cores-and-8gb-dram/&amp;#34;&amp;gt;ODroid MC1&amp;lt;/a&amp;gt;,
 a board based on the &amp;lt;a href=&amp;#34;https://www.hardkernel.com/shop/odroid-xu4-special-price/&amp;#34;&amp;gt;ODroid XU4&amp;lt;/a&amp;gt;,
@@ -107,7 +115,7 @@ So &amp;lt;a href=&amp;#34;/index.xml&amp;#34;&amp;gt;stay tuned&amp;lt;/a&amp;g
 &amp;lt;img alt=&amp;#34;Boom Box (image credit: Sorin Mares)&amp;#34;
 class=&amp;#34;js-img&amp;#34;
 data-src=&amp;#34;/post/caab-the-concept/images/boombox.png&amp;#34;
-src=&amp;#34;/post/caab-the-concept/images/boombox_hu8437552645e4ba1d5674dcf64bda3015_1719739_0x400_resize_box_2.png&amp;#34;&amp;gt;
+src=&amp;#34;/post/caab-the-concept/images/boombox_hu8437552645e4ba1d5674dcf64bda3015_1719739_0x400_resize_box_3.png&amp;#34;&amp;gt;
 &amp;lt;/img&amp;gt;
 &amp;lt;figcaption&amp;gt;Boom Box (image credit: Sorin Mares)&amp;lt;/figcaption&amp;gt;
 &amp;lt;/figure&amp;gt;
@@ -118,7 +126,7 @@ src=&amp;#34;/post/caab-the-concept/images/boombox_hu8437552645e4ba1d5674dcf64bd
 &amp;lt;img alt=&amp;#34;Drawing of the inside view of the CaaB (image copyright: Mendel Greenberg)&amp;#34;
 class=&amp;#34;js-img&amp;#34;
 data-src=&amp;#34;/post/caab-the-concept/images/front_inside.png&amp;#34;
-src=&amp;#34;/post/caab-the-concept/images/front_inside_hu72bb49716f0d001dfcba4aa9c1d1c056_398168_0x400_resize_box_2.png&amp;#34;&amp;gt;
+src=&amp;#34;/post/caab-the-concept/images/front_inside_hu72bb49716f0d001dfcba4aa9c1d1c056_398168_0x400_resize_box_3.png&amp;#34;&amp;gt;
 &amp;lt;/img&amp;gt;
 &amp;lt;figcaption&amp;gt;Drawing of the inside view of the CaaB (image copyright: Mendel Greenberg)&amp;lt;/figcaption&amp;gt;
 &amp;lt;/figure&amp;gt;
@@ -138,16 +146,7 @@ src=&amp;#34;/post/caab-the-concept/images/front_inside_hu72bb49716f0d001dfcba4a
 As is indicated by the title, this project will called the &amp;amp;ldquo;Cluster as a Box&amp;amp;rdquo; or CaaB.
 This is &amp;lt;strong&amp;gt;not a how-to guide&amp;lt;/strong&amp;gt;, this is me documenting my experience in a format that you may find informative (and hopefully you&amp;amp;rsquo;ll learn something).
 This will also act as a nice way to test my &amp;lt;a href=&amp;#34;/project&amp;#34;&amp;gt;Project&amp;lt;/a&amp;gt; format, so we&amp;amp;rsquo;ll see how it goes!&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;a href=&amp;#34;/index.xml&amp;#34;&amp;gt;Stay Tunned!&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;</content></entry><entry><title>About Me</title><link href="https://chabad360.me/page/about-me/"/><id>https://chabad360.me/page/about-me/</id><published>2019-09-13T21:22:25+00:00</published><updated>2019-09-13T21:22:25+00:00</updated><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><summary type="html">Hi, My name is Mendel Greenberg, and welcome to my blog!</summary><content type="html">
-&amp;lt;p&amp;gt;Hi my name is Mendel Greenberg (&amp;lt;a href=&amp;#34;https://github.com/chabad360&amp;#34;&amp;gt;chabad360&amp;lt;/a&amp;gt;), I&amp;amp;rsquo;m into software enginering,
-DevOps, VFX (IKR), and a bunch of other random tech related things.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;I started this blog because I need a good way to document my ideas in a
-way that they can be shared (plus kept together and in an organized and presentable format),
-and found that this is (probably) the best format.&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;If you think I might have something interesting to write, or find my personality (that small
-glimpse that you got) interesting, than you might enjoy my content. So stick around, and hopefully
-I&amp;amp;rsquo;ll have something that appeases you!&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;Thanks for visiting!&amp;lt;/p&amp;gt;</content></entry><entry><title>Welcome</title><link href="https://chabad360.me/post/welcome/"/><id>https://chabad360.me/post/welcome/</id><published>2019-09-13T02:14:21+00:00</published><updated>2019-09-13T02:14:21+00:00</updated><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><summary type="html">&amp;lt;p&amp;gt;Welcome to my blog!&amp;lt;/p&amp;gt;</summary><content type="html">
+&amp;lt;p&amp;gt;&amp;lt;a href=&amp;#34;/index.xml&amp;#34;&amp;gt;Stay Tunned!&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;</content></entry><entry><title>Welcome</title><link href="https://chabad360.me/post/welcome/"/><id>https://chabad360.me/post/welcome/</id><published>2019-09-13T02:14:21+00:00</published><updated>2019-09-13T02:14:21+00:00</updated><author><name>Mendel Greenberg</name><email>mendel@chabad360.me</email></author><summary type="html">&amp;lt;p&amp;gt;Welcome to my blog!&amp;lt;/p&amp;gt;</summary><content type="html">
 &amp;lt;p&amp;gt;Welcome to my blog!&amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;Hello, My name is Mendel Greenberg, its a pleasure to have you on my site,
 and I hope you will enjoy my content.&amp;lt;/p&amp;gt;
